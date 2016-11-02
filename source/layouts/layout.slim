@@ -10,4 +10,17 @@ html
     == stylesheet_link_tag :site
 
   body class="#{page_classes}"
+    header.header
+      .container
+        nav
+          span.nav-toggle.hamburger
+            span
+            span
+            span
+
+          .nav-right.nav-menu
+            == link_to 'link1', '/#link1', :class => 'nav-item'
+            == link_to 'link2', '/#link2', :class => 'nav-item'
+            == link_to 'link3', '/#link3', :class => 'nav-item'
+
     == yield
