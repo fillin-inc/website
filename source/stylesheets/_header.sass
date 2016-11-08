@@ -1,11 +1,19 @@
 
 
 body > .header
+  background: $white
+
   .hamburger
     position: absolute
     right: 0
 
   .nav
-    background: whitesmoke
+    background: $white
     .logo
+      display: block
       width: 100px
+
+  &.is-top
+    .logo
+      display: none
+

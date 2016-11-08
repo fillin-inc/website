@@ -10,7 +10,7 @@ html
     == stylesheet_link_tag :site
 
   body class="#{page_classes}"
-    header.header
+    header.header.is-top
       nav.nav
         .nav-left
           == link_to image_tag('images/logo.svg', :alt => 'フィルインロゴ', :class => 'logo'), '/', :class => 'nav-item'
