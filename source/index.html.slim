@@ -4,7 +4,7 @@ title: 株式会社フィルイン
 
 section#hero.hero
   .hero-body
-    .container
+    .container.has-text-centered
       h1.title
         == image_tag 'images/logo.svg', :alt => '株式会社フィルインロゴ', :class => 'logo'
       h2.subtitle
@@ -47,13 +47,13 @@ section#biz.biz
           li Git/Github を使った入門から開発フローの教育
           li Web サービス運用へ向けたサーバ構築
 
-section#conmapy.company
+section#company.company
   .container
     .columns
       .column.is-half.is-offset-one-quarter
         h2.title 会社情報
-        table.table.content
-          tbody
+        table.table
+          tbody.content
             tr
               th 会社名
               td 株式会社フィルイン
@@ -76,7 +76,7 @@ section#conmapy.company
             tr
               th 連絡先
               td
-                == mail_to('info@fillin-inc.com', 'info@fillin-inc.com')
+                == mail_to 'info@fillin-inc.com', 'info@fillin-inc.com'
 
             tr
               th 所在地
