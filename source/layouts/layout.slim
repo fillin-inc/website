@@ -11,16 +11,19 @@ html
 
   body class="#{page_classes}"
     header.header
-      .container
-        nav
-          span.nav-toggle.hamburger
-            span
-            span
-            span
+      nav.nav
+        .nav-left
+          == link_to image_tag('images/logo.svg', :alt => 'フィルインロゴ', :class => 'logo'), '/', :class => 'nav-item'
 
-          .nav-right.nav-menu
-            == link_to 'link1', '/#link1', :class => 'nav-item'
-            == link_to 'link2', '/#link2', :class => 'nav-item'
-            == link_to 'link3', '/#link3', :class => 'nav-item'
+        span.nav-toggle.hamburger
+          span
+          span
+          span
+
+        .nav-right.nav-menu.is-6
+          == link_to 'リリース', '/#release', :class => 'nav-item'
+          == link_to '事業内容', '/#business', :class => 'nav-item'
+          == link_to '会社概要', '/#company', :class => 'nav-item'
+          == link_to 'お問合せ', '/inquiry/', :class => 'nav-item'
 
     == yield
