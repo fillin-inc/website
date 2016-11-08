@@ -8,6 +8,16 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+activate :blog do |blog|
+  blog.name = 'releases'
+  blog.prefix = blog.name
+  blog.layout = blog.name
+  blog.sources = 'articles/{year}-{month}-{day}-{title}.html'
+  blog.default_extension = '.md'
+  blog.summary_separator = /<!--more-->/
+  blog.paginate = false
+end
+
 activate :directory_indexes
 activate :syntax
 activate :autoprefixer

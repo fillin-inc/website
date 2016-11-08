@@ -1,0 +1,16 @@
+header.header
+  nav.nav
+    - if current_page.data.blog.present?
+      .nav-left
+        == link_to image_tag('images/logo.svg', :alt => 'フィルインロゴ', :class => 'logo'), '/', :class => 'nav-item'
+
+    span.nav-toggle.hamburger
+      span
+      span
+      span
+
+    .nav-right.nav-menu.is-6
+      == link_to 'リリース', '/releases/', :class => 'nav-item'
+      == link_to '事業内容', '/#biz', :class => 'nav-item'
+      == link_to '会社概要', '/#company', :class => 'nav-item'
+      == link_to 'お問合せ', '/inquiry/', :class => 'nav-item'

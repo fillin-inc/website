@@ -86,3 +86,16 @@ section#company.company
                   377-0849<br>
                   群馬県高崎市八島町58番地1<br>
                   ウエストワンビル10F1011号
+
+section#releases.releases
+  .container
+    .columns
+      .column.is-half.is-offset-one-quarter
+        h2.title リリース
+        ul
+          - blog(:releases).articles[0...5].each do |article|
+            li
+              == link_to article.url do
+                span.date
+                  = article.date.strftime('%Y-%m-%d')
+                = article.title

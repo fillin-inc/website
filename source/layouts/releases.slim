@@ -5,7 +5,8 @@ html
     meta charset="utf-8"
     meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
 
-    title = current_page.data.title || "株式会社フィルイン"
+    title
+      = release_title(current_resource)
 
     == stylesheet_link_tag :site
 
@@ -13,6 +14,9 @@ html
     == partial 'layouts/header'
 
     main
-      == yield
+      .container
+        .columns
+          .column.is-half.is-offset-one-quarter.content
+            == yield
 
     == partial 'layouts/footer'
