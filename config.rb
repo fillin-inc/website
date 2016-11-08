@@ -17,6 +17,12 @@ activate :gzip, exts: %w(.css .js .html .xml)
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, tables: true, autolink: true
 
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
+  source: ".tmp/dist",
+  latency: 1
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
