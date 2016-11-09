@@ -1,11 +1,19 @@
 doctype html
-html
+html lang="ja"
   head
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta charset="utf-8"
     meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
 
     title = current_page.data.title || "株式会社フィルイン"
+
+    - if current_resource.data.keyword
+      meta name="keywords" content="#{current_resource.data.keyword}"
+
+    - if current_resource.data.description
+      meta name="description" content="#{current_resource.data.description}"
+
+    == partial 'layouts/favicon'
 
     == stylesheet_link_tag :site
 
