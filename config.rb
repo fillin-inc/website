@@ -38,6 +38,7 @@ configure :build do
 
   activate :minify_css
   activate :minify_javascript
+  activate :asset_hash
 
   activate :robots, rules: [
     {
@@ -48,6 +49,6 @@ configure :build do
   sitemap: 'https://www.fillin-inc.com/sitemap/xml'
 end
 
-# activate :s3_sync do |s3|
-#   s3.region = 'ap-northeast-1'
-# end
+activate :s3_sync do |s3|
+  s3.region = 'ap-northeast-1'
+end
