@@ -13,4 +13,4 @@ header.header
       == link_to '事業内容', '/#biz', :class => 'nav-item'
       == link_to '会社情報', '/#company', :class => 'nav-item'
       == link_to 'リリース', '/releases/', :class => 'nav-item'
-      == link_to 'お問合せ', '/inquiry/', :class => 'nav-item'
+      == mail_to 'お問合せ', 'info@fillin-inc.com', :class => 'nav-item'
