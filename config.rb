@@ -30,14 +30,24 @@ set :markdown, fenced_code_blocks: true, smartypants: true, tables: true, autoli
 activate :external_pipeline,
   name: :webpack,
   command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
-  source: ".tmp/dist",
+  source: '.tmp/dist',
   latency: 1
 
 configure :build do
+  ignore '/stylesheets/vendor/*'
+
   activate :minify_css
   activate :minify_javascript
+
+  activate :robots, rules: [
+    {
+      user_agent: '*',
+      disallow: %w(/inquiry/thanks/ /inquiry/thanks/index.html)
+    }
+  ],
+  sitemap: 'https://www.fillin-inc.com/sitemap/xml'
 end
 
-#activate :s3_sync do |s3|
-#  s3.region = 'ap-northeast-1'
-#end
+# activate :s3_sync do |s3|
+#   s3.region = 'ap-northeast-1'
+# end

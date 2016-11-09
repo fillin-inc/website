@@ -102,6 +102,8 @@ GEM
     middleman-generator-tag (0.2.4)
       middleman (>= 4.0)
       nokogiri (>= 1.6)
+    middleman-robots (1.2.3)
+      middleman (>= 4.0)
     middleman-s3_sync (4.0.3)
       ansi (~> 1.5.0)
       fog-aws (>= 0.1.1)
@@ -160,6 +162,7 @@ DEPENDENCIES
   middleman-autoprefixer
   middleman-blog
   middleman-generator-tag
+  middleman-robots
   middleman-s3_sync
   middleman-syntax
   rake
