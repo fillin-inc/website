@@ -16,6 +16,9 @@ html lang="ja"
 
     == partial 'layouts/favicon'
 
+    - if build?
+      == javascript_include_tag "google-analytics.js"
+
     == stylesheet_link_tag :site
 
   body class="#{page_classes}"
