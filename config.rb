@@ -39,14 +39,6 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
-
-  activate :robots, rules: [
-    {
-      user_agent: '*',
-      disallow: %w(/inquiry/thanks/ /inquiry/thanks/index.html)
-    }
-  ],
-  sitemap: 'https://www.fillin-inc.com/sitemap/xml'
 end
 
 activate :s3_sync do |s3|
