@@ -22,6 +22,7 @@ activate :directory_indexes
 activate :syntax
 activate :autoprefixer
 activate :generator_tag
+activate :vcs_time
 activate :gzip, exts: %w(.css .js .html .xml)
 
 set :markdown_engine, :redcarpet
@@ -38,7 +39,6 @@ configure :build do
 
   activate :minify_css
   activate :minify_javascript
-  activate :asset_hash
 end
 
 activate :s3_sync do |s3|

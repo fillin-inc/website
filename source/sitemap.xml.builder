@@ -13,11 +13,7 @@ xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     path = path.sub(/index\.html$/, '')
     xml.url do
       xml.loc URI.escape(File.join(site_url, path))
-      if /\/(tech|releases)\/$/ =~ page.destination_path
-        xml.lastmod Time.now.iso8601 # 常時更新
-      else
-        xml.lastmod File.mtime(page.source_file).iso8601
-      end
+      xml.lastmod page.mtime
 
       if /(tech|releases)\/.+/ =~ page.destination_path
         xml.changefreq page.data.changefreq || "weekly"
