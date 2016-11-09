@@ -1,0 +1,36 @@
+{
+  "name": "fillin-inc-website",
+  "version": "0.1.0",
+  "description": "[株式会社フィルイン](https://www.fillin-inc.com/) のコードです。Middleman を使っています。",
+  "main": "source/javascripts/site.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fillin-inc/website.git"
+  },
+  "keywords": [
+    "fillin"
+  ],
+  "author": "Yuya Matsushima",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fillin-inc/website/issues"
+  },
+  "homepage": "https://www.fillin-inc.com/",
+  "dependencies": {
+    "babel-polyfill": "^6.3.14",
+    "babel-runtime": "^6.3.19",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-runtime": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "clean-webpack-plugin": "^0.1.5",
+    "webpack": "^1.12.9"
+  }
+}

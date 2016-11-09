@@ -1,0 +1,18 @@
+---
+blog: releases
+layout: releases
+description: リリース一覧ページです
+keyword: リリース, Web サービス, 群馬県高崎市
+---
+
+h2.title リリース一覧
+- blog.articles.group_by {|a| a.date.year}.each do |year, articles|
+  div class="year-#{year} list"
+    h3.title #{year}年
+    ul
+      - articles.each do |article|
+        li
+          == link_to article.url do
+            span.date
+              = article.date.strftime('%Y-%m-%d')
+            = article.title

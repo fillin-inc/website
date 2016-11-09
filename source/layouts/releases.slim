@@ -6,7 +6,8 @@ html lang="ja"
     meta content="width=device-width,initial-scale=1.0,user-scalable=yes" name="viewport"
     link rel="canonical" href="https://www.fillin-inc.com#{current_page.url}"
 
-    title = current_page.data.title || "株式会社フィルイン"
+    title
+      = release_title(current_resource)
 
     - if current_page.data.keyword
       meta name="keywords" content="#{current_page.data.keyword}"
@@ -25,6 +26,9 @@ html lang="ja"
     == partial 'layouts/header'
 
     main
-      == yield
+      .container
+        .columns
+          .column.is-half.is-offset-one-quarter.content
+            == yield
 
     == partial 'layouts/footer'
