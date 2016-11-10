@@ -19,8 +19,6 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
-activate :syntax
-activate :autoprefixer
 activate :generator_tag
 activate :vcs_time
 activate :gzip, exts: %w(.css .js .html .xml)

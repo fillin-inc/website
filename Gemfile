@@ -6,8 +6,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-blog'
-gem 'middleman-syntax'
-gem 'middleman-autoprefixer'
 gem 'middleman-generator-tag'
 gem 'middleman-vcs-time'
 gem 'middleman-s3_sync'

@@ -9,8 +9,6 @@
 - 静的サイトジェネレータ [Middleman](https://middlemanapp.com/jp/)
 - Middleman 拡張
     - [middleman-blog](https://github.com/middleman/middleman-blog)
-    - [middleman-syntax](https://github.com/middleman/middleman-syntax)
-    - [middleman-autoprefixer](https://github.com/middleman/middleman-autoprefixer)
     - [middleman-generator-tag](https://github.com/yterajima/middleman-generator-tag)
     - [middleman-vcs-time](https://github.com/AndrewKvalheim/middleman-vcs-time)
     - [middleman-s3_sync](https://github.com/fredjean/middleman-s3_sync)
