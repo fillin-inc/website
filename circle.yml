@@ -26,5 +26,5 @@ deployment:
     commands:
       - bundle exec middleman s3_sync
       - sleep 10
-      - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*'
+      - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*' > /dev/null 2>&1
       - curl http://www.google.com/webmasters/sitemaps/ping -k --verbose --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"
