@@ -1,7 +1,7 @@
 ---
-title: 株式会社フィルイン
 description: 群馬で web サービスをつくる会社です
 keyword: Web サービス開発, Web アプリケーション, 群馬県高崎市, PHP, Ruby, Ruby on Rails, Golang
+priority: 1.0
 ---
 
 section#hero.hero
@@ -10,7 +10,7 @@ section#hero.hero
       h1.title
         == image_tag 'images/logo.svg', :alt => '株式会社フィルインロゴ', :class => 'logo'
       h2.subtitle
-        | 群馬で Web サービスを作る会社です
+        | 群馬で Web サービスをつくる会社です
 
 
 section#biz.biz
@@ -98,7 +98,10 @@ section#releases.releases
   .container
     .columns
       .column.is-half.is-offset-one-quarter.content
-        h2.title リリース
+        h2.title
+          | リリース
+          == link_to '<i class="fa fa-feed">', '/releases/feed.xml'
+
         ul
           - blog(:releases).articles[0...5].each do |article|
             li

@@ -3,9 +3,13 @@ blog: releases
 layout: releases
 description: リリース一覧ページです
 keyword: リリース, Web サービス, 群馬県高崎市
+priority: 1.0
+changefreq: weekly
 ---
 
-h2.title リリース一覧
+h2.title
+  | リリース
+  == link_to '<i class="fa fa-feed">', '/releases/feed.xml'
 - blog.articles.group_by {|a| a.date.year}.each do |year, articles|
   div class="year-#{year} list"
     h3.title #{year}年

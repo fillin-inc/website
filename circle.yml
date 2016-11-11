@@ -1,0 +1,30 @@
+general:
+  branches:
+    only:
+      - master
+
+machine:
+  timezone: Asia/Tokyo
+  ruby:
+    version: 2.3.1
+
+dependencies:
+  pre:
+    - pip install awscli
+    - aws configure set preview.cloudfront true
+  override:
+    - npm install
+    - bundle install --path vendor/bundle --jobs=4 --retry=3
+
+test:
+  override:
+    - bundle exec middleman version
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - bundle exec middleman s3_sync
+      - sleep 10
+      - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*'
+      - curl http://www.google.com/webmasters/sitemaps/ping -k --verbose --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"

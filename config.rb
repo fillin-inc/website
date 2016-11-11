@@ -19,8 +19,6 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
-activate :syntax
-activate :autoprefixer
 activate :generator_tag
 activate :vcs_time
 activate :gzip, exts: %w(.css .js .html .xml)
@@ -35,7 +33,8 @@ activate :external_pipeline,
   latency: 1
 
 configure :build do
-  ignore '/stylesheets/vendor/*'
+  ignore '/stylesheets/vendor/bulma/*'
+  ignore '/stylesheets/vendor/font-awesome/scss/*'
 
   activate :minify_css
   activate :minify_javascript
