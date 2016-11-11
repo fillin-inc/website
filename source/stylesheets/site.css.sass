@@ -16,11 +16,16 @@ main
   padding-left: 1em
   padding-right: 1em
 
-h2
+.title
   .fa
     padding-left: .25em
     vertical-align: 2%
     font-size: .9em
+  a
+    &:link, &:visited
+      border: none
+    &:hover
+      border-bottom: 1px solid $grey-lighter
 
 .content a:not(.button)
   .fa-feed
@@ -54,3 +59,16 @@ h2
 
 .privacy
   margin: 2em auto 4em
+
+body:not(.index)
+  section:first-child
+    margin-top: 5em
+
+body.releases
+  .article-data
+    margin-bottom: 2em
+    text-align: right
+  .updated
+    margin-left: .75em
+  .inquiry-info
+    margin-top: 8em
