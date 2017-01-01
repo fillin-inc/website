@@ -39,9 +39,34 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
     == partial 'layouts/header'
 
     main
-      .container
-        .columns
-          .column.is-half.is-offset-one-quarter.content
-            == yield
+      section#inquiry.inquiry
+        .container
+          .columns
+            .column.is-half.is-offset-one-quarter.content
+              - if is_blog_article?
+                h1.title #{current_page.data.title}
+
+                .article-data
+                  span.created created: #{current_page.date.strftime('%Y-%m-%d')}
+
+                == yield
+
+                .inquiry-info
+                  h3 問い合わせ先
+                  p
+                    |
+                      リリースに関するお問い合わせはこちらまでお願いします。
+
+                  ul
+                    li リリース担当者宛
+                    li
+                      == mail_to 'info@fillin-inc.com', 'info@fillin-inc.com', :subject => 'リリースお問い合わせ', :class => 'email-link'
+                      | または
+                      == link_to 'お問い合わせ', '/inquiry/'
+                      | からご連絡ください。
+                    li 一両日中の返信を心がけておりますが数日かかる場合があります。
+
+              - else
+                == yield
 
     == partial 'layouts/footer'

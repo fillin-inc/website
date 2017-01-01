@@ -15,7 +15,7 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
       xml.id URI.join(site_url, article.url)
       xml.published article.date.to_time.iso8601
       xml.updated File.mtime(article.source_file).iso8601
-      xml.author { xml.name article.data.aurhor }
+      xml.author '株式会社フィルイン'
       xml.content article.body, "type" => "html"
     end
   end
