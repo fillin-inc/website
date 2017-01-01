@@ -2,6 +2,7 @@ general:
   branches:
     only:
       - master
+      - develop
 
 machine:
   timezone: Asia/Tokyo
