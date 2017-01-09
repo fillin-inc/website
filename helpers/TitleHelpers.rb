@@ -1,6 +1,6 @@
 module TitleHelpers
   def release_title(resource)
-    base_title = '株式会社フィルイン'
+    base_title = '株式会社フィルイン -群馬でWebサービスを作る会社-'
     case resource.source_file
     when /release\/tag.html/
       /tags\/(.+)\// =~ resource.destination_path
