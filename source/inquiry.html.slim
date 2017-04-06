@@ -25,6 +25,10 @@ section#inquiry.inquiry
           p.control
             label.label
               input(class="checkbox" type="checkbox" name="プライバシーポリシー同意" data-formrun-required)
-              | &nbsp;プライバシーポリシーに同意します
+              | &nbsp;
+              == link_to 'プライバシーポリシー', '/privacy/'
+              | &nbsp;に同意します
 
-          button type="submit" class="button" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." 送信
+
+          .submit-box
+            button type="submit" class="button" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." 送信
