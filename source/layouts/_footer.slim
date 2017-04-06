@@ -3,6 +3,10 @@ footer.footer
     .content.has-text-centered
       small copyright &copy; 株式会社フィルイン some rights reserved.
 
+    .columns
+      .column.is-half.is-offset-one-quarter.content.has-text-centered
+        == link_to 'プライバシーポリシー', '/privacy/'
+
   == javascript_include_tag :site
   - if current_page.data.js
     == javascript_include_tag current_page.data.js
