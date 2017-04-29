@@ -18,6 +18,16 @@ activate :blog do |blog|
   blog.paginate = false
 end
 
+activate :robots,
+  :rules => [
+    {
+      user_agent: '*',
+      allow: %w(/),
+      disallow: %w(/inquiry/thanks/ /inquiry/thanks/index.html),
+    }
+  ],
+  :sitemap => 'https://www.fillin-inc.com/sitemap.xml'
+
 activate :directory_indexes
 activate :generator_tag
 activate :vcs_time

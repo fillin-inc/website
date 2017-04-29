@@ -1,6 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /inquiry/thanks/
-Disallow: /inquiry/thanks/index.html
-
-Sitemap: https://www.fillin-inc.com/sitemap.xml
