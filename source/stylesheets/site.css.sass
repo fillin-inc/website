@@ -1,7 +1,7 @@
 @charset 'utf-8'
+@import 'settings'
 @import 'vendor/bulma/bulma'
 @import 'vendor/font-awesome/scss/font-awesome'
-@import 'settings'
 @import 'header'
 
 html, body, main
@@ -21,7 +21,6 @@ main
   .fa
     padding-left: .25em
     vertical-align: 2%
-    font-size: .9em
   a
     &:link, &:visited
       border: none
@@ -46,11 +45,7 @@ main
   margin-bottom: 10em
 
   p
-    font-size: 1.2em
     line-height: 1.72
-
-  ul
-    font-size: 1.15em
 
 .company
   margin-bottom: 5em
@@ -58,7 +53,8 @@ main
 .releases
   min-height: 15em
 
-.releases
+  .list
+    margin-bottom: 2em
   .date
     margin-right: 1em
 
