@@ -1,14 +1,14 @@
-import $ from 'jquery';
+const navList = document.getElementById('nav-list');
+const hamburgerMenu = document.getElementById('hamburger');
 
-const navRight = $('.nav-right');
-
-$('.nav-toggle.hamburger').click(function (event) {
+hamburgerMenu.addEventListener('click', function (event) {
     event.preventDefault();
-    if ($(this).hasClass('is-active')) {
-        $(this).removeClass('is-active');
-        navRight.removeClass('is-active');
+    const elm = event.target;
+    if (elm.classList.contains('is-active')) {
+        elm.classList.remove('is-active');
+        navList.classList.remove('is-active');
     } else {
-        $(this).addClass('is-active');
-        navRight.addClass('is-active');
+        elm.classList.add('is-active');
+        navList.classList.add('is-active');
     }
 });

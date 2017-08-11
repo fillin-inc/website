@@ -1,37 +1,3 @@
-.level-item
-  .title,
-  .subtitle
-    margin-bottom: 0
-  // Responsiveness
-  +mobile
-    &:not(:last-child)
-      margin-bottom: 10px
-
-.level-left,
-.level-right
-  .level-item
-    &:not(:last-child)
-      margin-right: 10px
-    // Modifiers
-    &.is-flexible
-      flex-grow: 1
-
-.level-left
-  // Responsiveness
-  +mobile
-    & + .level-right
-      margin-top: 20px
-  +tablet
-    align-items: center
-    display: flex
-
-.level-right
-  // Responsiveness
-  +tablet
-    align-items: center
-    display: flex
-    justify-content: flex-end
-
 .level
   +block
   align-items: center
@@ -44,7 +10,12 @@
   // Modifiers
   &.is-mobile
     display: flex
-    & > .level-item
+    .level-left,
+    .level-right
+      display: flex
+    .level-left + .level-right
+      margin-top: 0
+    .level-item
       &:not(:last-child)
         margin-bottom: 0
       &:not(.is-narrow)
@@ -55,3 +26,47 @@
     & > .level-item
       &:not(.is-narrow)
         flex-grow: 1
+
+.level-item
+  align-items: center
+  display: flex
+  flex-basis: auto
+  flex-grow: 0
+  flex-shrink: 0
+  justify-content: center
+  .title,
+  .subtitle
+    margin-bottom: 0
+  // Responsiveness
+  +mobile
+    &:not(:last-child)
+      margin-bottom: 0.75rem
+
+.level-left,
+.level-right
+  flex-basis: auto
+  flex-grow: 0
+  flex-shrink: 0
+  .level-item
+    &:not(:last-child)
+      margin-right: 0.75rem
+    // Modifiers
+    &.is-flexible
+      flex-grow: 1
+
+.level-left
+  align-items: center
+  justify-content: flex-start
+  // Responsiveness
+  +mobile
+    & + .level-right
+      margin-top: 1.5rem
+  +tablet
+    display: flex
+
+.level-right
+  align-items: center
+  justify-content: flex-end
+  // Responsiveness
+  +tablet
+    display: flex

@@ -1,5 +1,5 @@
 ---
-description: 群馬で web サービスをつくる会社です
+description: 群馬で web サービスをつくる会社
 keyword: Web サービス開発, Web アプリケーション, 群馬県高崎市, PHP, Ruby, Ruby on Rails, Golang
 priority: 1.0
 ---
@@ -19,36 +19,29 @@ section#biz.biz
     .columns.content
       .column
         h3.title
-          i.fa.fa-cloud
-          | Web サービス開発
-        p
-          | Webサービスの企画, 開発ならびに運用を行います。<br>
-          | 現在は小型の Web サービスの開発を中心に進めています。人材の獲得と安定的な教育機会の確保, 同時に継続的な収益確保を目指しています。
+          == link_to 'services/web_development/' do
+            i.fa.fa-laptop
+            | Web サービス開発事業
 
-        ul
-          li サイト内検索 API <a href="https://lazysear.ch">LazySearch</a>
+        == link_to 'services/web_development/' do
+          == image_tag 'services/development.png', alt: ''
+
+        p
+          | Web サービスの企画, 検証, 開発ならびに運用を行います。<br>
+          | 自社サービスの開発によるナレッジの収集をベースにご依頼内容に応じて受託開発, SES に対応します。
 
       .column
         h3.title
-          i.fa.fa-laptop
-          | 新規事業開発支援
-        p
-          | 新規事業展開時の Web サービス展開や管理システム構築の支援を行います。<br>
-          | アジャイルやリーンスタートアップを導入した開発手法から事業検討まで初期段階から事業が安定的に立ち上がるまでサポートします。
-          | ビジネス展開に必要なデータ解析システム, 新しい技術要素の導入, エンジニア教育から各種 SaaS との連携まで広く対応します。
+          == link_to 'services/education/' do
+            i.fa.fa-graduation-cap
+            | 教育事業
 
-      .column
-        h3.title
-          i.fa.fa-cogs
-          | 受託開発
-        p
-          | Web アプリケーションを中心とした受託開発を承ります。ご要望に応じて月額制による開発参加やシステム丸ごとの定額開発まで対応します。
-          | 詳細は <a href="/inquiry/">お問い合わせ</a> よりお気軽にご連絡ください。
+        == link_to 'services/education/' do
+          == image_tag 'services/education.png', alt: ''
 
-        ul
-          li 対応言語:PHP, Ruby, Golang, JavaScript 他
-          li リモートワークによる開発参加可能
-          li 開発ツールのモダン環境へのアップデート, スタッフ教育 など
+        p
+          | Web プログラミングを中心とした社会人向け教育事業を行います。<br>
+          | 未経験からの転職をご希望の方, Web デザイナーからプログラマへ転身されたい方や技術力の向上を望まれる方を対象にしています。
 
 section#company.company
   .container

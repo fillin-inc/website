@@ -2,6 +2,9 @@
 title: 夏季休業のお知らせ
 date: 2017-07-30
 description: 2017年の夏季休業のお知らせです。8/11〜8/15 がおやすみです。
+breadcrumbs:
+  リリース: /releases/
+  夏季休業のお知らせ: /releases/2017/05/09/lazysearch-was-released-as-beta-version/
 ---
 
 弊社では下記の期間を夏季休業とさせていただきます。ご迷惑をおかけいたしますが何卒ご了承ください。

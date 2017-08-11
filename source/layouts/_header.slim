@@ -1,15 +1,14 @@
-header.header
+header.header class="#{current_page.path == 'index.html' ? '' : 'is-fixed'}"
   nav.nav
-    - if current_page.path != 'index.html'
-      .nav-left
-        == link_to image_tag('images/logo.svg', :alt => 'フィルインロゴ', :class => 'logo'), '/', :class => 'nav-item'
+    .nav-left class="#{current_page.path == 'index.html' ? 'index' : ''}"
+      == link_to image_tag('images/logo-white.svg', :alt => 'フィルインロゴ', :class => 'logo'), '/', :class => 'nav-item logo-link'
 
-    span.nav-toggle.hamburger
+    span#hamburger.nav-toggle.hamburger
       span
       span
       span
 
-    .nav-right.nav-menu.is-6
+    #nav-list.nav-right.nav-menu.is-6
       == link_to '事業内容', '/#biz', :class => 'nav-item'
       == link_to '会社情報', '/#company', :class => 'nav-item'
       == link_to 'リリース', '/releases/', :class => 'nav-item'
