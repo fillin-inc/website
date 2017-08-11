@@ -1,10 +1,13 @@
+$section-padding: 3rem 1.5rem !default
+$section-padding-medium: 9rem 1.5rem !default
+$section-padding-large: 18rem 1.5rem !default
+
 .section
-  background-color: $white
-  padding: 40px 20px
+  padding: $section-padding
   // Responsiveness
   +desktop
     // Sizes
     &.is-medium
-      padding: 120px 20px
+      padding: $section-padding-medium
     &.is-large
-      padding: 240px 20px
+      padding: $section-padding-large

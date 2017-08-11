@@ -8,9 +8,22 @@ body > .header
     right: 0
 
   .nav
-    max-width: 1200px
+    max-width: $fullhd
     margin: 0 auto
-    background: $white
     .logo
       display: block
       width: 100px
+  .nav-left.index
+    display: none
+
+aside.breadcrumbs
+  margin: 1em auto 2em
+
++tablet
+  body > .header.is-fixed
+    &, nav
+      background: lighten($black, 13%)
+      color: $white
+
+    .nav-item a:not(.button), a.nav-item:not(.button)
+      color: $white

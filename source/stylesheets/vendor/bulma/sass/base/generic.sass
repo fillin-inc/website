@@ -1,14 +1,32 @@
-$body-background: $white-ter !default
+$body-background-color: #fff !default
+$body-size: 16px !default
+$body-rendering: optimizeLegibility !default
+$body-family: $family-sans-serif !default
+$body-color: $text !default
+$body-weight: $weight-normal !default
+$body-line-height: 1.5 !default
+
+$code-family: $family-monospace !default
+$code-padding: 0.25em 0.5em 0.25em !default
+$code-weight: normal !default
+$code-size: 0.875em !default
+
+$hr-background-color: $border !default
+$hr-height: 1px !default
+$hr-margin: 1.5rem 0 !default
+
+$strong-color: $text-strong !default
+$strong-weight: $weight-bold !default
 
 html
-  background-color: $body-background
-  font-size: $size-normal
+  background-color: $body-background-color
+  font-size: $body-size
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
   min-width: 300px
   overflow-x: hidden
   overflow-y: scroll
-  text-rendering: optimizeLegibility
+  text-rendering: $body-rendering
 
 article,
 aside,
@@ -24,20 +42,19 @@ button,
 input,
 select,
 textarea
-  font-family: $family-primary
+  font-family: $body-family
 
 code,
 pre
   -moz-osx-font-smoothing: auto
   -webkit-font-smoothing: auto
-  font-family: $family-code
-  line-height: 1.25
+  font-family: $code-family
 
 body
-  color: $text
+  color: $body-color
   font-size: 1rem
-  font-weight: $weight-normal
-  line-height: 1.428571428571429
+  font-weight: $body-weight
+  line-height: $body-line-height
 
 // Inline
 
@@ -45,25 +62,27 @@ a
   color: $link
   cursor: pointer
   text-decoration: none
-  transition: none $speed $easing
+  strong
+    color: currentColor
   &:hover
     color: $link-hover
 
 code
   background-color: $code-background
   color: $code
-  font-size: 12px
-  font-weight: normal
-  padding: 1px 2px 2px
+  font-size: $code-size
+  font-weight: $code-weight
+  padding: $code-padding
 
 hr
-  background-color: $border
+  background-color: $hr-background-color
   border: none
   display: block
-  height: 1px
-  margin: 20px 0
+  height: $hr-height
+  margin: $hr-margin
 
 img
+  height: auto
   max-width: 100%
 
 input[type="checkbox"],
@@ -71,32 +90,34 @@ input[type="radio"]
   vertical-align: baseline
 
 small
-  font-size: $size-small
+  font-size: 0.875em
 
 span
   font-style: inherit
   font-weight: inherit
 
 strong
-  color: $text-strong
-  font-weight: $weight-bold
+  color: $strong-color
+  font-weight: $strong-weight
 
 // Block
 
 pre
   background-color: $pre-background
   color: $pre
+  font-size: 0.875em
   white-space: pre
   word-wrap: normal
   code
-    background-color: $pre-background
-    color: $pre
+    +overflow-touch
+    background: none
+    color: inherit
     display: block
+    font-size: 1em
     overflow-x: auto
-    padding: 16px 20px
+    padding: 1.25rem 1.5rem
 
 table
-  width: 100%
   td,
   th
     text-align: left

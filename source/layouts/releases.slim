@@ -1,72 +1,29 @@
-doctype html
-html lang="ja" prefix="og: http://ogp.me/ns#"
-  head
-    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
-    meta charset="utf-8"
-    meta content="width=device-width,initial-scale=1.0,user-scalable=yes" name="viewport"
-    link rel="canonical" href="https://www.fillin-inc.com#{current_page.url}"
+= wrap_layout :layout do
+  section#inquiry.inquiry
+    .container
+      .columns
+        .column.is-two-thirds.is-offset-2.content
+          - unless is_blog_article?
+            == yield
+          - else
+            h1.title #{current_page.data.title}
 
-    title
-      = release_title(current_resource)
+            .article-data
+              span.created created: #{current_page.date.strftime('%Y-%m-%d')}
 
-    - if current_page.data.keyword
-      meta name="keywords" content="#{current_page.data.keyword}"
+            == yield
 
-    - if current_page.data.description
-      meta name="description" content="#{current_page.data.description}"
+            .inquiry-info
+              h3 問い合わせ先
+              p
+                |
+                  リリースに関するお問い合わせはこちらまでお願いします。
 
-    meta property="og:title" content="#{release_title(current_resource)}"
-    meta property="og:type" content="website"
-    meta property="og:url" content="https://www.fillin-inc.com#{current_page.url}"
-    meta property="og:description" content="#{current_page.data.description}"
-    meta property="og:image" content="https://www.fillin-inc.com/images/ogp.png"
-    meta property="og:site_name" content="株式会社フィルイン -群馬でWebサービスを作る会社-"
-    meta property="fb:app_id" content="#{data.facebook.app_id}"
-
-    meta name="twitter:card" content="summary"
-    meta name="twitter:description" content="#{current_page.data.description}"
-    meta name="twitter:image" content="https://www.fillin-inc.com/images/ogp-square.png"
-    meta name="twitter:title" content="#{release_title(current_resource)}"
-
-    == partial 'layouts/favicon'
-
-    - if build?
-      == javascript_include_tag "google-analytics.js"
-
-    == stylesheet_link_tag :site
-
-  body class="#{page_classes}"
-    == partial 'layouts/header'
-
-    main
-      section#inquiry.inquiry
-        .container
-          .columns
-            .column.is-half.is-offset-one-quarter.content
-              - if is_blog_article?
-                h1.title #{current_page.data.title}
-
-                .article-data
-                  span.created created: #{current_page.date.strftime('%Y-%m-%d')}
-
-                == yield
-
-                .inquiry-info
-                  h3 問い合わせ先
-                  p
-                    |
-                      リリースに関するお問い合わせはこちらまでお願いします。
-
-                  ul
-                    li リリース担当者宛
-                    li
-                      == mail_to 'info@fillin-inc.com', 'info@fillin-inc.com', :subject => 'リリースお問い合わせ', :class => 'email-link'
-                      | または
-                      == link_to 'お問い合わせ', '/inquiry/'
-                      | からご連絡ください。
-                    li 一両日中の返信を心がけておりますが数日かかる場合があります。
-
-              - else
-                == yield
-
-    == partial 'layouts/footer'
+              ul
+                li リリース担当者宛
+                li
+                  == mail_to 'info@fillin-inc.com', 'info@fillin-inc.com', :subject => 'リリースお問い合わせ', :class => 'email-link'
+                  | または
+                  == link_to 'お問い合わせ', '/inquiry/'
+                  | からご連絡ください。
+                li 一両日中の返信を心がけておりますが数日かかる場合があります。
