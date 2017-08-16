@@ -43,6 +43,22 @@ section#biz.biz
           | Web プログラミングを中心とした社会人向け教育事業を行います。<br>
           | 未経験からの転職をご希望の方, Web デザイナーからプログラマへ転身されたい方や技術力の向上を望まれる方を対象にしています。
 
+section#releases.releases
+  .container
+    .columns
+      .column.is-half.is-offset-one-quarter.content
+        h2.title
+          | リリース
+          == link_to '<i class="fa fa-feed">', '/releases/feed.xml'
+
+        ul
+          - blog(:releases).articles[0...5].each do |article|
+            li
+              == link_to article.url do
+                span.date
+                  = article.date.strftime('%Y-%m-%d')
+                = article.title
+
 section#company.company
   .container
     .columns
@@ -81,19 +97,3 @@ section#company.company
                   370-0849<br>
                   群馬県高崎市八島町58番地1<br>
                   ウエストワンビル10F1011号
-
-section#releases.releases
-  .container
-    .columns
-      .column.is-half.is-offset-one-quarter.content
-        h2.title
-          | リリース
-          == link_to '<i class="fa fa-feed">', '/releases/feed.xml'
-
-        ul
-          - blog(:releases).articles[0...5].each do |article|
-            li
-              == link_to article.url do
-                span.date
-                  = article.date.strftime('%Y-%m-%d')
-                = article.title
