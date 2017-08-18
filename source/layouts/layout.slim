@@ -22,7 +22,8 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
     == partial 'layouts/favicon'
 
     - if build?
-      == javascript_include_tag "google-analytics.js"
+      script
+        == partial "javascripts/google-analytics.js"
 
     == stylesheet_link_tag :site
 
