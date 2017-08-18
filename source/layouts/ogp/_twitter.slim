@@ -1,9 +1,6 @@
 meta name="twitter:card" content="summary"
 meta name="twitter:description" content="#{current_page.data.description}"
-- if current_page.data.ogp_image
-  meta name="twitter:image" content="#{File.join('/images/', current_page.data.ogp_image)}"
-- else
-  meta name="twitter:image" content="https://www.fillin-inc.com/images/ogp-square.png"
+meta name="twitter:image" content="https://www.fillin-inc.com/images/ogp-square.png"
 - if current_page.data.title
   meta name="twitter:title" content="#{current_page.data.title} | 株式会社フィルイン -群馬でWebサービスを作る会社-"
 - else

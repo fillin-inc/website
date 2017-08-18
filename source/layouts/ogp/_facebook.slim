@@ -10,5 +10,11 @@ meta property="og:description" content="#{current_page.data.description}"
   meta property="og:image" content="#{File.join('/images/', current_page.data.ogp_image)}"
 - else
   meta property="og:image" content="https://www.fillin-inc.com/images/ogp.png"
+
+- if current_page.data.ogp_image_width
+  meta property="og:image:width" content="#{current_page.data.ogp_image_width}"
+- if current_page.data.ogp_image_height
+  meta property="og:image:height" content="#{current_page.data.ogp_image_height}"
+
 meta property="og:site_name" content="株式会社フィルイン | 群馬でWebサービスを作る会社"
 meta property="fb:app_id" content="#{data.facebook.app_id}"
