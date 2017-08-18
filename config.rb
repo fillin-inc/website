@@ -54,3 +54,4 @@ end
 activate :s3_sync do |s3|
   s3.region = 'ap-northeast-1'
 end
+default_caching_policy max_age: (60 * 60 * 24 * 365), public: true, must_revalidate: true
