@@ -7,7 +7,7 @@ meta property="og:type" content="website"
 meta property="og:url" content="https://www.fillin-inc.com#{current_page.url}"
 meta property="og:description" content="#{current_page.data.description}"
 - if current_page.data.ogp_image
-  meta property="og:image" content="#{File.join('/images/', current_page.data.ogp_image)}"
+  meta property="og:image" content="#{'https://www.fillin-inc.com' + File.join('/images/', current_page.data.ogp_image)}"
 - else
   meta property="og:image" content="https://www.fillin-inc.com/images/ogp.png"
 
