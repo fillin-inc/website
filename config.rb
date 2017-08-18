@@ -31,7 +31,8 @@ activate :robots,
 activate :directory_indexes
 activate :generator_tag
 activate :vcs_time
-activate :gzip, exts: %w(.css .js .html .xml)
+activate :gzip
+activate :asset_hash
 
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, tables: true, autolink: true
