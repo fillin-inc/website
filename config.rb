@@ -57,3 +57,6 @@ activate :s3_sync do |s3|
   s3.error_document = '404/index.html'
 end
 default_caching_policy max_age: (60 * 60 * 24 * 365), public: true, must_revalidate: true
+caching_policy 'text/html', max_age: 60 * 10
+caching_policy 'text/plain', max_age: 60 * 10
+caching_policy 'application/xml', max_age: 60 * 10
