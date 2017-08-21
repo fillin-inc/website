@@ -35,14 +35,22 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
         - last_url = current_page.data.breadcrumbs.values.last
         aside.container.breadcrumbs
           nav.breadcrumb.has-succeeds-separator aria-label="breadcrumbs"
-            ul
-              li
-                == link_to 'トップ', '/'
+            ul itemscope="true" itemtype="http://schema.org/BreadcrumbList"
+              li itemprop="itemListElement" itemscope="true" itemtype="http://schema.org/ListItem"
+                == link_to 'トップ', '/', itemscope: true, itemtype: 'http://schema.org/Thing', itemprop: 'item'
+                meta itemprop="position" content="1"
+              - content_num = 1
               - current_page.data.breadcrumbs.each do |title, url|
                 - if last_url == url
-                  li.is-active #{link_to title, url}
+                  li.is-active itemprop="itemListElement" itemscope="true" itemtype="http://schema.org/ListItem"
+                    == link_to url, itemscope: true, itemtype: 'http://schema.org/Thing', itemprop: 'item' do
+                      span itemprop="name" #{title}
+                    meta itemprop="position" content="#{content_num += 1}"
                 - else
-                  li #{link_to title, url}
+                  li itemprop="itemListElement" itemscope="true" itemtype="http://schema.org/ListItem"
+                    == link_to url, itemscope: true, itemtype: 'http://schema.org/Thing', itemprop: 'item' do
+                      span itemprop="name" #{title}
+                    meta itemprop="position" content="#{content_num += 1}"
 
       == yield
 
