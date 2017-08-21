@@ -1,8 +1,38 @@
 <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "url": "https://www.fillin-inc.com/",
-    "logo": "https://www.fillin-inc.com<%= image_path 'logo.svg' %>"
-  }
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://www.fillin-inc.com/",
+  "logo": "https://www.fillin-inc.com<%= image_path 'logo.svg' %>"
+}
 </script>
+<% if current_page.path == 'index.html' %>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "ItemList",
+  "itemListElement":[
+    {
+      "@type": "ListItem",
+      "position": "1",
+      "url": "https://www.fillin-inc.com/services/web_development/"
+    },
+    {
+      "@type": "ListItem",
+      "position": "2",
+      "url": "https://www.fillin-inc.com/services/education/"
+    },
+    {
+      "@type": "ListItem",
+      "position": "3",
+      "url": "https://www.fillin-inc.com/releases/"
+    },
+    {
+      "@type": "ListItem",
+      "position": "4",
+      "url": "https://www.fillin-inc.com/inquiry/"
+    }
+  ]
+}
+</script>
+<% end %>
