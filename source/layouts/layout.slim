@@ -17,6 +17,7 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
     - if current_page.data.description
       meta name="description" content="#{current_page.data.description}"
 
+    == partial 'layouts/ogp/common'
     == partial 'layouts/ogp/facebook'
     == partial 'layouts/ogp/twitter'
     == partial 'layouts/favicon'
