@@ -22,10 +22,10 @@
   },
   "homepage": "https://www.fillin-inc.com/",
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-preset-env": "^1.6.0",
-    "webpack": "^3.5.3"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.8.1"
   },
   "engines": {
     "node": ">= 4.0.0",
