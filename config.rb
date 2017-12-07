@@ -23,7 +23,7 @@ activate :robots,
     {
       user_agent: '*',
       allow: %w(/),
-      disallow: %w(/inquiry/thanks/ /inquiry/thanks/index.html),
+      disallow: %w(/404/ /inquiry/thanks/ /inquiry/thanks/index.html),
     }
   ],
   :sitemap => 'https://www.fillin-inc.com/sitemap.xml'
