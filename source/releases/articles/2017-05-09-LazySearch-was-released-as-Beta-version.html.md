@@ -7,7 +7,7 @@ breadcrumbs:
   LazySearch beta版がリリースされました: releases/2017/05/09/lazysearch-was-released-as-beta-version/
 ---
 
-Mitsume として開発が継続されてきたサイト内検索 API サービスが名前を変えてベータ版としてリリースされました。
+サイト内検索 API サービスが名前を変えてベータ版としてリリースされました。
 
 [LazySearch \(レイジーサーチ\)](https://lazysear.ch/)
 
