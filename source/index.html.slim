@@ -18,30 +18,39 @@ section#biz.biz
     h2.title 事業内容
     .columns.content
       .column
-        h3.title
-          == link_to 'services/web_development/' do
-            i.fa.fa-laptop
-            | Web サービス開発事業
+        == link_to 'https://lazysear.ch/' do
+          == image_tag 'index/lazysearch.png', alt: ''
 
-        == link_to 'services/web_development/' do
-          == image_tag 'services/development.png', alt: ''
+        == link_to 'https://lazysear.ch/' do
+          h3.title
+            | LazySearch
+            i.fa.fa-external-link
 
         p
-          | Web サービスの企画, 検証, 開発ならびに運用を行います。<br>
-          | 自社サービスの開発によるナレッジの収集をベースにご依頼内容に応じて受託開発, SES に対応します。
+          | サイト内検索サービスの企画, 開発, 運営。<br>
+          | Middleman や Jekyll のような静的サイトジェネレータにサイト内検索を組込むことができるサービスです。
 
       .column
-        h3.title
-          == link_to 'services/education/' do
-            i.fa.fa-graduation-cap
-            | 教育事業
+        == link_to 'services/web_development/' do
+          == image_tag 'index/development.png', alt: ''
 
-        == link_to 'services/education/' do
-          == image_tag 'services/education.png', alt: ''
+        == link_to '/services/web_development/' do
+          h3.title Web サービス開発事業
 
         p
-          | Web プログラミングを中心とした社会人向け教育事業を行います。<br>
-          | 未経験からの転職をご希望の方, Web デザイナーからプログラマへ転身されたい方や技術力の向上を望まれる方を対象にしています。
+          | Web サービスの企画, 検証, 開発ならびに運用。<br>
+          | 自社サービス開発で培ったナレッジをベースにご依頼内容に対応します。
+
+      .column
+        == link_to 'services/education/' do
+          == image_tag 'index/education.png', alt: ''
+
+        == link_to '/services/education/' do
+          h3.title 教育事業
+
+        p
+          | 社会人向け Web プログラミング教育事業。<br>
+          | 未経験からの転職, Web デザイナーからプログラマへ転身される方をサポートします。
 
 section#releases.releases
   .container
