@@ -1,17 +1,14 @@
 version: 2
 
-default: &default
-  working_directory: ~/website
-  docker:
-    - image: yterajima/middleman:latest
-      environment:
-        TZ: Asia/Tokyo
-        LANG: ja_JP.UTF-8
-        MM_ENV: production
-
 jobs:
   build:
-    <<: *default
+    working_directory: ~/website
+    docker:
+      - image: yterajima/middleman:latest
+        environment:
+          TZ: Asia/Tokyo
+          LANG: ja_JP.UTF-8
+          MM_ENV: production
     steps:
       - checkout
       - run: mkdir -p ~/website/fillin/build
@@ -37,7 +34,12 @@ jobs:
           root: fillin
           paths: build
   deploy:
-    <<: *default
+    working_directory: ~/website
+    docker:
+      - image: yterajima/awscli:latest
+        environment:
+          TZ: Asia/Tokyo
+          LANG: ja_JP.UTF-8
     steps:
       - attach_workspace:
           at: fillin
