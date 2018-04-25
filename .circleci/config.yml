@@ -37,15 +37,13 @@ jobs:
     working_directory: ~/website
     docker:
       - image: yterajima/awscli:latest
-        environment:
-          TZ: Asia/Tokyo
-          LANG: ja_JP.UTF-8
     steps:
       - attach_workspace:
           at: fillin
-      - run: aws configure set preview.cloudfront true
-      - run: ls -al fillin/build/
-      - run: aws s3 sync fillin/build/ s3://$AWS_BUCKET --delete
+      - run: |
+          aws configure set preview.cloudfront true
+          ls -al fillin/build/
+          aws s3 sync fillin/build/ s3://$AWS_BUCKET --delete
       - run: sleep 5
       - run: aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*'
       - run: curl http://www.google.com/webmasters/sitemaps/ping -k --verbose --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"
