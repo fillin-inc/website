@@ -1,5 +1,4 @@
 version: 2
-
 jobs:
   build:
     working_directory: ~/website
@@ -42,7 +41,6 @@ jobs:
           at: fillin
       - run: |
           aws configure set preview.cloudfront true
-          ls -al fillin/build/
           aws s3 sync fillin/build/ s3://$AWS_BUCKET --delete
       - run: sleep 5
       - run: aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*'
