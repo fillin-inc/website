@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/website
     docker:
-      - image: yterajima/middleman:latest
+      - image: yterajima/middleman:2.5.1
         environment:
           TZ: Asia/Tokyo
           LANG: ja_JP.UTF-8
@@ -35,7 +35,7 @@ jobs:
   deploy:
     working_directory: ~/website
     docker:
-      - image: yterajima/awscli:latest
+      - image: yterajima/awscli:v1
     steps:
       - attach_workspace:
           at: fillin
