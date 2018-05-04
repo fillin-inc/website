@@ -1,13 +1,17 @@
 version: 2
+
+default: &default
+  working_directory: ~/website
+  docker:
+    - image: yterajima/middleman:2.5.1
+      environment:
+        TZ: Asia/Tokyo
+        LANG: ja_JP.UTF-8
+        MM_ENV: production
+
 jobs:
-  build:
-    working_directory: ~/website
-    docker:
-      - image: yterajima/middleman:2.5.1
-        environment:
-          TZ: Asia/Tokyo
-          LANG: ja_JP.UTF-8
-          MM_ENV: production
+  release:
+    <<: *default
     steps:
       - checkout
       - run: mkdir -p ~/website/fillin/build
@@ -28,32 +32,47 @@ jobs:
       - save_cache:
           key: npm-cache-{{ checksum "package-lock.json" }}
           paths: node_modules
-      - run: NO_CONTRACTS=true bundle exec middleman build --build-dir ~/website/fillin/build
-      - persist_to_workspace:
-          root: fillin
-          paths: build
-  deploy:
-    working_directory: ~/website
-    docker:
-      - image: yterajima/awscli:v1
-    steps:
-      - attach_workspace:
-          at: fillin
       - run: |
+          NO_CONTRACTS=true bundle exec middleman build
+          NO_CONTRACTS=true bundle exec middleman s3_sync
+          sleep 5
           aws configure set preview.cloudfront true
-          aws s3 sync fillin/build/ s3://$AWS_BUCKET --delete
-      - run: sleep 5
-      - run: aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*'
-      - run: curl http://www.google.com/webmasters/sitemaps/ping -k --verbose --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"
+          aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*'
+          curl http://www.google.com/webmasters/sitemaps/ping --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"
+  build:
+    <<: *default
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - gem-cache-{{ checksum "Gemfile.lock" }}
+            - gem-cache-
+      - restore_cache:
+          keys:
+            - npm-cache-{{ checksum "package-lock.json" }}
+            - npm-cache-
+      - run: |
+          bundle install --path vendor/bundle
+          npm install
+      - save_cache:
+          key: gem-cache-{{ checksum "Gemfile.lock" }}
+          paths: vendor/bundle
+      - save_cache:
+          key: npm-cache-{{ checksum "package-lock.json" }}
+          paths: node_modules
+      - run: NO_CONTRACTS=true bundle exec middleman build
 
 workflows:
   version: 2
-  build-deploy:
+  build-release:
     jobs:
-      - build
-      - deploy:
-          requires:
-            - build
+      - release:
           filters:
             branches:
               only: master
+  only-build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: master
