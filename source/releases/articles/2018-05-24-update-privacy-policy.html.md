@@ -3,7 +3,7 @@ title: プライバシーポリシーを変更しました
 date: 2018-05-24
 breadcrumbs:
     リリース: /releases/
-    本社移転のお知らせ: /releases/2018/05/24/update-privacy-policy/
+    プライバシーポリシーを変更しました: /releases/2018/05/24/update-privacy-policy/
 ---
 
 現在ご覧いただいている当社 Web サイト(https://www.fillin-inc.com) のプライバシーポリシーを変更いたしましたので, お知らせいたします。
