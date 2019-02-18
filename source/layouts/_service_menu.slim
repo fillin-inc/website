@@ -1,0 +1,6 @@
+aside.menu
+  p.menu-label サービス
+  ul.menu-list
+    - data.services.each do |service|
+      li
+        == link_to service.name, service.path, class: current_page.url == service.path ? 'is-active' : ''

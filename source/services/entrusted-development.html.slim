@@ -57,15 +57,5 @@ section
           li 開発費や運用費の補助金依存が強くビジネスの継続性が難しいと考えられるもの
 
       .column
-        aside.menu
-          p.menu-label サービス
-          ul.menu-list
-            li
-              == link_to '受託開発', '/services/entrusted-development/', class: 'is-active'
-            li
-              == link_to '開発支援', '/services/service-engineering-service/'
-            li
-              == link_to 'プログラミング教育', '/services/programming-education/'
-            li
-              == link_to 'コンサルティング', '/services/consulting/'
+        == partial 'layouts/service_menu'
 
