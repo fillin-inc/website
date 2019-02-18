@@ -11,14 +11,9 @@ footer.footer
             li
               | サービス
               ul
-                li
-                  == link_to '受託開発', '/services/entrusted-development/'
-                li
-                  == link_to '開発支援', '/services/service-engineering-service/'
-                li
-                  == link_to 'プログラミング教育', '/services/programming-education/'
-                li
-                  == link_to 'コンサルティング', '/services/consulting/'
+                - data.services.each do |service|
+                  li
+                    == link_to service.name, service.path
 
       .column.is-one-quarter
         ul.sitemap-2

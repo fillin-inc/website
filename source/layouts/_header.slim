@@ -14,10 +14,8 @@ header.header
           .navbar-item.has-dropdown.is-hoverable
             a.navbar-link 事業内容
             .navbar-dropdown
-              == link_to '受託開発', '/services/entrusted-development/', class: 'navbar-item'
-              == link_to '開発支援', '/services/service-engineering-service/', class: 'navbar-item'
-              == link_to 'プログラミング教育', '/services/programming-education/', class: 'navbar-item'
-              == link_to 'コンサルティング', '/services/consulting/', class: 'navbar-item'
+              - data.services.each do |service|
+                == link_to service.name, service.path, class: 'navbar-item'
           == link_to 'お知らせ', '/releases/', class: 'navbar-item'
           == link_to '代表挨拶', '/message/', class: 'navbar-item'
           == link_to 'お問い合わせ', '/inquiry/', class: 'navbar-item'
