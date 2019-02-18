@@ -28,33 +28,14 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
       script
         == partial "javascripts/google-analytics.js"
 
+    / TODO: CSS ファイル名変更
     == stylesheet_link_tag :site
+    / TODO: 構造化データの確認
     == partial 'layouts/structured_data'
   body class="#{page_classes}"
-    == partial 'layouts/header'
+    = partial 'layouts/header'
 
     main
-      - if current_page.data['breadcrumbs']
-        - last_url = current_page.data.breadcrumbs.values.last
-        aside.container.breadcrumbs
-          nav.breadcrumb.has-succeeds-separator aria-label="breadcrumbs"
-            ul itemscope="true" itemtype="http://schema.org/BreadcrumbList"
-              li itemprop="itemListElement" itemscope="true" itemtype="http://schema.org/ListItem"
-                == link_to 'トップ', '/', itemscope: true, itemtype: 'http://schema.org/Thing', itemprop: 'item'
-                meta itemprop="position" content="1"
-              - content_num = 1
-              - current_page.data.breadcrumbs.each do |title, url|
-                - if last_url == url
-                  li.is-active itemprop="itemListElement" itemscope="true" itemtype="http://schema.org/ListItem"
-                    == link_to url, itemscope: true, itemtype: 'http://schema.org/Thing', itemprop: 'item' do
-                      span itemprop="name" #{title}
-                    meta itemprop="position" content="#{content_num += 1}"
-                - else
-                  li itemprop="itemListElement" itemscope="true" itemtype="http://schema.org/ListItem"
-                    == link_to url, itemscope: true, itemtype: 'http://schema.org/Thing', itemprop: 'item' do
-                      span itemprop="name" #{title}
-                    meta itemprop="position" content="#{content_num += 1}"
-
       == yield
 
     == partial 'layouts/footer'
