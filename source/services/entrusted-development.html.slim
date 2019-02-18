@@ -6,11 +6,7 @@ changefreq: monthly
 ---
 
 section
-  .title-block
-    .container
-      .title-wrapper
-        h1.title 受託開発
-        h2.subtitle Entrusted Development
+  == partial 'layouts/title_block', locals: { title: current_page.data.title, english_title: 'Entrusted Development' }
 
   .container
     .columns

@@ -6,11 +6,7 @@ changefreq: monthly
 ---
 
 section
-  .title-block
-    .container
-      .title-wrapper
-        h1.title 開発支援
-        h2.subtitle Service Engineering Service
+  == partial 'layouts/_title_block', locals: { title: current_page.data.title, english_title: 'Service Engineering Service' }
 
   .container
     .columns
