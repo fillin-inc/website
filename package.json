@@ -1,0 +1,40 @@
+{
+  "name": "fillin-inc-website",
+  "version": "0.3.0",
+  "description": "[株式会社フィルイン](https://www.fillin-inc.com/) のコードです。Middleman を使っています。",
+  "main": "source/javascripts/site.js",
+  "scripts": {
+    "build": "webpack --bail --mode production",
+    "watch": "webpack -d --watch --mode development",
+    "clear": "rm -r source/javascripts/dist/* && touch source/javascripts/dist/.gitkeep"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/fillin-inc/website.git"
+  },
+  "keywords": [
+    "fillin"
+  ],
+  "author": "fillin Inc.",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fillin-inc/website/issues"
+  },
+  "homepage": "https://www.fillin-inc.com/",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "babel-loader": "^8.0.5",
+    "@babel/preset-env": "^7.3.1",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.2"
+  },
+  "engines": {
+    "node": ">= 10.15.1",
+    "npm": ">= 6.5.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}

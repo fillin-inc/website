@@ -9,10 +9,17 @@ module.exports = {
   },
 
   module: {
-    rules: [{
-      test: /source\/javascripts\/*\.js$/,
-      loader: 'babel-loader',
-      exclude: /node_modules|\.tmp|vendor/
-    }]
+    rules: [
+      {
+        test: /source\/javascripts\/*\.js$/,
+        exclude: /node_modules|\.tmp|vendor/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
   }
 };
