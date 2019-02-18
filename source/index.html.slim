@@ -1,94 +1,137 @@
 ---
-description: Ruby on RailsやGoを使った自社Webサービス開発やSESが主力事業です。リモートスタイルからリーンスタートアップまで顧客開発を通したプロトタイプから新規事業開発のお手伝いが可能です。
-keyword: Web サービス開発, Web アプリケーション, 群馬県高崎市, PHP, Ruby, Ruby on Rails, Golang
-priority: 1.0
+layout: false
 ---
+doctype html
+html lang="ja" prefix="og: http://ogp.me/ns#"
+  head
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta charset="utf-8"
+    meta content="width=device-width,initial-scale=1.0,user-scalable=yes" name="viewport"
 
-section#hero.hero
-  .hero-body
-    .container.has-text-centered
-      h1.title
-        == image_tag 'images/logo.svg', :alt => '株式会社フィルインロゴ', :class => 'logo'
-      h2.subtitle
-        | 群馬で Web サービスをつくる会社
+    - if current_page.data.title
+      title #{current_page.data.title} | 株式会社フィルイン -群馬でWebサービスを作る会社-
+    - else
+      title 株式会社フィルイン | 群馬でWebサービスをつくる会社
 
+    - if current_page.data.keyword
+      meta name="keywords" content="#{current_page.data.keyword}"
 
-section#biz.biz
-  .container
-    h2.title 事業内容
-    .columns.content
-      .column
-        == link_to 'services/web_development/' do
-          == image_tag 'index/development.png', alt: ''
+    - if current_page.data.description
+      meta name="description" content="#{current_page.data.description}"
 
-        == link_to '/services/web_development/' do
-          h3.title Web サービス開発事業
+    - unless current_page.url == '/404/'
+      link rel="canonical" href="https://www.fillin-inc.com#{current_page.url}"
+      == partial 'layouts/ogp/common'
+      == partial 'layouts/ogp/facebook'
+      == partial 'layouts/ogp/twitter'
 
-        p
-          | Web サービスの企画, 検証, 開発ならびに運用。<br>
-          | 自社サービス開発で培ったナレッジをベースにご依頼内容に対応します。
+    == partial 'layouts/favicon'
 
-      .column
-        == link_to 'services/education/' do
-          == image_tag 'index/education.png', alt: ''
+    - if build?
+      script
+        == partial "javascripts/google-analytics.js"
 
-        == link_to '/services/education/' do
-          h3.title 教育事業
+    / TODO: CSS ファイル名変更
+    == stylesheet_link_tag :site
+    / TODO: 構造化データの確認
+    == partial 'layouts/structured_data'
+  body class="#{page_classes}"
+    = partial 'layouts/header'
 
-        p
-          | 社会人向け Web プログラミング教育事業。<br>
-          | 未経験からの転職, Web デザイナーからプログラマへ転身される方をサポートします。
+    section.hero.first
+      .hero-body
+        .container.has-text-centered
+          .text
+            h1.title.has-text-white 群馬で Web サービスをつくる会社
+            h2.subtitle.has-text-white ビジネスの継続的な発展を目指す
 
-section#releases.releases
-  .container
-    .columns
-      .column.is-half.is-offset-one-quarter.content
-        h2.title
-          | リリース
-          == link_to '<i class="fa fa-feed">', '/releases/feed.xml'
+    section.hero.second
+      .hero-body
+        .container.has-text-centered
+          == image_tag 'images/logomark.svg', class: 'logo-mark'
+          h1.title.has-text-white 当社は Web アプリケーション開発を専門としたシステム開発会社です。
+          h2.subtitle.has-text-white 受託開発や開発支援を通じてお客様のビジネスの継続的な発展をお手伝いします。
 
-        ul
-          - blog(:releases).articles[0...5].each do |article|
-            li
-              == link_to article.url do
-                span.date
-                  = article.date.strftime('%Y-%m-%d')
-                = article.title
+    .office-room &nbsp;
 
-section#company.company
-  .container
-    .columns
-      .column.is-half.is-offset-one-quarter
-        h2.title 会社情報
-        table.table
-          tbody.content
-            tr
-              th 会社名
-              td 株式会社フィルイン
-            tr
-              th 代表取締役
-              td 松島 祐也
-            tr
-              th 設立
-              td 2016年9月1日
-            tr
-              th 資本金
-              td 100万円
-            tr
-              th 事業内容
-              td
-                ul
-                  li Webサービスの企画,開発および運営
-                  li コンピュータソフトウェアの企画,開発および販売
-                  li IT技術に関するセミナーの企画および運営
-            tr
-              th 連絡先
-              td
-                == mail_to 'info@fillin-inc.com', 'info@fillin-inc.com'
+    section.service.container
+      h1.title.has-text-centered サービス
 
-            tr
-              th 所在地
-              td
-                |
-                  370-0813<br>
-                  群馬県高崎市本町48番地
+      .columns
+        .column
+          == link_to '/services/entrusted-development/' do
+            .wrapper
+              == image_tag 'images/index/computer.png', width: 284, height: 284, alt: '', class: 'circle-image'
+            h2 受託開発
+          p Ruby on Rails や PHP フレームワーク, パッケージを使用したWebサービスやシステムの開発をお請けしております。
+
+        .column
+          == link_to '/services/service-engineering-service/' do
+            .wrapper
+              == image_tag 'images/index/cross-hands.png', width: 284, height: 284, alt: '', class: 'circle-image'
+            h2 開発支援
+          p お客様のサービス開発に必要な要員や技術の提供を行っています。リモートワークを主とした都内案件が中心になります。
+
+        .column
+          == link_to '/services/programming-education/' do
+            .wrapper
+              == image_tag 'images/index/screen.png', width: 284, height: 284, alt: '', class: 'circle-image'
+            h2 プログラミング教育
+          p プログラミングやシステム開発能力向上を目指した教育事業を行っています。企業内教育としてもご利用いただけます。
+
+        .column
+          == link_to '/services/consulting/' do
+            .wrapper
+              == image_tag 'images/index/computer-with-human.png', width: 284, height: 284, alt: '', class: 'circle-image'
+            h2 コンサルティング
+          p 非IT企業向けIT導入コンサルティングを行っています。事業の効率化を通してお客様の事業に貢献します。
+
+    section.information.container
+      .columns
+        section.column.release
+          h1.title.has-text-centered お知らせ
+
+          ul
+            - blog(:releases).articles[0...5].each do |article|
+              li
+                == link_to article.url do
+                  .date
+                    == article.date.strftime('%Y-%m-%d')
+                  .article-title
+                    == article.title
+
+        section.column.company
+          h1.title.has-text-centered 会社概要
+
+          table.table.is-striped.is-fullwidth
+            tbody
+              tr
+                th 会社名
+                td 株式会社フィルイン
+              tr
+                th 代表取締役
+                td 松島&nbsp;祐也
+              tr
+                th 設立
+                td 2016 年 9 月 1 日
+              tr
+                th 資本金
+                td 100 万円
+              tr
+                th 事業内容
+                td
+                  ul
+                    li Web サービスの企画, 開発および運営
+                    li コンピュータソフトウェアの企画, 開発および販売
+                    li IT 技術に関するセミナーの企画および運営
+              tr
+                th 連絡先
+                td info@fillin-inc.com
+              tr
+                th 所在地
+                td.address
+                  | 370-0813
+                  br
+                  | 群馬県高崎市本町 48 番地
+
+    = partial 'layouts/footer'
