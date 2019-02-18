@@ -1,7 +1,6 @@
 @charset 'utf-8'
 @import 'settings'
-@import 'vendor/bulma/bulma'
-@import 'vendor/font-awesome/scss/font-awesome'
+@import '../../node_modules/bulma/bulma'
 @import 'header'
 
 html, body, main
@@ -19,9 +18,6 @@ main
 
 .title
   font-weight: normal
-  .fa
-    padding-left: .25em
-    vertical-align: 2%
   a
     &:link, &:visited
       border: none
@@ -29,8 +25,6 @@ main
       border-bottom: 1px solid $grey-lighter
 
 .content a:not(.button)
-  .fa-feed
-    color: $orange
 
 .hero
   height: 40em
@@ -49,9 +43,6 @@ main
     display: inline-block
     font-size: 1.125rem
     margin: .5rem auto .75rem
-    & > .fa
-      position: relative
-      top: 1px
 
   p
     line-height: 1.72
@@ -82,9 +73,6 @@ main
     margin-top: 3em
   h3.child-heading
     margin-top: 1.75em
-
-.fa
-  padding-right: .5em
 
 body:not(.index)
   section:first-child
@@ -137,8 +125,3 @@ body.releases
     li
       display: inline-block
       margin-right: 1em
-    .fa
-      font-size: 1.1em
-      position: relative
-      top: 5px
-      padding-right: 5px
