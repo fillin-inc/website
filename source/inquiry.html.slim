@@ -6,11 +6,15 @@ breadcrumbs:
   お問い合わせ: /inquiry/
 ---
 
-section#inquiry.inquiry
+section
+  == partial 'layouts/title_block', locals: { title: current_page.data.title, english_title: 'Inquiry' }
+
   .container
     .columns
       .column.is-half.is-offset-one-quarter.content
-        h1.title お問い合わせ
+
+        p お問い合わせ内容をご入力の上送信してください。
+
         form.formrun action="https://form.run/api/v1/r/ztSEuInMOm5HZ2eqRPKC" method="post"
           p.control
             label.label お名前
@@ -24,13 +28,13 @@ section#inquiry.inquiry
             label.label お問い合わせ内容
             textarea(class="textarea" name="お問い合わせ内容" data-formrun-required)
 
-          p.control
+          p.control.confirm-privacy-policy
             label.label
               input(class="checkbox" type="checkbox" name="プライバシーポリシー同意" data-formrun-required)
               | &nbsp;
-              == link_to 'プライバシーポリシー', '/privacy/'
-              | &nbsp;に同意します
+              span.text
+                == link_to 'プライバシーポリシー', '/privacy/'
+                | &nbsp;に同意します
 
-
-          .submit-box
+          .has-text-right
             button type="submit" class="button" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." 送信

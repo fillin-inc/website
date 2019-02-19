@@ -1,0 +1,80 @@
+.index
+  .first
+    height: 28rem
+    max-height: 28rem
+    background-image: url(/images/index/hero.jpg)
+    background-size: cover
+
+    .title
+      font-size: $font-1
+      text-shadow: 1px 1px 1px #444, -1px 1px 1px #444, 1px -1px 1px #444, -1px -1px 1px #444
+    .subtitle
+      font-size: $font-3
+      text-shadow: 1px 1px 1px #444, -1px 1px 1px #444, 1px -1px 1px #444, -1px -1px 1px #444
+    .text
+      position: relative
+      top: 9rem
+
+  .second
+    min-height: 15rem
+    background: #00A0E9
+
+    .title
+      font-size: $font-3
+    .subtitle
+      font-size: $font-4
+    .logo-mark
+      width: 3rem
+      margin: .75rem 0 .5rem
+
+  .office-room
+    height: 15rem
+    max-height: 15em
+    background-image: url(/images/index/office-room.jpg)
+    background-size: cover
+    background-position: center center
+
+  .service
+    padding: 2rem 0 4rem
+
+    .title
+      font-size: $font-3
+
+    .wrapper
+      text-align: center
+    .circle-image
+      border-radius: 50%
+      border: 2px solid $gray-circle
+      margin-bottom: .5rem
+
+    h2
+      font-size: $font-4
+      color: $blue
+      margin-bottom: .25rem
+
+    a:hover .circle-image
+      border-color: $blue
+
+  .information
+    h1
+      font-size: $font-3
+
+    .release
+      ul
+        margin-top: 2rem
+      li
+        padding-bottom: .5rem
+        margin-bottom: 1rem
+        border-bottom: 1px solid $gray-border
+
+      .date
+        color: $blue
+        font-size: $font-6
+        font-weight: bold
+      .article-title
+        color: $black
+
+      a:visited .article-title, a:link .article-title
+        color: $black
+      a:hover .article-title
+        color: $blue

@@ -1,5 +1,5 @@
 const navList = document.getElementById('nav-list');
-const hamburgerMenu = document.getElementById('hamburger');
+const hamburgerMenu = document.getElementById('burger');
 
 hamburgerMenu.addEventListener('click', function (event) {
     event.preventDefault();

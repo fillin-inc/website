@@ -3,12 +3,18 @@ title: 404 Not Found
 priority: 0.1
 ---
 
-section#not-found.not-found
+section
+  == partial 'layouts/title_block', locals: { title: 'ページが見つかりませんでした', english_title: 'Not Found' }
   .container
     .columns
       .column.is-half.is-offset-one-quarter.content
         h1.title
           i.fa.fa-exclamation-triangle
-          | 404 Not Found
+          | Not Found
 
         p アクセスいただいたリソースが存在しません。
+
+        p URL をご確認いただくか下記のボタンからトップページにアクセスし, ご利用したいページを確認してください。
+
+        .has-text-centered style="margin-top: 2.5rem"
+          = link_to 'トップページへ', '/', class: 'button is-light'

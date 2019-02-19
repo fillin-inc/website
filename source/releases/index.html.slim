@@ -1,25 +1,23 @@
 ---
 blog: releases
 layout: releases
-title: リリース
-description: 株式会社フィルインのリリース一覧ページです。運営するサービスの最新情報や事業情報がご確認いただけます。
-keyword: リリース, Web サービス, 群馬県高崎市
+title: お知らせ
+description: 株式会社フィルインのお知らせ一覧ページです。運営するサービスの最新情報や事業情報がご確認いただけます。
 priority: 1.0
 changefreq: weekly
-breadcrumbs:
-  リリース: /releases/
 ---
 
-h1.title
-  | リリース
-  == link_to '<i class="fa fa-feed">', '/releases/feed.xml'
 - blog.articles.group_by {|a| a.date.year}.each do |year, articles|
-  div class="year-#{year} list"
-    h2.title #{year}年
+  div class="year-#{year} year-group"
+    h3.title
+      span.year
+        == year
+      | 年
     ul
       - articles.each do |article|
         li
           == link_to article.url do
-            span.date
+            .article-title
+              = article.title
+            .date
               = article.date.strftime('%Y-%m-%d')
-            = article.title

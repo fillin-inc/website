@@ -1,29 +1,22 @@
 = wrap_layout :layout do
-  section#inquiry.inquiry
-    .container
-      .columns
-        .column.is-two-thirds.is-offset-2.content
-          - unless is_blog_article?
+  section
+    == partial 'layouts/title_block', locals: { title: 'お知らせ', english_title: 'Releases' }
+
+  .container
+    .columns
+      .column.is-three-quarters.content
+        - unless is_blog_article?
             == yield
-          - else
-            h1.title #{current_page.data.title}
+        - else
+          .single
+            h2.title
+              = current_page.data.title
 
             .article-data
-              span.created created: #{current_page.date.strftime('%Y-%m-%d')}
+              span.published
+                = "公開日: #{current_page.date.strftime('%Y-%m-%d')}"
 
             == yield
 
-            .inquiry-info
-              h3 問い合わせ先
-              p
-                |
-                  リリースに関するお問い合わせはこちらまでお願いします。
-
-              ul
-                li リリース担当者宛
-                li
-                  == mail_to 'info@fillin-inc.com', 'info@fillin-inc.com', :subject => 'リリースお問い合わせ', :class => 'email-link'
-                  | または
-                  == link_to 'お問い合わせ', '/inquiry/'
-                  | からご連絡ください。
-                li 一両日中の返信を心がけておりますが数日かかる場合があります。
+      .column
+        == partial 'layouts/release_menu'

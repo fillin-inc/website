@@ -1,15 +1,22 @@
-header.header class="#{current_page.path == 'index.html' ? '' : 'is-fixed'}"
-  nav.nav
-    .nav-left class="#{current_page.path == 'index.html' ? 'index' : ''}"
-      == link_to image_tag('images/logo-white.svg', :alt => 'フィルインロゴ', :class => 'logo'), '/', :class => 'nav-item logo-link'
+header.header
+  nav.navbar role="navigation" aria-label="main navigation"
+    .container
+      .navbar-brand
+        == link_to '/', class: 'navbar-item' do
+          == image_tag 'images/logo.svg', alt: 'ロゴ', class: 'logo'
+          span.company-name 株式会社フィルイン
 
-    span#hamburger.nav-toggle.hamburger
-      span
-      span
-      span
+        a#burger.navbar-burger.burger role="button" aria-label="menu" aria-expanded="false" data-target="nav-list"
+          - 3.times do
+            span aria-hidden="true"
 
-    #nav-list.nav-right.nav-menu.is-6
-      == link_to '事業内容', '/#biz', :class => 'nav-item'
-      == link_to '会社情報', '/#company', :class => 'nav-item'
-      == link_to 'リリース', '/releases/', :class => 'nav-item'
-      == link_to 'お問い合わせ', '/inquiry/', :class => 'nav-item'
+      #nav-list.navbar-menu
+        .navbar-end
+          .navbar-item.has-dropdown.is-hoverable
+            a.navbar-link
+              | 事業内容
+            .navbar-dropdown
+              - data.services.each do |service|
+                = link_to service.name, service.path, class: 'navbar-item'
+          = link_to 'お知らせ', '/releases/', class: 'navbar-item'
+          = link_to 'お問い合わせ', '/inquiry/', class: 'navbar-item'

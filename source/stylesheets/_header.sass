@@ -2,28 +2,20 @@
 
 body > .header
   background: $white
+  height: 67px
+  margin-bottom: 3px
+  box-shadow: 0 3px 6px 0px rgba(0, 0, 0, .15)
 
-  .hamburger
-    position: absolute
-    right: 0
+  .logo
+    height: 40px
+    margin-top: 20px
+    margin-left: 8px
 
-  .nav
-    max-width: $fullhd
-    margin: 0 auto
-    .logo
-      display: block
-      width: 100px
-  .nav-left.index
-    display: none
+  .company-name
+    position: relative
+    top: 14px
+    left: 8px
+    color: #4a4a4a
 
-aside.breadcrumbs
-  margin: 1em auto 2em
-
-+tablet
-  body > .header.is-fixed
-    &, nav
-      background: lighten($black, 13%)
-      color: $white
-
-    .nav-item a:not(.button), a.nav-item:not(.button)
-      color: $white
+  .navbar-menu
+    margin-top: 26px

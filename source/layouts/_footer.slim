@@ -1,24 +1,28 @@
 footer.footer
   .container
+    .logo-wrapper
+      == image_tag 'images/logo_white.svg', alt: '', class: 'logo'
+
     .columns
-      .column.content.has-text-centered
-        ul.links
+      .column.is-one-quarter
+        ul.sitemap-1
           li
-            == link_to 'https://www.facebook.com/fillininc' do
-              i.fa.fa-facebook-official
-              | Facebook
-          li
-            == link_to 'https://github.com/fillin-inc' do
-              i.fa.fa-github
-              | GitHub
-          li
-            == link_to '/privacy/' do
-              i.fa.fa-file
-              | プライバシーポリシー
+            == link_to 'index', '/'
+            li
+              | サービス
+              ul
+                - data.services.each do |service|
+                  li
+                    == link_to service.name, service.path
 
-    .content.has-text-right
-      small Copyright &copy; 2016-2018 株式会社フィルイン some rights reserved.
-
+      .column.is-one-quarter
+        ul.sitemap-2
+          li
+            == link_to 'お知らせ', '/releases/'
+          li
+            == link_to 'お問い合わせ', '/inquiry/'
+          li
+            == link_to 'プライバシーポリシー', '/privacy-policy/'
 
 == javascript_include_tag :site
 - if current_page.data.js

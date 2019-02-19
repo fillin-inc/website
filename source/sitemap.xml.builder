@@ -5,7 +5,7 @@ site_url = "https://www.fillin-inc.com"
 xml.instruct!
 xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
   sitemap.resources.select { |page| page.destination_path =~ /\.html/ }.each do |page|
-    next if %w(/404/ /inquiry/thanks/).include? page.url
+    next if %w(/404/ /inquiry/thanks/ /privacy/).include? page.url
 
     xml.url do
       xml.loc URI.escape(File.join(site_url, page.url))

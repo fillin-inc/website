@@ -1,0 +1,8 @@
+- name: 受託開発
+  path: /services/entrusted-development/
+- name: 開発支援
+  path: /services/service-engineering-service/
+- name: プログラミング教育
+  path: /services/programming-education/
+- name: コンサルティング
+  path: /services/consulting/
