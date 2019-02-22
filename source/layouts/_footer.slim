@@ -24,6 +24,10 @@ footer.footer
           li
             == link_to 'プライバシーポリシー', '/privacy-policy/'
 
+    .columns
+      .column.has-text-right
+        small.copyright Copyright &copy; 2016-#{Date.current.year} fillin Inc. Some Rights Reserved.
+
 == javascript_include_tag :site
 - if current_page.data.js
   == javascript_include_tag current_page.data.js
