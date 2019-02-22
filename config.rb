@@ -9,7 +9,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 data.redirects.each do |r|
-  redirect r.from, to: r.to
+  redirect r.from, to: 'https://www.fillin-inc.com/' + r.to
 end
 
 activate :blog do |blog|
