@@ -1,0 +1,6 @@
+- from: services/web_development.html
+  to: services/entrusted-development.html
+- from: services/education.html
+  to: services/programming-education.html
+- from: privacy.html
+  to: privacy-policy.html

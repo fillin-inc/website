@@ -8,6 +8,10 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+data.redirects.each do |r|
+  redirect r.from, to: r.to
+end
+
 activate :blog do |blog|
   blog.name = 'releases'
   blog.prefix = blog.name
