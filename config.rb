@@ -50,9 +50,6 @@ activate :external_pipeline,
   latency: 1
 
 configure :build do
-  ignore '/stylesheets/vendor/bulma/*'
-  ignore '/stylesheets/vendor/font-awesome/scss/*'
-
   activate :minify_css
   activate :minify_javascript
 end
