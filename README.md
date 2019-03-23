@@ -6,12 +6,13 @@
 
 ### 採用ツール
 
-- 静的サイトジェネレータ [Middleman](https://middlemanapp.com/jp/)
-- Middleman 拡張
-    - [middleman-blog](https://github.com/middleman/middleman-blog)
-    - [middleman-generator-tag](https://github.com/yterajima/middleman-generator-tag)
-    - [middleman-vcs-time](https://github.com/AndrewKvalheim/middleman-vcs-time)
-    - [middleman-s3_sync](https://github.com/fredjean/middleman-s3_sync)
+- 静的サイトジェネレータ
+    - [Middleman](https://middlemanapp.com/jp/)
+    - 拡張機能
+        - [middleman-blog](https://github.com/middleman/middleman-blog)
+        - [middleman-generator-tag](https://github.com/yterajima/middleman-generator-tag)
+        - [middleman-vcs-time](https://github.com/AndrewKvalheim/middleman-vcs-time)
+        - [middleman-s3_sync](https://github.com/fredjean/middleman-s3_sync)
 - テンプレートエンジン 
     - [Slim](http://slim-lang.com/)
     - [redcarpet](https://github.com/vmg/redcarpet)
@@ -19,7 +20,6 @@
 - JavaScript
     - [webpack](https://webpack.github.io/)
     - [Babel](https://babeljs.io/)
-    - [jquery](https://jquery.com/)
 
 ### サーバ環境
 
