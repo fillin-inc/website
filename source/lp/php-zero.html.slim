@@ -1,0 +1,260 @@
+doctype html
+html lang="ja" prefix="og: http://ogp.me/ns#"
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta content="width=device-width,initial-scale=1.0,user-scalable=yes" name="viewport"
+    title PHP Zero
+
+    - if build?
+      script
+        == partial "javascripts/google-analytics.js"
+
+    == stylesheet_link_tag 'lp/php-zero'
+
+  body class="#{page_classes}"
+    header.header
+      .container
+        nav.navbar role="navigation"
+          .navbar-brand
+            = link_to '/lp/php-zero/', class: 'navbar-item' do
+              h1 PHP Zero
+
+            a#burger.navbar-burger.burger role="button" aria-label="menu" aria-expanded="false" data-target="nav-list"
+              - 3.times do
+                span aria-hidden="true"
+
+          #nav-list.navbar-menu
+            .navbar-end
+              = link_to '講座情報', '#', class: 'navbar-item'
+              = link_to '開催スケジュール', '#', class: 'navbar-item'
+              = link_to '講師', '#', class: 'navbar-item'
+              = link_to 'Q&A', '#', class: 'navbar-item'
+              .navbar-item
+                .buttons
+                  = link_to 'お問い合わせ', '#', class: 'button is-rounded'
+                  = link_to 'お申し込み', '#', class: 'button is-info is-rounded'
+
+    section.hero.first
+      .hero-body
+        .container.has-text-centered
+          .text
+            h1.title
+              | 「書ける」
+              span から
+              | 「できる」プログラマ
+              span へ
+            h2.subtitle Web アプリケーションフレームワークから離れて始める PHP 集中講座
+          .price
+            span 全 2 講義
+            | 29,800 円
+            span
+              = '(税込)'
+          .button-area.has-text-centered
+            = link_to 'お問い合わせ', '#', class: 'button is-rounded is-medium'
+            = link_to 'お申し込み', '#', class: 'button is-rounded is-medium is-info'
+
+    section.hero.second
+      .hero-body.has-text-centered
+        h1.title スキルアップに悩んでいませんか？
+        .container
+          .columns
+            .column
+              | 動くものは作れるようになったけど上手くかけているか不安...
+            .column
+              | Webサイトではなく Web サービスを作れるようになりたい。
+            .column
+              | リモートワークで東京の仕事をできるようになりたい。
+          .columns.is-centered
+            .column.is-half
+              p
+                | PHP Zero では
+                br
+                | Web フレームワークやパッケージから入門した場合に抜けがちな PHP のオブジェクト指向によるシステム設計や開発,
+                  テストについて再学習することで次のステップを踏み出すお手伝いをします。
+
+    section.curriculum
+      .container
+        h1.title.has-text-centered 講座情報
+
+        .columns.is-centered.summary
+          .column.is-half.has-text-centered
+            p
+              | オブジェクト指向としての PHP を中心に再学習し, Web アプリ開発の
+                現場で活かせる知識の習得の一歩を踏み出すことを目的としています。
+
+        .columns.content.detail
+          .column
+            h2 第 1 講義 PHP を使ったオブジェクト指向
+
+            p
+              | PHP のオブジェクト指向機能を復習しながら, Web アプリケーション開発を念頭にした
+                設計の考え方や実装, 失敗パターンを学びます。
+
+            ul
+              li PHP のオブジェクト指向機能
+              li 原則とアーキテクチャー
+              li マジックメソッドやSPL を活用した実装
+              li MVC フレームワークと設計
+
+            dl
+              dt 所要時間
+              dd 約 3 時間 (休憩別)
+
+          .column
+            h2 第 2 講義 PHPUnit を中心としたテスト
+
+            p
+              | テストフレームワーク PHPUnit を中心に, 設計とテストの関係や現実的なテスト方法,
+                TDD や BDD, CI サービスを学びます。
+
+            ul
+              li テスト可能なコードと PHPUnit
+              li テストの種類と共通するツールセット
+              li TDD と BDD
+              li CI サービスの導入
+
+            dl
+              dt 所要時間
+              dd 約 3 時間 (休憩別)
+
+        .columns.is-centered.content
+          .column.is-half
+            h2 対象者
+
+            ul
+              li 20 歳以上 35 歳以下の PHP プログラマー
+              li MVC FW で簡単なアプリを書くことができる方
+              li EC や CMS カスタマイズを業務で行なっている方
+
+            p ※ お申し込みいただいた際に当社が受講を不適切だと判断した場合, 受講をお断りする場合がございます。
+
+        .columns.is-centered.content.required
+          .column.is-half
+            h2 受講に必要なもの
+
+            ul
+              li
+                | PHP( >= 7.2) の開発環境が構築されたノートPC
+                ul
+                  li OS は Windows, Mac, Linux のいずれか
+                  li XAMPP や MAMP可
+                  li Composer の実行が可能であること
+                  li テキストエディタがインストールされていること
+              li 受講への申し込み, ならびにお支払い
+
+            .button-area.has-text-centered
+              = link_to 'お問い合わせ', '#', class: 'button is-rounded is-medium'
+              = link_to 'お申し込み', '#', class: 'button is-rounded is-medium is-info'
+
+    section.schedule
+      .container
+        h1.title.has-text-centered 開催スケジュール
+
+        .columns.content
+          .column
+            h2 2019 年 5 月講座
+            ul
+              li
+                | 第 1 講義
+                ul
+                  li 定員：5 名
+                  li 日時：2019 年 5 月 11 日（土）13 〜 17 時
+                  li
+                    | 会場：
+                    = link_to '高崎駅西口ESA貸し会議室', 'https://高崎貸し会議室.com/', rel: 'nofollow'
+              li
+                | 第 2 講義
+                ul
+                  li 定員：5 名
+                  li 日時：2019 年 5 月 25 日（土）13 〜 17 時
+                  li
+                    | 会場：
+                    = link_to '高崎駅西口ESA貸し会議室', 'https://高崎貸し会議室.com/', rel: 'nofollow'
+
+          .column
+            h2 2019 年 7 月講座
+            ul
+              li
+                | 第 1 講義
+                ul
+                  li 定員：5 名
+                  li 日時：2019 年 7 月 13 日（土）13 〜 17 時
+                  li 会場：未定（高崎駅徒歩圏内を予定)
+              li
+                | 第 2 講義
+                ul
+                  li 定員：5 名
+                  li 日時：2019 年 7 月 27 日（土）13 〜 17 時
+                  li 会場：未定（高崎駅徒歩圏内を予定)
+
+    section.teacher
+      .container
+        h1.title.has-text-centered 講師
+
+        .columns.is-centered.content
+          .column.is-half.profile
+            = image_tag 'lp/php-zero/icon.png', alt: '松島祐也プロフィール画像', class: 'profile-image'
+            .detail
+              h2.subtitle
+                span &#12849;フィルイン代表取締役 / プログラマー
+                span 松島　祐也
+
+              p 個人事業時代から受託開発に並行して複数のベンチャー企業やスタートアップのシステム開発, サービス開発に参加。主な使用言語は PHP, Ruby, Golang, JavaScript。
+              p 「本講座では自分が経験した無駄な遠回りを受講生の皆さんが回避できるように短時間で効果的な内容を心がけています。」
+
+    section.qa
+      .container
+        h1.title.has-text-centered Q &amp; A
+
+        .columns.content.first
+          .column
+            h2 講座では PHP の話題のみ取り扱いますか？
+            p PHP を中心としていますが, オブジェクト思考やテストツールの解説時に他言語, 特に Ruby, JavaScript, Go 言語の機能やツールセットについて例示する場合があります。
+
+          .column
+            h2 受講にあたって開発環境の構築は必要ですか？
+            p
+              | PHP 7.2 + Web サーバー(Apache + Nginx) がインストールされ Composer が動作する環境が必要です。
+                日頃お使いの開発環境で PHP バージョンに問題がなければ大丈夫です。
+                ご不安な場合はお申し込み後に環境に問題がないかお問い合わせください。
+
+          .column
+            h2 ハンズオンのように手を動かす講座ですか？
+            p 基本座学が中心の講座内容ですが, 内容に応じて手を動かす時間もあります。サンプルコードを中心に解説しながら進めていきます。
+
+        .columns.content.second
+          .column
+            h2 2 回の受講で「できる」プログラマになれますか？
+            p
+              | なれません。この講座では「できるプログラマ」へ向かって初めの一歩を踏み出していただく内容をご用意しております。
+              br
+              | 受講後に個人で, または業務を通して継続した学習や努力が必要になります。講座中に「どういったことに注意して開発を進めていけばいいのか」解説する予定です。
+
+          .column
+            h2 一方の講義だけ受講することは可能ですか？
+            p 「第1回」単独の受講は可能です。「第2回」については「第1回」で学習していただいた内容が前提になるため受講はお断りさせていただきます。
+
+          .column
+            h2 アフターフォローはありますか？
+            p 受講後1ヶ月後に限り受講内容に対する質問や確認をお受けいたします。実際のコードを書く際に疑問が発生した際にご活用ください。
+
+        .columns.third
+          .column
+            .button-area.has-text-centered
+              = link_to 'お問い合わせ', '#', class: 'button is-rounded is-medium'
+
+
+    footer.footer
+      .container.has-text-centered
+        ul
+          li
+            = link_to '受講規約', '#'
+          li
+            = link_to '特定商取引法に基づく表示', '#'
+          li
+            = link_to 'プライバシーポリシー', '#'
+          li
+            = link_to '運営会社', 'https://www.fillin-inc.com'
+
+        small.copyright Copyright &copy; fillin Inc. Some Rights Reserved.
