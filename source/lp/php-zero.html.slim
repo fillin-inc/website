@@ -44,7 +44,7 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
               span から
               | 「できる」プログラマ
               span へ
-            h2.subtitle Web アプリケーションフレームワークから離れて始める PHP 集中講座
+            h2.subtitle フレームワークから離れて始める PHP 集中講座
           .price
             span 全 2 講義
             | 29,800 円
@@ -60,18 +60,24 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
         .container
           .columns
             .column
-              | 動くものは作れるようになったけど上手くかけているか不安...
+              | 動くものは作れるけど
+              br
+              | よくできているか不安...
             .column
-              | Webサイトではなく Web サービスを作れるようになりたい。
+              | Web サイトよりも
+              br
+              | Web サービスを作りたい
             .column
-              | リモートワークで東京の仕事をできるようになりたい。
+              | リモートワークで
+              br
+              | 東京の仕事をしたい
           .columns.is-centered
             .column.is-half
               p
                 | PHP Zero では
                 br
-                | Web フレームワークやパッケージから入門した場合に抜けがちな PHP のオブジェクト指向によるシステム設計や開発,
-                  テストについて再学習することで次のステップを踏み出すお手伝いをします。
+                | フレームワークやパッケージから入門した場合に抜けがちなシステム設計や開発方法,
+                  テストについて再学習することで, 次のステップを踏み出すお手伝いをします。
 
     section.curriculum
       .container
@@ -194,7 +200,8 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
 
         .columns.is-centered.content
           .column.is-half.profile
-            = image_tag 'lp/php-zero/icon.png', alt: '松島祐也プロフィール画像', class: 'profile-image'
+            .image
+              = image_tag 'lp/php-zero/icon.png', alt: '松島祐也プロフィール画像'
             .detail
               h2.subtitle
                 span &#12849;フィルイン代表取締役 / プログラマー
@@ -258,3 +265,5 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
             = link_to '運営会社', 'https://www.fillin-inc.com'
 
         small.copyright Copyright &copy; fillin Inc. Some Rights Reserved.
+
+== javascript_include_tag :site

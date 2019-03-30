@@ -15,6 +15,11 @@ $red: #E01010
     font-size: 1.5rem
   .navbar-menu
     font-weight: 290
+  .navbar-menu.is-active
+    .navbar-item
+      text-align: center
+    .buttons
+      display: block
 
 .hero.first
   background-image: url(/images/lp/php-zero/hero.jpg)
@@ -63,13 +68,14 @@ $red: #E01010
   padding: 1rem 0
 
   .title
-    font-size: 2rem
+    font-size: 1.875rem
+    font-weight: 500
     color: $white
     padding-bottom: 3rem
 
   .columns
     &:first-child
-      font-size: 1.5rem
+      font-size: 1.375rem
       font-weight: 400
       padding-bottom: 3rem
 
@@ -155,11 +161,14 @@ $red: #E01010
   .profile
     display: flex
 
-  .profile-image
-    width: 11.25rem
-    height: 11.25rem
-    border-radius: 50%
+  .image
+    min-width: 11.25rem
+    min-height: 11.25rem
     margin-right: 2rem
+    img
+      width: 11.25rem
+      height: 11.25rem
+      border-radius: 50%
 
 .qa
   padding: 4rem 0
@@ -199,3 +208,38 @@ $red: #E01010
   .copyright
     display: block
     margin-top: 4rem
+
+
++tablet
+.columns
+  .column
+    padding: 1.375rem 2.25rem
+.curriculum
+  .container
+    .columns
+      margin-bottom: 2rem
+.qa
+  .title
+    padding-bottom: 0
+  .columns
+    margin-top: 0
+
+.teacher
+  .title
+    margin-bottom: 0
+  .subtitle
+    span
+      font-size: 1.125rem
+  .profile
+    display: block
+  .image
+    text-align: center
+    margin-right: 0
+    margin-bottom: 1rem
+    img
+      display: inline-block
+
++mobile
+.hero.first
+  .container
+    margin-top: 6rem
