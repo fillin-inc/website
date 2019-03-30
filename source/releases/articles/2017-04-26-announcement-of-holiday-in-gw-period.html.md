@@ -1,9 +1,6 @@
 ---
 title: GW 期間の休業日のお知らせ
 date: 2017-04-26
-breadcrumbs:
-  リリース: /releases/
-  GW 期間の休業日のお知らせ: /releases/2017/04/26/announcement-of-holiday-in-gw-period/
 ---
 
 弊社では下記のとおり, ゴールデンウィーク期間の休業日をとらせていただきます。ご迷惑をおかけいたしますが何卒ご了承ください。

@@ -1,9 +1,6 @@
 ---
 title: LazySearch サービス終了のお知らせ
 date: 2018-08-06
-breadcrumbs:
-  リリース: /releases/
-  LazySearch サービス終了のお知らせ: /releases/2018/08/06/lazysearch-will-end/
 ---
 
 当社で開発運営を進めてきたサイト内検索サービス[LazySearch](https://lazysear.ch) を __2018 年 8 月 30 日__ をもってサービスを終了させていただくこととなりました。

@@ -1,9 +1,6 @@
 ---
 title: 本社移転のお知らせ
 date: 2018-04-23
-breadcrumbs:
-    リリース: /releases/
-    本社移転のお知らせ: /releases/2018/04/23/anouncement-of-headquarters-relocation/
 ---
 
 弊社設立より本社住所を置かせていただいている [SOHO ガーデン高崎](http://www.takasaki-urbanhotel.com/contents/soho/) 様から, 次の住所に移転することとなりました。お取引をいただいている各社様に対しては, 移転完了後速やかにお知らせを個別発送させていただく予定です。

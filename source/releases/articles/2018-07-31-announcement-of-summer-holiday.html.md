@@ -2,9 +2,6 @@
 title: 夏季休業のお知らせ
 date: 2018-07-31
 description: 2018年の夏季休業のお知らせです。8/11〜8/15 がおやすみです。
-breadcrumbs:
-  リリース: /releases/
-  夏季休業のお知らせ: /releases/2018/07/31/announcement-of-summer-holiday/
 ---
 
 弊社では下記の期間を夏季休業とさせていただきます。ご迷惑をおかけいたしますが何卒ご了承ください。
