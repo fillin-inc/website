@@ -26,10 +26,9 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
 
           #nav-list.navbar-menu
             .navbar-end
-              = link_to '講座情報', '#', class: 'navbar-item'
-              = link_to '開催スケジュール', '#', class: 'navbar-item'
-              = link_to '講師', '#', class: 'navbar-item'
-              = link_to 'Q&A', '#', class: 'navbar-item'
+              = link_to '講座情報', '/lp/php-zero/#curriculum', class: 'navbar-item'
+              = link_to '開催スケジュール', '/lp/php-zero/#schedule', class: 'navbar-item'
+              = link_to 'Q&A', '/lp/php-zero/#qa', class: 'navbar-item'
               .navbar-item
                 .buttons
                   = link_to 'お問い合わせ', '#', class: 'button is-rounded'
@@ -79,7 +78,7 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
                 | フレームワークやパッケージから入門した場合に抜けがちなシステム設計や開発方法,
                   テストについて再学習することで, 次のステップを踏み出すお手伝いをします。
 
-    section.curriculum
+    section.curriculum#curriculum
       .container
         h1.title.has-text-centered 講座情報
 
@@ -153,7 +152,7 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
               = link_to 'お問い合わせ', '#', class: 'button is-rounded is-medium'
               = link_to 'お申し込み', '#', class: 'button is-rounded is-medium is-info'
 
-    section.schedule
+    section.schedule#schedule
       .container
         h1.title.has-text-centered 開催スケジュール
 
@@ -210,7 +209,7 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
               p 個人事業時代から受託開発に並行して複数のベンチャー企業やスタートアップのシステム開発, サービス開発に参加。主な使用言語は PHP, Ruby, Golang, JavaScript。
               p 「本講座では自分が経験した無駄な遠回りを受講生の皆さんが回避できるように短時間で効果的な内容を心がけています。」
 
-    section.qa
+    section.qa#qa
       .container
         h1.title.has-text-centered Q &amp; A
 
@@ -253,11 +252,11 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
       .container.has-text-centered
         ul
           li
-            = link_to '受講規約', '#'
+            = link_to '受講規約', '/services/programming-education/agreement/'
           li
-            = link_to '特定商取引法に基づく表示', '#'
+            = link_to '特定商取引法に基づく表示', '/act-on-specified-commercial-transactions/'
           li
-            = link_to 'プライバシーポリシー', '#'
+            = link_to 'プライバシーポリシー', '/privacy-policy/'
           li
             = link_to '運営会社', 'https://www.fillin-inc.com'
 
