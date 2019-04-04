@@ -4,7 +4,7 @@
 
   .container
     .columns
-      .column.is-three-quarters.content
+      .column.is-two-thirds.content
         - unless is_blog_article?
             == yield
         - else
@@ -18,5 +18,5 @@
 
             == yield
 
-      .column
+      .column.is-offset-1
         == partial 'layouts/release_menu'
