@@ -31,10 +31,12 @@ section
               td 平日 9:30 〜 18:30
             tr
               th メールアドレス
-              td info@fillin-inc.com
+              td
+                = mail_to 'edu@fillin-inc.com'
             tr
               th Web サイト URL
-              td https://www.fillin-inc.com
+              td
+                = link_to 'https://www.fillin-inc.com', 'https://www.fillin-inc.com'
             tr
               th 販売価格・受講代金
               td 各講座の紹介ページをご参照ください。
