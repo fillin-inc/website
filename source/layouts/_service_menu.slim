@@ -4,3 +4,7 @@ aside.menu
     - data.services.each do |service|
       li
         == link_to service.name, service.path, class: current_page.url == service.path ? 'is-active' : ''
+        - if current_page.url == service.path && service.children.present?
+          ul
+            - service.children.each do |child|
+              li== link_to child.name, "#{service.path}##{child.tag}"
