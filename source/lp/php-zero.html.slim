@@ -39,7 +39,7 @@ html lang="ja"
               .navbar-item
                 .buttons
                   = link_to 'お問い合わせ', 'https://form.run/@edu', class: 'button is-rounded'
-                  = link_to 'お申し込み', 'https://form.run/@php-zero', class: 'button is-info is-rounded'
+                  = link_to 'お申し込み', '#', class: 'button is-info is-rounded', disabled: true
 
     section.hero.first
       .hero-body
@@ -58,7 +58,9 @@ html lang="ja"
               = '(税込)'
           .button-area.has-text-centered
             = link_to 'お問い合わせ', 'https://form.run/@edu', class: 'button is-rounded is-medium'
-            = link_to 'お申し込み', 'https://form.run/@php-zero', class: 'button is-rounded is-medium is-info'
+            = link_to 'お申し込み', '#', class: 'button is-rounded is-medium is-info', disabled: true
+
+            p.has-text-danger.is-size-5 次回の開催日程は未定です。ご興味のある方はお問い合わせください。
 
     section.hero.second
       .hero-body.has-text-centered
@@ -166,6 +168,7 @@ html lang="ja"
         .columns.content
           .column
             h2 2019 年 5 月講座
+            p.has-text-danger 募集終了しました!
             ul
               li
                 | 第 1 回
@@ -186,6 +189,7 @@ html lang="ja"
 
           .column
             h2 2019 年 7 月講座
+            p.has-text-danger 募集終了しました!
             ul
               li
                 | 第 1 回
