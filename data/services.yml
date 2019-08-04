@@ -1,12 +1,12 @@
 - name: 受託開発
   path: /services/entrusted-development/
   children:
-    - name: ページ内リンク1
-      path: #
-    - name: ページ内リンク2
-      path: #
-    - name: ページ内リンク3
-      path: #
+    - name: 概要
+      tag: overview
+    - name: 特徴
+      tag: feature
+    - name: 開発実績
+      tag: development
 - name: 開発支援
   path: /services/service-engineering-service/
 - name: プログラミング教育

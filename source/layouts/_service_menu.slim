@@ -7,4 +7,4 @@ aside.menu
         - if current_page.url == service.path && service.children.present?
           ul
             - service.children.each do |child|
-              li== link_to child.name, child.path
+              li== link_to child.name, "#{service.path}##{child.tag}"
