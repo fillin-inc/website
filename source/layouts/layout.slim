@@ -26,10 +26,13 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
 
     - if build?
       script
-        == partial "javascripts/google-analytics.js"
+        == partial "javasceipts/google-tag-manager.js
 
     == stylesheet_link_tag :site
   body class="#{page_classes}"
+    noscript
+      iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4QJS67" height="0" width="0" style="display:none;visibility:hidden"
+
     = partial 'layouts/header'
 
     main
