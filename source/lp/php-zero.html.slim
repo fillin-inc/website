@@ -15,11 +15,12 @@ html lang="ja"
 
     - if build?
       script
-        == partial "javascripts/google-analytics.js"
+        == partial 'javascripts/google-tag-manager.js'
 
     == stylesheet_link_tag 'lp/php-zero'
 
   body class="#{page_classes}"
+    == partial 'layouts/google_tag_manager'
     header.header
       .container
         nav.navbar role="navigation"
