@@ -1,6 +1,5 @@
 ---
 title: お問い合わせ
-js: https://sdk.form.run/js/v2/formrun.js
 priority: 1.0
 ---
 
@@ -13,26 +12,6 @@ section
 
         p お問い合わせ内容をご入力の上送信してください。
 
-        form.formrun action="https://form.run/api/v1/r/ztSEuInMOm5HZ2eqRPKC" method="post"
-          p.control
-            label.label お名前
-            input(class="input" name="お名前" type="text" data-formrun-required)
+        <iframe style="height: 55rem;" src="https://docs.google.com/forms/d/e/1FAIpQLSf7_8Q-A4O4jeRyw9GtNR17VqOr5mL8ITFSNbLAPG7H77N8pg/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 
-          p.control
-            label.label メールアドレス
-            input(class="input" name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required)
-
-          p.control
-            label.label お問い合わせ内容
-            textarea(class="textarea" name="お問い合わせ内容" data-formrun-required)
-
-          p.control.confirm-privacy-policy
-            label.label
-              input(class="checkbox" type="checkbox" name="プライバシーポリシー同意" data-formrun-required)
-              | &nbsp;
-              span.text
-                == link_to 'プライバシーポリシー', '/privacy/'
-                | &nbsp;に同意します
-
-          .has-text-right
-            button type="submit" class="button" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." 送信
+        p Email でのお問い合わせをご希望の場合は info@fillin-inc.com までご連絡ください。
