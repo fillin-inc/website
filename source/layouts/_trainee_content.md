@@ -51,4 +51,4 @@
 
 お申し込みやお問い合わせは下記ボタンからお願い申し上げます。
 
-<a class="button is-primary" href="https://form.run/@trainee">お問い合わせ・お申し込み</a>
+<a class="button is-primary" href="#" disabled>お問い合わせ・お申し込み</a>
