@@ -8,6 +8,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/lp/*.html', layout: false
+page 'index.html', layout: false
 
 data.redirects.each do |r|
   redirect r.from, to: 'https://www.fillin-inc.com/' + r.to
