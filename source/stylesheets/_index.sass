@@ -1,82 +1,26 @@
 .index
-  .first
-    height: 28rem
-    max-height: 28rem
-    background-image: url(/images/index/hero.jpg)
-    background-size: cover
+  overflow: hidden
+  .hero
+    background: $light-blue
+    height: 43.75rem
 
-    .title
-      font-size: $font-1
-    .subtitle
-      font-size: $font-3
-    .text
+    .main
       position: relative
-      top: 7.5rem
-      background: $pure_white
-      opacity: .85
-      padding: 1.5rem 0
-      border-radius: 50px
+      top: -3.25rem
+      right: 200px
+      min-width: 1097px
 
-  .second
-    min-height: 15rem
-    background: #00A0E9
-
+    .title, .sub-title
+      display: inline-block
+      color: $white
+      position: relative
+      z-index: 100
     .title
-      font-size: $font-3
-    .subtitle
-      font-size: $font-4
-    .logo-mark
-      width: 3rem
-      margin: .75rem 0 .5rem
-
-  .office-room
-    height: 15rem
-    max-height: 15em
-    background-image: url(/images/index/office-room.jpg)
-    background-size: cover
-    background-position: center center
-
-  .service
-    padding: 2rem 0 4rem
-
-    .title
-      font-size: $font-3
-
-    .wrapper
-      text-align: center
-    .circle-image
-      border-radius: 50%
-      border: 2px solid $gray-circle
-      margin-bottom: .5rem
-
-    h2
-      font-size: $font-4
-      color: $blue
-      margin-bottom: .25rem
-
-    a:hover .circle-image
-      border-color: $blue
-
-  .information
-    h1
-      font-size: $font-3
-
-    .release
-      ul
-        margin-top: 2rem
-      li
-        padding-bottom: .5rem
-        margin-bottom: 1rem
-        border-bottom: 1px solid $gray-border
-
-      .date
-        color: $blue
-        font-size: $font-6
-        font-weight: bold
-      .article-title
-        color: $black
-
-      a:visited .article-title, a:link .article-title
-        color: $black
-      a:hover .article-title
-        color: $blue
+      font-size: 1.5625rem
+      letter-spacing: 1rem
+      top: 16rem
+      left: 35rem
+    .sub-title
+      font-size: 1.25rem
+      top: 18.75rem
+      left: 17rem
