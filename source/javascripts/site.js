@@ -12,7 +12,3 @@ hamburgerMenu.addEventListener('click', function (event) {
         navList.classList.add('is-active');
     }
 });
-
-let options = { navigation: true, navigationKeys: false };
-const bulmaCarousel = require('bulma-carousel');
-const carousels = bulmaCarousel.attach('.carousels', options);

@@ -26,7 +26,6 @@
     "@babel/preset-env": "^7.11",
     "babel-loader": "^8.1.0",
     "bulma": "^0.9",
-    "bulma-carousel": "^4.0",
     "webpack": "^4.44",
     "webpack-cli": "^3.3"
   },
