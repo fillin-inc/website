@@ -29,6 +29,12 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
         == partial 'javascripts/google-tag-manager.js'
 
     == stylesheet_link_tag :site
+    == stylesheet_link_tag 'swiper-bundle'
+    // TODO
+    // index だけロードさせる
+    // - if current_page.data.css
+    //   == stylesheet_link_tag current_page.data.css
+
   body class="#{page_classes}"
     == partial 'layouts/google_tag_manager'
     == partial 'layouts/header'

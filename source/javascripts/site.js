@@ -1,3 +1,5 @@
+import Swiper from 'swiper'
+
 const navList = document.getElementById('nav-list');
 const hamburgerMenu = document.getElementById('burger');
 
@@ -11,4 +13,11 @@ hamburgerMenu.addEventListener('click', function (event) {
         elm.classList.add('is-active');
         navList.classList.add('is-active');
     }
+});
+
+const swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
