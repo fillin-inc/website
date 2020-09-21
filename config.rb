@@ -38,7 +38,7 @@ activate :generator_tag
 activate :vcs_time
 activate :gzip
 activate :asset_hash do |f|
-  f.ignore = [/images\/ogp\/\S+\.(png|jpg|gif)/]
+  f.ignore = [/images\/ogp\/\S+\.(png|jpg|gif)/, /images\/common\/footer_inquiry.png/]
 end
 
 set :markdown_engine, :redcarpet

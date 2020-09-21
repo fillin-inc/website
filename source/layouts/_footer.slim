@@ -1,40 +1,25 @@
 footer.footer
-  .container
-    .logo-wrapper
-      == image_tag 'images/logo_white.svg', alt: '', class: 'logo'
+  .inquiry
+    p お問い合わせは下記ボタン
+      <br>
+      または電話（050-7101-1520）へお問い合わせください
 
-    .columns
-      .column.is-one-quarter
-        ul.sitemap-1
-          li
-            == link_to 'index', '/'
-            li
-              | サービス
-              ul
-                - data.services.each do |service|
-                  li
-                    == link_to service.name, service.path
+    == link_to 'お問い合わせ', '/inquiry', class: 'button is-large is-rounded'
 
-      .column.is-one-quarter
-        ul.sitemap-2
-          li
-            == link_to 'お知らせ', '/releases/'
-          li
-            == link_to '研修生制度', '/trainee/'
-          li
-            == link_to '求人情報', '/job-information/'
-          li
-            == link_to 'お問い合わせ', '/inquiry/'
-          li
-            == link_to 'プライバシーポリシー', '/privacy-policy/'
-          li
-            == link_to '受講規約', '/services/programming-education/agreement/'
-          li
-            == link_to '特定商取引法に基づく表記', '/act-on-specified-commercial-transactions/'
+  .links
+    .container
+      .columns
+        .column.has-text-centered
+          .logo-wrapper
+            == image_tag 'images/logo_white.svg', alt: '', class: 'logo'
 
-    .columns
-      .column.has-text-right
-        small.copyright Copyright &copy; 2016-#{Date.current.year} fillin Inc. Some Rights Reserved.
+          address.address
+            |
+              〒370-0813 群馬県高崎市本町48番地<br>
+              info@fillin-inc.com<br>
+              050-7101-1521
+
+          small.copyright Copyright &copy; 2016-#{Date.current.year} fillin Inc. Some Rights Reserved.
 
 == javascript_include_tag :site
 - if current_page.data.js
