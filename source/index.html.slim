@@ -1,5 +1,5 @@
 ---
-description: 'hogehoge'
+description: @TODO
 ---
 
 section.hero
@@ -72,9 +72,9 @@ section.releases
 section.achivements
   .container
     h1.title.has-text-centered 最近の実績
-    .column.is-two-thirds.is-offset-2.swiper-container
-      .swiper-wrapper
-        .achivement.swiper-slide
+    .column.is-two-thirds.is-offset-2
+      .carousels
+        .achivement.item-1
           h2.title レジアプリとECサイトの在庫連携アプリ
           == link_to '株式会社玉井様', '#', class: :customer, rel: 'noopener nofollow', target: '_blank'
           == link_to 'http://example.jp/hoge/to/path', '#', class: :url, rel: 'noopener nofollow', target: '_blank'
@@ -90,7 +90,7 @@ section.achivements
               ここにテキストを入れるここにテキストを入れるここにテキストを入れるここにテキストをいれるこ
               こにテキストを入れるここにテキストを入れるここにテキストを入れる
 
-        .achivement.swiper-slide
+        .achivement.item-2
           h2.title レジアプリとECサイトの在庫連携アプリ
           == link_to '株式会社玉井様', '#', class: :customer, rel: 'noopener nofollow', target: '_blank'
           == link_to 'http://example.jp/hoge/to/path', '#', class: :url, rel: 'noopener nofollow', target: '_blank'
@@ -106,7 +106,7 @@ section.achivements
               ここにテキストを入れるここにテキストを入れるここにテキストを入れるここにテキストをいれるこ
               こにテキストを入れるここにテキストを入れるここにテキストを入れる
 
-        .achivement.swiper-slide
+        .achivement.item-2
           h2.title レジアプリとECサイトの在庫連携アプリ
           == link_to '株式会社玉井様', '#', class: :customer, rel: 'noopener nofollow', target: '_blank'
           == link_to 'http://example.jp/hoge/to/path', '#', class: :url, rel: 'noopener nofollow', target: '_blank'
@@ -121,6 +121,3 @@ section.achivements
               こにテキストを入れるここにテキストを入れるここにテキストを入れる
               ここにテキストを入れるここにテキストを入れるここにテキストを入れるここにテキストをいれるこ
               こにテキストを入れるここにテキストを入れるここにテキストを入れる
-
-      .swiper-button-next
-      .swiper-button-prev
