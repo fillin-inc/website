@@ -74,50 +74,10 @@ section.achivements
     h1.title.has-text-centered 最近の実績
     .column.is-two-thirds.is-offset-2
       .carousels
-        .achivement.item-1
-          h2.title レジアプリとECサイトの在庫連携アプリ
-          == link_to '株式会社玉井様', '#', class: :customer, rel: 'noopener nofollow', target: '_blank'
-          == link_to 'http://example.jp/hoge/to/path', '#', class: :url, rel: 'noopener nofollow', target: '_blank'
-          ul.tags
-            li.tag.button.is-small.is-rounded.is-achivement Ruby
-            li.tag.button.is-small.is-rounded.is-achivement API
-            li.tag.button.is-small.is-rounded.is-achivement AWS
-          == image_tag '/images/achivements/achivement-1.jpg', class: :image
-          p.description
-            |
-              ここにテキストを入れるここにテキストを入れるここにテキストを入れるここにテキストをいれるこ
-              こにテキストを入れるここにテキストを入れるここにテキストを入れる
-              ここにテキストを入れるここにテキストを入れるここにテキストを入れるここにテキストをいれるこ
-              こにテキストを入れるここにテキストを入れるここにテキストを入れる
-
-        .achivement.item-2
-          h2.title レジアプリとECサイトの在庫連携アプリ
-          == link_to '株式会社玉井様', '#', class: :customer, rel: 'noopener nofollow', target: '_blank'
-          == link_to 'http://example.jp/hoge/to/path', '#', class: :url, rel: 'noopener nofollow', target: '_blank'
-          ul.tags
-            li.tag.button.is-small.is-rounded.is-achivement Ruby
-            li.tag.button.is-small.is-rounded.is-achivement API
-            li.tag.button.is-small.is-rounded.is-achivement AWS
-          == image_tag '/images/achivements/achivement-1.jpg', class: :image
-          p.description
-            |
-              ここにテキストを入れるここにテキストを入れるここにテキストを入れるここにテキストをいれるこ
-              こにテキストを入れるここにテキストを入れるここにテキストを入れる
-              ここにテキストを入れるここにテキストを入れるここにテキストを入れるここにテキストをいれるこ
-              こにテキストを入れるここにテキストを入れるここにテキストを入れる
-
-        .achivement.item-2
-          h2.title レジアプリとECサイトの在庫連携アプリ
-          == link_to '株式会社玉井様', '#', class: :customer, rel: 'noopener nofollow', target: '_blank'
-          == link_to 'http://example.jp/hoge/to/path', '#', class: :url, rel: 'noopener nofollow', target: '_blank'
-          ul.tags
-            li.tag.button.is-small.is-rounded.is-achivement Ruby
-            li.tag.button.is-small.is-rounded.is-achivement API
-            li.tag.button.is-small.is-rounded.is-achivement AWS
-          == image_tag '/images/achivements/achivement-1.jpg', class: :image
-          p.description
-            |
-              ここにテキストを入れるここにテキストを入れるここにテキストを入れるここにテキストをいれるこ
-              こにテキストを入れるここにテキストを入れるここにテキストを入れる
-              ここにテキストを入れるここにテキストを入れるここにテキストを入れるここにテキストをいれるこ
-              こにテキストを入れるここにテキストを入れるここにテキストを入れる
+        - data.achivements[0...3].each do |a|
+          .achivement
+            h2.title= a.title
+            == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
+            == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
+            == image_tag a.image_path, class: :image
+            p.description= a.description
