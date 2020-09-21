@@ -1,3 +1,41 @@
 html, body
   background: $white
   font-feature-settings: 'pkna'
+
+section > .container.summary
+  .title
+    font-size: 1.375rem
+    letter-spacing: .5rem
+  .description
+    margin-top: 4.175rem
+    text-align: left
+
+.columns.blocks
+  margin: 0 0 10rem
+  .column
+    padding: 0 9px
+    width: 352px
+    .image
+      width: 352px
+    .title
+      font-size: 1.25rem
+      margin: 1.875rem 0
+      text-align: center
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+
+  .more
+    text-align: right
+    margin-top: 2rem
+
+  .button.is-light-blue
+    width: 10rem
+    color: $light-blue-text
+    border: 2px solid $light-blue-text
+    box-shadow: 2px 2px 4px #999
+    border-radius: 12px
+    &:hover, &:active
+      color: $white
+      background: $light-blue-text

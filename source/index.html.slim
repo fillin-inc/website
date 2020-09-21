@@ -4,7 +4,73 @@ description: @TODO
 
 section.hero
   .container
-    h2.title 必要なピースをつくる
-    h3.sub-title 検証と分析を繰り返しながら速く大きく
+    h1.title 必要なピースをつくる
+    h2.sub-title 検証と分析を繰り返しながら速く大きく
     == image_tag 'images/top.gif', width: '1097', class: :main
+
+section
+  .container.summary
+    .columns
+      .column.is-two-thirds.is-offset-2
+        h1.title 事業内容
+        .description
+          p
+            |
+              Web アプリ開発や Web サイト制作の企画, 開発, 制作や運用を通じてお客様のビ
+              ジネスをサポートします。Web サービス, 社内システム, ランディングページ から
+              コーポレートサイトまで、まずはご相談ください。
+
+  .container.business
+    .columns.blocks
+      .column
+        == image_tag 'images/index/entrusted.jpg', alt: '', class: :image
+        h2.title 受託開発
+        p.detail
+          |
+            Webアプリ開発をご依頼いただけます。設計, 開
+            発や運用やすでにご利用のシステムの調査, 改修
+            まで対応します。
+        .more
+          == link_to 'もっと詳しく', '/entrusted-development/', class: 'button is-light-blue'
+
+      .column
+        == image_tag 'images/index/web-design.jpg', alt: '', class: :image
+        h2.title Webサイト制作
+        p.detail
+          |
+            Webサイトの制作を中心にプロモーションをお手
+            伝いします。新商品やサービスのPRをお考えの場
+            合はお気軽にお問い合わせください。
+        .more
+          == link_to 'もっと詳しく', '/web-design/', class: 'button is-light-blue'
+
+      .column
+        == image_tag 'images/index/ses.jpg', alt: '', class: :image
+        h2.title 開発支援
+        p.detail
+          |
+            Webサービス開発や運用に必要な技術提供を行って
+            います。リモートワークを中心とした支援方法で、
+            都内企業様の開発支援を行っています。
+        .more
+          == link_to 'もっと詳しく', '/development-support/', class: 'button is-light-blue'
+
+section.releases
+  .container
+    h1.title.has-text-centered お知らせ
+    .columns
+      .column.is-two-thirds.is-offset-2
+        ul
+          - blog(:releases).articles[0...3].each do |article|
+            li.article
+              == link_to article.url do
+                .date
+                  == article.date.strftime('%Y年%m月%d日')
+                .article-title
+                  == article.title
+
+section.achivements
+  .container
+    h1.title.has-text-centered 最近の実績
+    p あとで
 
