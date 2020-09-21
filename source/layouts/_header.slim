@@ -2,8 +2,8 @@ header.header
   nav.navbar role="navigation" aria-label="main navigation"
     .container
       .navbar-brand
-        == link_to '/', class: 'navbar-item' do
-          == image_tag 'images/logo.svg', alt: 'ロゴ', class: 'logo'
+        == link_to '/', class: 'navbar-item logo-link' do
+          == image_tag 'images/logo.svg', alt: '株式会社フィルインのロゴ', class: 'logo'
 
         a#burger.navbar-burger.burger role="button" aria-label="menu" aria-expanded="false" data-target="nav-list"
           - 3.times do
@@ -11,12 +11,10 @@ header.header
 
       #nav-list.navbar-menu
         .navbar-end
-          .navbar-item.has-dropdown.is-hoverable
-            a.navbar-link
-              | 事業内容
-            .navbar-dropdown
-              - data.services.each do |service|
-                = link_to service.name, service.path, class: 'navbar-item'
+          = link_to '受託開発', '/entrusted-development/', class: 'navbar-item'
+          = link_to 'Webサイト制作', '/web-design/', class: 'navbar-item'
+          = link_to '開発支援', '/development-support/', class: 'navbar-item'
+          = link_to '実績一覧', '/achivements/', class: 'navbar-item'
+          = link_to '会社情報', '/company/', class: 'navbar-item'
           = link_to 'お知らせ', '/releases/', class: 'navbar-item'
-          = link_to '求人情報', '/job-information/', class: 'navbar-item'
           = link_to 'お問い合わせ', '/inquiry/', class: 'navbar-item'
