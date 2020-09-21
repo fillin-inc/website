@@ -13,6 +13,6 @@ hamburgerMenu.addEventListener('click', function (event) {
     }
 });
 
-let options = {};
+let options = { navigation: true, navigationKeys: false };
 const bulmaCarousel = require('bulma-carousel');
-const carousels = bulmaCarousel.attach('.carousel', options);
+const carousels = bulmaCarousel.attach('.carousels', options);
