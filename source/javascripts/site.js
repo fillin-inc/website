@@ -1,3 +1,7 @@
+import jquery from 'jquery';
+import slick from 'slick-carousel';
+
+const $ = jquery;
 const navList = document.getElementById('nav-list');
 const hamburgerMenu = document.getElementById('burger');
 
@@ -12,3 +16,5 @@ hamburgerMenu.addEventListener('click', function (event) {
         navList.classList.add('is-active');
     }
 });
+
+$('.carousels').slick();
