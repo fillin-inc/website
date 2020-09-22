@@ -1,0 +1,71 @@
+---
+title: 受託開発
+description: TODO
+priority: 0.75
+changefreq: monthly
+---
+
+section
+  == partial 'layouts/title_block', locals: { title: current_page.data.title }
+  .container
+    .columns
+      .column.is-two-thirds.is-offset-2
+        p.summary
+          |
+            ウェブブラウザから利用するWebアプリケーション開発をご依頼いただけます。
+            お客様のRFP(提案依頼書)作成から設計, 開発や運用やすでにご利用のシステムの
+            調査や改修まで対応します。「とりあえず困っている」ことがありましたらお気
+            軽にお問い合わせください。
+
+  .container
+    h2.title.has-text-centered.block-title 特徴
+    .columns.blocks
+      .column
+        == image_tag 'images/entrusted/feature-1.jpg', alt: '', class: :image
+        h3.title 開発支援で高めた技術力
+        p.detail
+          |
+            スタートアップやベンチャー企業の開発支援で得たノウハウや経験をベースとした技術力を生かしたシステム開発を提供します。
+            サービス運用を含めたご提案も可能です。
+      .column
+        == image_tag 'images/entrusted/feature-2.jpg', alt: '', class: :image
+        h3.title 目的にあった技術選定
+        p.detail
+          |
+            開発の目的やビジネスの見通しに合わせた開発ツール, アーキテクチャーや運用体制をご提案します。
+            WebアプリだけでもRuby on Rails, PHP や Go といった選択が可能です。
+      .column
+        == image_tag 'images/entrusted/feature-3.jpg', alt: '', class: :image
+        h3.title 流行キーワード対応
+        p.detail
+          |
+            DX(デジタルトランスフォーメーション)やリーンスタートアップ といった流行の横文字に対応した開発に対応します。
+            小難しい部分は当社のエンジニアから現実的な設計とスケジュールでご説明します。
+
+section.person
+  .container
+    h1.title.has-text-centered 担当者
+    .columns
+      .column.is-offset-2.is-one-third
+        == image_tag '/images/entrusted/person.jpg', class: :image
+      .column.is-one-third
+        dl.personal-info
+          dt エンジニア
+          dd 松島 祐也
+          dt メッセージ
+          dd
+            | お客様のビジネスが利益を出すことで当社も成長する二人三脚の関係性を大切にしています。
+              お気軽にご相談ください。
+
+section.achivements
+  .container
+    h1.title.has-text-centered 開発実績
+    .column.is-two-thirds.is-offset-2
+      .wrapper
+        - data.achivements[0...3].each do |a|
+          .achivement
+            h2.title= a.title
+            == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
+            == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
+            == image_tag a.image_path, class: :image
+            p.description= a.description

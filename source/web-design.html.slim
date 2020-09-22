@@ -1,0 +1,66 @@
+---
+title: Webサイト制作
+description: TODO
+priority: 0.75
+changefreq: monthly
+---
+
+section
+  == partial 'layouts/title_block', locals: { title: current_page.data.title }
+  .container
+    .columns
+      .column.is-two-thirds.is-offset-2
+        p.summary
+          |
+            コーポレートサイトからランディングページの企画, 制作, 運用保守までご依頼い
+            ただけます。会社ホームページの開設やリニューアル, 新サービスや商品のプロモ
+            ーションをお考えの場合はお気軽にお問い合わせください。
+
+  .container
+    h2.title.has-text-centered.block-title 特徴
+    .columns.blocks
+      .column
+        == image_tag 'images/web-design/feature-1.jpg', alt: '', class: :image
+        h3.title 機能に強い
+        p.detail
+          |
+            開発支援や受託開発のシステム開発のノウハウを生かした機能追加やコンテンツ更新が可能な静的サイトの運用に自信があります。
+      .column
+        == image_tag 'images/web-design/feature-2.jpg', alt: '', class: :image
+        h3.title 低価格の運用コスト
+        p.detail
+          |
+            静的サイトでの制作運用をご選択いただけますと月額100円程度(当社実績)からWebサイトを運用いただけます。
+      .column
+        == image_tag 'images/web-design/feature-3.jpg', alt: '', class: :image
+        h3.title 目的に適した計画
+        p.detail
+          |
+            商品やサービス内容, 体制に応じてWebサイトの制作内容や運用, お客様を含めた運用プランをご提案させていただきます。
+
+section.person
+  .container
+    h1.title.has-text-centered 担当者
+    .columns
+      .column.is-offset-2.is-one-third
+        == image_tag '/images/web-design/person.jpg', class: :image
+      .column.is-one-third
+        dl.personal-info
+          dt Webデザイナー
+          dd 蜂巣 可奈実
+          dt メッセージ
+          dd
+            | テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+
+section.achivements
+  .container
+    h1.title.has-text-centered 開発実績
+    .column.is-two-thirds.is-offset-2
+      .wrapper
+        - data.achivements[0...3].each do |a|
+          .achivement
+            h2.title= a.title
+            == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
+            == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
+            == image_tag a.image_path, class: :image
+            p.description= a.description
