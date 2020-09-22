@@ -21,21 +21,21 @@ section
     h2.title.has-text-centered.block-title 特徴
     .columns.blocks
       .column
-        == image_tag 'images/entrusted/feature-1.jpg', alt: '', class: :image
+        == image_tag 'images/entrusted/feature-1.jpg', alt: '', class: :image, loading: :lazy
         h3.title 開発支援で高めた技術力
         p.detail
           |
             スタートアップやベンチャー企業の開発支援で得たノウハウや経験をベースとした技術力を生かしたシステム開発を提供します。
             サービス運用を含めたご提案も可能です。
       .column
-        == image_tag 'images/entrusted/feature-2.jpg', alt: '', class: :image
+        == image_tag 'images/entrusted/feature-2.jpg', alt: '', class: :image, loading: :lazy
         h3.title 目的にあった技術選定
         p.detail
           |
             開発の目的やビジネスの見通しに合わせた開発ツール, アーキテクチャーや運用体制をご提案します。
             WebアプリだけでもRuby on Rails, PHP や Go といった選択が可能です。
       .column
-        == image_tag 'images/entrusted/feature-3.jpg', alt: '', class: :image
+        == image_tag 'images/entrusted/feature-3.jpg', alt: '', class: :image, loading: :lazy
         h3.title 流行キーワード対応
         p.detail
           |
@@ -47,7 +47,7 @@ section.person
     h1.title.has-text-centered 担当者
     .columns
       .column.is-offset-2.is-one-third
-        == image_tag '/images/entrusted/person.jpg', class: :image
+        == image_tag '/images/entrusted/person.jpg', class: :image, loading: :lazy
       .column.is-one-third
         dl.personal-info
           dt エンジニア
@@ -68,5 +68,5 @@ section.achivements
               h2.title= a.title
               == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
               == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
-              == image_tag a.image_path, class: :image
+              == image_tag a.image_path, class: :image, loading: :lazy
               p.description= a.description

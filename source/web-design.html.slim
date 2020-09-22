@@ -20,19 +20,19 @@ section
     h2.title.has-text-centered.block-title 特徴
     .columns.blocks
       .column
-        == image_tag 'images/web-design/feature-1.jpg', alt: '', class: :image
+        == image_tag 'images/web-design/feature-1.jpg', alt: '', class: :image, loading: :lazy
         h3.title 機能に強い
         p.detail
           |
             開発支援や受託開発のシステム開発のノウハウを生かした機能追加やコンテンツ更新が可能な静的サイトの運用に自信があります。
       .column
-        == image_tag 'images/web-design/feature-2.jpg', alt: '', class: :image
+        == image_tag 'images/web-design/feature-2.jpg', alt: '', class: :image, loading: :lazy
         h3.title 低価格の運用コスト
         p.detail
           |
             静的サイトでの制作運用をご選択いただけますと月額100円程度(当社実績)からWebサイトを運用いただけます。
       .column
-        == image_tag 'images/web-design/feature-3.jpg', alt: '', class: :image
+        == image_tag 'images/web-design/feature-3.jpg', alt: '', class: :image, loading: :lazy
         h3.title 目的に適した計画
         p.detail
           |
@@ -43,7 +43,7 @@ section.person
     h1.title.has-text-centered 担当者
     .columns
       .column.is-offset-2.is-one-third
-        == image_tag '/images/web-design/person.jpg', class: :image
+        == image_tag '/images/web-design/person.jpg', class: :image, loading: :lazy
       .column.is-one-third
         dl.personal-info
           dt Webデザイナー
@@ -63,5 +63,5 @@ section.achivements
               h2.title= a.title
               == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
               == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
-              == image_tag a.image_path, class: :image
+              == image_tag a.image_path, class: :image, loading: :lazy
               p.description= a.description

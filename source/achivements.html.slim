@@ -16,7 +16,7 @@ section.archives
               h2.title= a.title
               == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
               == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
-              == image_tag a.image_path, class: :image
+              == image_tag a.image_path, class: :image, loading: :lazy
               p.description= a.description
 
         .pagination

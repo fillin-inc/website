@@ -23,7 +23,7 @@ section
   .container.business
     .columns.blocks
       .column
-        == image_tag 'images/index/entrusted.jpg', alt: '', class: :image
+        == image_tag 'images/index/entrusted.jpg', alt: '', class: :image, loading: :lazy
         h2.title 受託開発
         p.detail
           |
@@ -34,7 +34,7 @@ section
           == link_to 'もっと詳しく', '/entrusted-development/', class: 'button is-light-blue'
 
       .column
-        == image_tag 'images/index/web-design.jpg', alt: '', class: :image
+        == image_tag 'images/index/web-design.jpg', alt: '', class: :image, loading: :lazy
         h2.title Webサイト制作
         p.detail
           |
@@ -45,7 +45,7 @@ section
           == link_to 'もっと詳しく', '/web-design/', class: 'button is-light-blue'
 
       .column
-        == image_tag 'images/index/ses.jpg', alt: '', class: :image
+        == image_tag 'images/index/ses.jpg', alt: '', class: :image, loading: :lazy
         h2.title 開発支援
         p.detail
           |
@@ -79,5 +79,5 @@ section.achivements
             h2.title= a.title
             == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
             == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
-            == image_tag a.image_path, class: :image
+            == image_tag a.image_path, class: :image, loading: :lazy
             p.description= a.description
