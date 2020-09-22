@@ -24,7 +24,7 @@ if ($('.carousels').length) {
 
 const header = $('#header');
 const headerHeight = header.height() / 2;
-$(window).scroll(throttle(250, () => {
+$(window).scroll(throttle(250, function () {
     if ($(window).scrollTop() >= headerHeight) {
       header.addClass('is-sticky');
     } else {
