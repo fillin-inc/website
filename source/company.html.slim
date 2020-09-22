@@ -1,0 +1,51 @@
+---
+title: 会社情報
+description: TODO
+priority: 0.5
+changefreq: monthly
+---
+
+section
+  == partial 'layouts/title_block', locals: { title: current_page.data.title }
+
+  .container
+    .columns.info
+      .column.is-two-thirds.is-offset-2
+        h2.title 会社概要
+
+        table.table
+          tr
+            th 会社名
+            td 株式会社フィルイン
+          tr
+            th 代表取締役
+            td 松島　祐也
+          tr
+            th 設立
+            td 2016年9月1日
+          tr
+            th 資本金
+            td 100万円
+          tr
+            th 所在地
+            td 群馬県高崎市本町48番地
+          tr
+            th 連絡先
+            td info@fillin-inc.com
+          tr
+            th 事業内容
+            td
+              ul
+                li Webサービスの企画、販売及び運営
+                li IT技術に関するセミナーの企画及び運営
+                li コンピュータソフトウェアの企画及び販売
+
+
+  .container
+    .columns.history
+      .column.is-two-thirds.is-offset-2
+        h2.title 会社経歴
+        dl
+          - data.histories.each do |history|
+            dt= history.date
+            dd= history.text
