@@ -55,12 +55,13 @@ section.person
 section.achivements
   .container
     h1.title.has-text-centered 開発実績
-    .column.is-two-thirds.is-offset-2
-      .wrapper
-        - data.achivements[0...3].each do |a|
-          .achivement
-            h2.title= a.title
-            == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
-            == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
-            == image_tag a.image_path, class: :image
-            p.description= a.description
+    .columns
+      .column.is-two-thirds.is-offset-2
+        .wrapper
+          - data.achivements[0...3].each do |a|
+            .achivement
+              h2.title= a.title
+              == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
+              == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
+              == image_tag a.image_path, class: :image
+              p.description= a.description
