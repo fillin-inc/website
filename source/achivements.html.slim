@@ -1,0 +1,28 @@
+---
+title: 実績一覧
+description: TODO
+priority: 0.75
+changefreq: monthly
+---
+
+section.archives
+  == partial 'layouts/title_block', locals: { title: current_page.data.title }
+  .container
+    .columns
+      .column.is-two-thirds.is-offset-2
+        .wrapper
+          - data.achivements[0...3].each do |a|
+            .achivement
+              h2.title= a.title
+              == link_to a.customer.name, a.customer.url, class: :customer, rel: 'noopener nofollow', target: '_blank'
+              == link_to a.url, a.url, class: :url, rel: 'noopener nofollow', target: '_blank'
+              == image_tag a.image_path, class: :image
+              p.description= a.description
+
+        .pagination
+          ul
+            li= link_to '前へ', '#', class: :prev
+            li.current 1
+            li= link_to '2', '#'
+            li= link_to '3', '#'
+            li= link_to '次へ', '#', class: :next
