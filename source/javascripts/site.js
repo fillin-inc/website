@@ -17,4 +17,6 @@ hamburgerMenu.addEventListener('click', function (event) {
     }
 });
 
-$('.carousels').slick();
+if ($('.carousels').length) {
+  $('.carousels').slick();
+}
