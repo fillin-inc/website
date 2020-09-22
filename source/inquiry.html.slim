@@ -4,14 +4,14 @@ priority: 1.0
 ---
 
 section
-  == partial 'layouts/title_block', locals: { title: current_page.data.title, english_title: 'Inquiry' }
+  == partial 'layouts/title_block', locals: { title: current_page.data.title }
 
   .container
     .columns
       .column.is-half.is-offset-one-quarter.content
+        .wrapper
+          p お問い合わせ内容をご入力の上送信してください。
 
-        p お問い合わせ内容をご入力の上送信してください。
+          <iframe style="height: 55rem;" src="https://docs.google.com/forms/d/e/1FAIpQLSf7_8Q-A4O4jeRyw9GtNR17VqOr5mL8ITFSNbLAPG7H77N8pg/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 
-        <iframe style="height: 55rem;" src="https://docs.google.com/forms/d/e/1FAIpQLSf7_8Q-A4O4jeRyw9GtNR17VqOr5mL8ITFSNbLAPG7H77N8pg/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-
-        p Email でのお問い合わせをご希望の場合は info@fillin-inc.com までご連絡ください。
+          p Email でのお問い合わせをご希望の場合は info@fillin-inc.com までご連絡ください。
