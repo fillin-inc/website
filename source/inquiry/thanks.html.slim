@@ -4,10 +4,13 @@ sitemap_ignore: true
 ---
 
 section
-  == partial 'layouts/title_block', locals: { title: 'お問い合わせ', english_title: 'Inquiry' }
+  == partial 'layouts/title_block', locals: { title: current_page.data.title }
 
   .container
     .columns
-      .column.is-half.is-offset-one-quarter.content style="min-height: 300px;"
-        h1.title お問い合わせありがとうございました
-        p ご送信いただいたお問い合わせは順次ご対応させていただいております。返信のお受け取りまで少々お待ち下さい。
+      .column.is-half.is-offset-one-quarter.content
+        .wrapper
+          p
+            |
+              お問い合わせありがとうございました。<br>
+              ご送信いただいたお問い合わせは順次ご対応させていただいております。返信のお受け取りまで少々お待ち下さい。
