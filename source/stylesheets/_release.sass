@@ -1,43 +1,31 @@
+@charset 'utf-8'
+
 .releases
-  .year-group
-    h3.title
-      font-size: $font-5
-
-      .year
-        font-size: $font-4
-        padding-right: .125rem
-
-    ul
-      margin-left: 1rem
-      margin-bottom: 2.5rem
-    li
-      list-style: none
-      padding-bottom: .25rem
-
-      a:link, a:visited
-        color: $black
-      a:hover
-        color: $blue
-
-    .article-title
-      font-weight: bold
-  .single
-    h2.title
-      font-size: $font-3
-      margin-bottom: .25rem
-    h3
-      font-size: $font-4
-      margin-top: 2.25rem
-      margin-bottom: 1.25rem
-    h4, h5, h6
-      font-size: $font-5
-    .article-data
-      font-size: $font-5
-      margin-bottom: 2.125rem
-
-.release-menu
-  .title
-    font-size: $font-5
-    margin-bottom: .125rem
+  .title-block
+    background-image: url(/images/releases/header.jpg)
+  .wrapper
+    margin-bottom: 11.25rem
+  .year-title
+    margin: 6.5rem 0 2.75rem
+    font-size: 1.25rem
+    letter-spacing: .25rem
   .date
-    font-size: $font-6
+    font-style: italic
+    color: #adadad
+  .article-title
+    margin-bottom: 1.25rem
+
+  .article
+    margin: 6.5rem 0 11.25rem
+    .title
+      font-size: 1.25rem
+      letter-spacing: .125rem
+      margin: 0
+    .date
+      margin: .25rem 0 3.75rem
+      font-size: 1.125rem
+    .content
+      font-size: 1.25rem
+      h1, h2, h3
+        font-size: 1.25rem
+        letter-spacing: .125rem

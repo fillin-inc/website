@@ -1,23 +1,25 @@
 ---
 blog: releases
-layout: releases
 title: お知らせ
 description: 株式会社フィルインのお知らせ一覧ページです。運営するサービスの最新情報や事業情報がご確認いただけます。
 priority: 1.0
 changefreq: weekly
 ---
 
-- blog.articles.group_by {|a| a.date.year}.each do |year, articles|
-  div class="year-#{year} year-group"
-    h3.title
-      span.year
-        == year
-      | 年
-    ul
-      - articles.each do |article|
-        li
-          == link_to article.url do
-            .article-title
-              = article.title
-            .date
-              = article.date.strftime('%Y-%m-%d')
+section
+  == partial 'layouts/title_block', locals: { title: current_page.data.title }
+  .container
+    .columns
+      .column.is-two-thirds.is-offset-2.wrapper
+        - blog.articles.group_by {|a| a.date.year}.each do |year, articles|
+          div class="year-#{year} year-group"
+            h2.title.year-title
+              span.year
+                == year
+              | 年
+            dl
+              - articles.each do |article|
+                dt.date= article.date.strftime('%Y年%m月%d日')
+                dd.article-title
+                  == link_to article.url do
+                    = article.title

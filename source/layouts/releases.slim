@@ -1,22 +1,15 @@
 = wrap_layout :layout do
+
   section
-    == partial 'layouts/title_block', locals: { title: 'お知らせ', english_title: 'Releases' }
+    == partial 'layouts/title_block', locals: { title: current_page.data.title}
 
-  .container
-    .columns
-      .column.is-two-thirds.content
-        - unless is_blog_article?
-            == yield
-        - else
-          .single
-            h2.title
-              = current_page.data.title
+    .container
+      .columns
+        .column.is-two-thirds.is-offset-2.content
+          .article
+            .title= current_page.data.title
+            .date= current_page.date.strftime('%Y年%m月%d日')
 
-            .article-data
-              span.published
-                = "公開日: #{current_page.date.strftime('%Y-%m-%d')}"
+            .content
+              == yield
 
-            == yield
-
-      .column
-        == partial 'layouts/release_menu'
