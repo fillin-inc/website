@@ -28,6 +28,7 @@
     "bulma": "^0.9",
     "jquery": "^3.5.1",
     "slick-carousel": "^1.8.1",
+    "throttle-debounce": "^2.3.0",
     "webpack": "^4.44",
     "webpack-cli": "^3.3"
   },

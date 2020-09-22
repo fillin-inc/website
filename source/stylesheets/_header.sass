@@ -3,6 +3,7 @@
 body > .header
   background: $white
   height: 94px
+  width: 100%
 
   .navbar
     .navbar-brand
@@ -20,3 +21,9 @@ body > .header
       padding: 0 19px
     .current
       background: $light-blue
+
+body > .header.is-sticky
+  position: fixed
+  top: 0
+  z-index: 1000
+  box-shadow: 0 2px #ededed

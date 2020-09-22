@@ -1,5 +1,6 @@
 import jquery from 'jquery';
 import slick from 'slick-carousel';
+import { throttle } from 'throttle-debounce';
 
 const $ = jquery;
 const navList = document.getElementById('nav-list');
@@ -20,3 +21,13 @@ hamburgerMenu.addEventListener('click', function (event) {
 if ($('.carousels').length) {
   $('.carousels').slick();
 }
+
+const header = $('#header');
+const headerHeight = header.height() / 2;
+$(window).scroll(throttle(250, () => {
+    if ($(window).scrollTop() >= headerHeight) {
+      header.addClass('is-sticky');
+    } else {
+      header.removeClass('is-sticky');
+    }
+}));
