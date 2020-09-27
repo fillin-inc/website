@@ -7,34 +7,28 @@ footer.footer
       .column.is-one-quarter
         ul.sitemap-1
           li
-            == link_to 'index', '/'
-            li
-              | サービス
-              ul
-                - data.services.each do |service|
-                  li
-                    == link_to service.name, service.path
+            == link_to 'TOP', '/'
+          li
+            == link_to '受託開発', '/services/entrusted-development/'
+          li
+            == link_to '開発支援', '/services/service-engineering-service/'
+          li
+            == link_to 'Webサイト制作', '/services/web-design/'
 
       .column.is-one-quarter
         ul.sitemap-2
           li
             == link_to 'お知らせ', '/releases/'
           li
-            == link_to '研修生制度', '/trainee/'
-          li
             == link_to '求人情報', '/job-information/'
           li
             == link_to 'お問い合わせ', '/inquiry/'
           li
             == link_to 'プライバシーポリシー', '/privacy-policy/'
-          li
-            == link_to '受講規約', '/services/programming-education/agreement/'
-          li
-            == link_to '特定商取引法に基づく表記', '/act-on-specified-commercial-transactions/'
 
     .columns
       .column.has-text-right
-        small.copyright Copyright &copy; 2016-#{Date.current.year} fillin Inc. Some Rights Reserved.
+        small.copyright &copy; 2016-#{Date.current.year} fillin Inc
 
 == javascript_include_tag :site
 - if current_page.data.js
