@@ -1,20 +1,23 @@
 ---
-description: 当社は Web アプリケーション開発を専門としたシステム開発会社です。受託開発事業や開発支援事業を通してお客様のビジネスの継続的な発展をお手伝いします。
+description: 当社は Web アプリケーション開発から Web サイト制作まで対応するシステム開発会社です。お客様のビジネスの継続的な発展をお手伝いします。
 ---
 
 section.hero.first
   .hero-body
     .container.has-text-centered
       .text
-        h1.title 群馬で Web サービスをつくる会社
+        h1.title お客様のビジネスのピースを埋める
         h2.subtitle 株式会社フィルイン
 
 section.hero.second
   .hero-body
     .container.has-text-centered
       == image_tag 'images/logomark.svg', class: 'logo-mark', alt: ''
-      h1.title.has-text-white 当社は Web アプリケーション開発を専門としたシステム開発会社です。
-      h2.subtitle.has-text-white 受託開発や開発支援を通じてお客様のビジネスの継続的な発展をお手伝いします。
+      h1.title.has-text-white Webアプリ開発やWeb制作を専門としたシステム開発会社
+      h2.subtitle.has-text-white
+        | Web アプリ開発や Web サイト制作の企画, 開発, 制作や運用を通じて<br>
+          お客様のビジネスをサポートします。Web サービス, 社内システム, ランディングページから<br>
+          コーポレートサイトまで、まずはご相談ください。
 
 .office-room &nbsp;
 
@@ -25,30 +28,27 @@ section.service.container
     .column
       == link_to '/services/entrusted-development/' do
         .wrapper
-          == image_tag 'images/index/computer.jpg', width: 220, height: 220, alt: '', class: 'circle-image'
+          == image_tag '/images/index/entrusted.jpg', width: 432, height: 345, alt: '', loading: :lazy
         h2 受託開発
-      p Web サービスや社内システムの調査, 設計, 開発や運用, 技術調査やプロトタイピングをご依頼いただけます。
+      p
+        |
+          Webアプリ開発をご依頼いただけます。設計, 開発や運用やすでにご利用のシステムの調査, 改修まで対応します。
 
     .column
       == link_to '/services/service-engineering-service/' do
         .wrapper
-          == image_tag 'images/index/cross-hands.jpg', width: 220, height: 220, alt: '', class: 'circle-image'
+          == image_tag 'images/index/support.jpg', width: 432, height: 345, alt: '', loading: :lazy
         h2 開発支援
-      p お客様のサービス開発に必要な要員や技術の提供を行っています。リモートワークを主とした都内案件が中心になります。
+      p
+        | Webサービス開発や運用に必要な技術提供を行っています。リモートワークを中心として支援します。
 
     .column
-      == link_to '/services/programming-education/' do
+      == link_to '/services/website-development/' do
         .wrapper
-          == image_tag 'images/index/screen.jpg', width: 220, height: 220, alt: '', class: 'circle-image'
-        h2 プログラミング教育
-      p プログラミングやシステム開発能力向上を目指した教育事業を行っています。企業内教育としてもご利用いただけます。
-
-    .column
-      == link_to '/services/consulting/' do
-        .wrapper
-          == image_tag 'images/index/computer-with-human.jpg', width: 220, height: 220, alt: '', class: 'circle-image'
-        h2 コンサルティング
-      p 非IT企業向けIT導入コンサルティングを行っています。事業の効率化を通してお客様の事業に貢献します。
+          == image_tag 'images/index/design.jpg', width: 432, height: 345, alt: '', loading: :lazy
+        h2 Web サイト制作
+      p
+        | Webサイトの制作を中心にプロモーションをお手伝いします。新商品やサービスのPRをお考えの場合はお気軽にお問い合わせください。
 
 section.information.container
   .columns
@@ -90,7 +90,9 @@ section.information.container
                 li IT 技術に関するセミナーの企画および運営
           tr
             th 連絡先
-            td info@fillin-inc.com
+            td
+              | info@fillin-inc.com<br>
+              | 050-7101-1520
           tr
             th 所在地
             td.address
