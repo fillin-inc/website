@@ -8,52 +8,46 @@ changefreq: monthly
 section
   == partial 'layouts/title_block', locals: { title: current_page.data.title, english_title: 'Entrusted Development' }
 
-  .container
+  .container.content
+    h2#overview 概要
     .columns
-      .column.is-two-thirds.is-offset-2.content
-        h2#overview 概要
+      .column.is-two-thirds.is-offset-2.description
+        p
+          |
+            Web ブラウザから利用するWebアプリケーション開発をご依頼いただけます。<br>
+            お客様のRFP(提案依頼書)作成から設計, 開発や運用やすでにご利用のシステムの調査や改修まで対応します。<br>
+            「とりあえず困っている」ことがありましたらお気軽にお問い合わせください。
 
+  .container.content
+    h2#feature 特徴
+    .columns
+      .column
         .wrapper
-          p
-            | Web サービスや社内システムの調査, 設計, 開発や運用をご依頼いただけます。<br>
-              リーンスタートアップの手法を応用した MVP (Minimum Viable Product) 開発や技術調査にも対応できます。
+          == image_tag '/images/index/entrusted.jpg', width: 432, height: 345, alt: '', loading: :lazy
+        h3 開発支援で高めた技術力
+        p
+          | スタートアップやベンチャー企業の開発支援で得たノウハウや経験をベースとした技術力を生かしたシステム開発を提供します。サービス運用を含めたご提案も可能です。
 
-        h2#feature 特徴
 
+      .column
         .wrapper
-          h3 1. スタートアップやベンチャーの開発支援を行う技術力
+          == image_tag '/images/index/server.jpg', width: 432, height: 345, alt: '', loading: :lazy
+        h3 目的にあった技術選定
+        p
+          | 開発の目的やビジネスの見通しに合わせた開発ツール, フレームワーク, アーキテクチャーや運用体制をご提案します。WebアプリだけでもRuby on Rails, PHP や Go といった選択が可能です。
 
-          p
-            | 当社は都内スタートアップやベンチャー企業の開発支援を行なっています。
-              その開発の中で必要となる技術や知識を生かした開発が可能です。
-
-          p
-            | 地方の中小企業が通常行う開発方法に加え, サービス開発に必要な知識, リーンスタートアップの手法やマーケティング,
-              外部サービス活用を行うことでより効率的な開発を実現しています。
-
-          h3 2. 目的に合った技術・プラットフォームの選定
-
-          p
-            | 将来見込むビジネス規模や目的, メンテナンス性の観点から使用言語, クラウド(IaaS, PaaS) や VPS のサーバー環境,
-              連携する Web サービス(SaaS) を選択します。
-
-          p
-            | 当社の開発主言語は Ruby と JavaScript ですが, 場合によっては PHP や Go を採用する場合があります。<br>
-              この選択は「いつどのタイミングでコストを負担するか」に大きな影響があります。
-              選定時にはメリット・デメリットを含めご理解いただいた上で決定いたします。
-
-          h3 3. 柔軟な取引設計
-
-          p 開発するサービスやシステムに応じて適切な契約形態をご選択いただけます。
-
-          p
-            | 受託開発ではシステム納品をお約束する「請負契約」が一般的です。しかし Web サービスや長期間にわたるシステム開発の場合には
-              適切なメンテナンスや調査, 機能提案が難しくなってしまう場合があります。そのような場合, 月額固定の受託開発プランを
-              ご用意しております。開発初期は請負契約で開発し途中から月額固定に移行する方法もございます。
+      .column
+        .wrapper
+          == image_tag '/images/index/future.jpg', width: 432, height: 345, alt: '', loading: :lazy
+        h3 流行キーワード対応
+        p
+          | DX(デジタルトランスフォーメーション)やリーンスタートアップ といった流行の横文字に対応した開発に対応します。小難しい部分は当社のエンジニアから現実的な設計とスケジュールでご説明します。
 
 
-        h2#development 開発実績
-
+  .container.content
+    h2#development 開発実績
+    .columns
+      .column.is-two-thirds.is-offset-2
         .wrapper
           ol
             li レジアプリと EC サイトの連携アプリケーション(レジアプリサービス API + API(Ruby) + WordPress + AWS)
@@ -61,7 +55,9 @@ section
             li サイト内検索サービス(Ruby on Rails + Go + DigitalOcean + 決済サービス連携)
             li Web サービス開発に係る技術調査 + 機能設計
 
-
+  .container
+    .columns.content
+      .column.is-two-thirds.is-offset-2
         .notification
           p
             | お問い合わせは下記ボタンまたは電話( <a href="tel:050-7101-1520">050-7101-1520</a> )にてお問い合わせください。
