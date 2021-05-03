@@ -3,7 +3,7 @@ version: 2
 default: &default
   working_directory: ~/website
   docker:
-    - image: yterajima/middleman:2.7.1-20.04
+    - image: yterajima/middleman:2.7.2-20.04
       environment:
         TZ: Asia/Tokyo
         MM_ENV: production
