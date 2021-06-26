@@ -9,7 +9,7 @@ xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     next if page.data.sitemap_ignore
 
     xml.url do
-      xml.loc URI.escape(File.join(site_url, page.url))
+      xml.loc File.join(site_url, page.url)
       xml.lastmod Time.parse(`git log -1 --pretty="format:%ci" #{page.source_file}`).iso8601
       xml.priority page.data.priority || "0.5"
     end
