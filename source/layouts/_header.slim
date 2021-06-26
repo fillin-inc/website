@@ -1,7 +1,7 @@
 header.header
-  nav.navbar role="navigation" aria-label="main navigation"
+  nav.navbar.level role="navigation" aria-label="main navigation"
     .container
-      .navbar-brand
+      .navbar-brand.level-item
         == link_to '/', class: 'navbar-item' do
           == image_tag 'images/logo.svg', alt: 'ロゴ', class: 'logo'
 
@@ -9,11 +9,15 @@ header.header
           - 3.times do
             span aria-hidden="true"
 
-      #nav-list.navbar-menu
+      #nav-list.navbar-menu.level-item
         .navbar-end
-          = link_to '受託開発', '/services/entrusted-development/', class: 'navbar-item'
-          = link_to '開発支援', '/services/service-engineering-service/', class: 'navbar-item'
-          = link_to 'Webサイト制作', '/services/website-development/', class: 'navbar-item'
+          .navbar-item.has-dropdown.is-hoverable
+            .navbar-link サービス
+            .navbar-dropdown
+              = link_to '受託開発', '/services/entrusted-development/', class: 'navbar-item'
+              = link_to '開発支援', '/services/service-engineering-service/', class: 'navbar-item'
+              = link_to 'Webサイト制作', '/services/website-development/', class: 'navbar-item'
+
           = link_to 'お知らせ', '/releases/', class: 'navbar-item'
           = link_to '求人情報', '/job-information/', class: 'navbar-item'
           = link_to 'お問い合わせ', '/inquiry/', class: 'navbar-item'
