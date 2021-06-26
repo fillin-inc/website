@@ -5,7 +5,7 @@
   "main": "source/javascripts/site.js",
   "scripts": {
     "build": "webpack --bail --mode production",
-    "watch": "webpack -d --watch --mode development",
+    "watch": "webpack -d eval-source-map --watch --mode development",
     "clear": "rm -r source/javascripts/dist/* && touch source/javascripts/dist/.keep"
   },
   "repository": {

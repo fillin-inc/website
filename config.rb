@@ -45,7 +45,7 @@ set :markdown, fenced_code_blocks: true, smartypants: true, tables: true, autoli
 
 activate :external_pipeline,
   name: :webpack,
-  command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
+  command: build? ? 'npm run build' : 'npm run watch',
   source: '.tmp/dist',
   latency: 1
 
