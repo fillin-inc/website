@@ -70,10 +70,10 @@ workflows:
       - release:
           filters:
             branches:
-              only: master
+              only: main
   only-build:
     jobs:
       - build:
           filters:
             branches:
-              ignore: master
+              ignore: main

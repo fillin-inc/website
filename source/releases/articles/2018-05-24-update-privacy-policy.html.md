@@ -12,5 +12,5 @@ date: 2018-05-24
 
 ## 変更内容の確認方法
 
-当社 Web サイトは GitHub で管理されています。[プライバシーポリシーの変更履歴](https://github.com/fillin-inc/website/commits/master/source/privacy.html.slim) から変更内容の詳細をご確認いただけます。
+当社 Web サイトは GitHub で管理されています。[プライバシーポリシーの変更履歴](https://github.com/fillin-inc/website/commits/main/source/privacy.html.slim) から変更内容の詳細をご確認いただけます。
 
