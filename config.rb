@@ -35,7 +35,6 @@ activate :robots,
 
 activate :directory_indexes
 activate :generator_tag
-activate :vcs_time
 activate :gzip
 activate :asset_hash do |f|
   f.ignore = [/images\/ogp\/\S+\.(png|jpg|gif)/]

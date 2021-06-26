@@ -7,7 +7,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-blog'
 gem 'middleman-generator-tag'
-gem 'middleman-vcs-time'
 gem 'middleman-robots'
 gem 'middleman-s3_sync'
 gem 'mime-types'
