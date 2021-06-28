@@ -32,7 +32,7 @@ section.section.welcome.container
         br
         | 目的に応じて柔軟に切り替えながら開発を行うことができます。
 
-      .more-read
+      .read-more
         == link_to 'もっと詳しく', '#', class: 'button is-text with-arrow-postfix'
 
 
@@ -69,55 +69,41 @@ section.section.service
           br
           | デジタルプロモーションをお手伝いします。
 
-section.information.container
+section.mission
   .columns
-    section.column.release
-      h1.title.has-text-centered お知らせ
+    .column
+      figure
+        == image_tag '/images/index/hero.jpg', alt: 'todo'
+    .column.section
+      h1.title
+        | ビジネス価値を高める
+        br
+        | デジタルソリューションを提供
+      .content
+        p
+          | 当社はWebアプリケーションのプロフェッショナルとして
+          br
+          | お客様のビジネス価値を高めるために存在します。
+        p
+          | より使いやすく効率的な手法を取り入れながら
+          br
+          | アプリケーションを構築, 改善ならびに運用を行います。
 
-      ul
-        - blog(:releases).articles[0...5].each do |article|
-          li
-            == link_to article.url do
-              .date
-                == article.date.strftime('%Y-%m-%d')
-              .article-title
-                == article.title
+section.section.information
+  .container
+    h1.title.has-text-centered お知らせ
+    .columns
+      - blog(:releases).articles[0..2].each do |article|
+        .column
+          .article
+            h2.subtitle
+              == link_to article.title, article.url
+            .summary
+              == article.summary(60, '...')
+            .date
+              .icon
+                == partial 'images/icons/calendar-outline.svg'
+              == article.date.strftime('%Y-%m-%d')
 
-    section.column.company
-      h1.title.has-text-centered 会社概要
-
-      table.table.is-striped.is-fullwidth
-        tbody
-          tr
-            th 会社名
-            td 株式会社フィルイン
-          tr
-            th 代表取締役
-            td 松島&nbsp;祐也
-          tr
-            th 設立
-            td 2016 年 9 月 1 日
-          tr
-            th 資本金
-            td 100 万円
-          tr
-            th 事業内容
-            td
-              ul
-                li Web サービスの企画, 開発および運営
-                li コンピュータソフトウェアの企画, 開発および販売
-                li IT 技術に関するセミナーの企画および運営
-          tr
-            th 連絡先
-            td
-              | info@fillin-inc.com<br>
-              | 050-7101-1520
-          tr
-            th 所在地
-            td.address
-              | 370-0069
-              br
-              | 群馬県高崎市飯塚町147-4
-              br
-              span.is-size-7
-                | ※駐車場 12,13,22番をご利用いただけます。
+            .read-more
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
