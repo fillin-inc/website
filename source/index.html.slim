@@ -2,53 +2,72 @@
 description: 当社は Web アプリケーション開発から Web サイト制作まで対応するシステム開発会社です。お客様のビジネスの継続的な発展をお手伝いします。
 ---
 
-section.hero.first
+section.hero.is-fullheight
   .hero-body
-    .container.has-text-centered
-      .text
-        h1.title お客様のビジネスのピースを埋める
-        h2.subtitle 株式会社フィルイン
+    .container
+      h1.title
+        | ビジネス価値を高める
+        br
+        | デジタルソリューションを
+      h2.subtitle 株式会社フィルイン
 
-section.hero.second
-  .hero-body
-    .container.has-text-centered
-      == image_tag 'images/logomark.svg', class: 'logo-mark', alt: ''
-      h1.title.has-text-white Webアプリ開発やWeb制作を専門としたシステム開発会社
-      h2.subtitle.has-text-white
-        | Web アプリ開発や Web サイト制作の企画, 開発, 制作や運用を通じて<br>
-          お客様のビジネスをサポートします。Web サービス, 社内システム, ランディングページから<br>
-          コーポレートサイトまで、まずはご相談ください。
-
-.office-room &nbsp;
-
-section.service.container
-  h1.title.has-text-centered サービス
-
+section.section.welcome.container
   .columns
     .column
-      == link_to '/services/entrusted-development/' do
-        .wrapper
-          == image_tag '/images/index/entrusted.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h2 受託開発
+      h1.title
+        | 株式会社フィルインは
+        br
+        | Webアプリケーション開発を専門とした
+        br
+        |システム開発会社
+    .column.content
       p
-        |
-          Webアプリ開発をご依頼いただけます。設計, 開発や運用やすでにご利用のシステムの調査, 改修まで対応します。
+        | 群馬県高崎市を拠点として
+        br
+        | 主に東京都内のベンチャー企業やスタートアップへの開発支援や
+        br
+        | 関東圏の受託開発を行っています。
+      p
+        | Ruby, PHP, JavaScript, Go といった開発言語を
+        br
+        | 目的に応じて柔軟に切り替えながら開発を行うことができます。
 
-    .column
-      == link_to '/services/service-engineering-service/' do
-        .wrapper
-          == image_tag 'images/index/support.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h2 開発支援
-      p
-        | Webサービス開発や運用に必要な技術提供を行っています。リモートワークを中心として支援します。
+      .more-read
+        == link_to 'もっと詳しく→', '#', class: 'button is-text'
 
-    .column
-      == link_to '/services/website-development/' do
-        .wrapper
-          == image_tag 'images/index/design.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h2 Web サイト制作
-      p
-        | Webサイトの制作を中心にプロモーションをお手伝いします。新商品やサービスのPRをお考えの場合はお気軽にお問い合わせください。
+
+section.section.service
+  .container
+    .columns
+      .column
+        .icon.white
+          == partial 'images/icons/document-text-outline.svg'
+        h1.title
+          == link_to '受託開発', '/services/entrusted-development/'
+        p
+          | Webアプリケーションの設計, 開発から
+          br
+          | 運用に加え改善までご対応いたします。
+
+      .column
+        .icon.white
+          == partial 'images/icons/people-outline.svg'
+        h1.title
+          == link_to '開発支援', '/services/service-engineering-service/'
+        p
+          | Webサービス開発や運用に必要な
+          br
+          | 人材と技術の提供を行っています。
+
+      .column
+        .icon.white
+          == partial 'images/icons/desktop-outline.svg'
+        h1.title
+          == link_to 'Webサイト制作', '/services/website-development/'
+        p
+          | Webサイトの制作を中心に
+          br
+          | デジタルプロモーションをお手伝いします。
 
 section.information.container
   .columns

@@ -1,95 +1,51 @@
-.index
-  .first
-    height: 28rem
-    max-height: 28rem
+body.index
+  .hero
     background-image: url(/images/index/hero.jpg)
     background-size: cover
-
+    min-height: calc(100vh - 5rem)
     .title
-      font-size: $font-2
-      letter-spacing: 2px
-      font-weight: normal
+      font-size: 5rem
+      color: $white
     .subtitle
-      font-size: $font-3
-    .text
-      position: relative
-      top: 7.5rem
-      max-width: 44rem
-      margin: 0 auto
-      background: $pure_white
-      opacity: .85
-      padding: 1.5rem 0
-      border-radius: 50px
+      font-size: 2.5rem
+      color: $white
 
-  .second
-    min-height: 20rem
-    background: #00A0E9
-
-    .title
-      font-size: $font-3
-    .subtitle
-      font-size: $font-4
-      max-width: 50rem
-      margin: 0 auto
-      text-align: center
-    .logo-mark
-      width: 3rem
-      margin: 1.125rem 0 .5rem
-
-  .office-room
-    height: 15rem
-    max-height: 15em
-    background-image: url(/images/index/office-room.jpg)
-    background-size: cover
-    background-position: center center
+  .welcome
+    .column
+      padding: 2rem 1rem
+      font-size: 1.25rem
+    .more-read .button
+      padding-left: 0
 
   .service
-    padding: 8rem 0 10rem
-
+    background: $blue
     .title
-      font-size: $font-3
-      padding-bottom: 3rem
-
-    .wrapper
-      text-align: center
-    .circle-image
-      border-radius: 50%
-      border: 2px solid $gray-circle
-      margin-bottom: .5rem
-
-    h2
-      text-align: center
-      padding: .75rem 0
-      font-size: $font-4
-      color: $blue
       margin-bottom: .25rem
+      a
+        font-size: 1.375rem
+        font-weight: 400
+        color: $white
+        &:link, &:hover, &:visited
+          color: $white
+    .column
+      color: $white
+    .icon
+      height: 1.875rem
+      width: 2rem
+    .column
+      text-align: center
 
-    a:hover .circle-image
-      border-color: $blue
++tablet
+  body.index
+    .welcome
+      .title
+        font-size: 1.5rem
 
-  .information
-    padding-bottom: 6rem
-
-    h1
-      font-size: $font-3
-      padding-bottom: 3rem
-
-    .release
-      ul
-        margin-top: 2rem
-      li
-        padding-bottom: .5rem
-        margin-bottom: 1rem
-        border-bottom: 1px solid $gray-border
-
-      .date
-        color: $blue
-        font-size: $font-6
-        font-weight: bold
-      .article-title
-        color: $black
-
-      a:visited .article-title, a:link .article-title
-        color: $black
-      a:hover .article-title
-        color: $blue
++mobile
+  body.index
+    .hero
+      min-height: calc(100vh - 14px)
+      .title
+        font-size: 1.875rem
+      .subtitle
+        font-size: 1rem
