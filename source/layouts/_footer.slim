@@ -2,7 +2,7 @@ footer.footer
   .container
     .columns
       .column
-        span.title 株式会社フィルイン
+        span.title.company-name 株式会社フィルイン
         p
           | 群馬県高崎市を拠点とした
           br
@@ -43,6 +43,18 @@ footer.footer
             span.strike サイト内検索サービス「LazySearch」
             span
               | (閉鎖)
+
+      .column
+        h1.title 会社情報
+        ul.links
+          li.with-smaller-prefix
+            == link_to '会社情報', '/company/'
+          li.with-smaller-prefix
+            == link_to '求人情報', '/job-information/'
+          li.with-smaller-prefix
+            == link_to 'プライバシーポリシー', '/privacy-policy/'
+          li.with-smaller-prefix
+            == link_to '情報セキュリティ方針', '/information-security-policy/'
 
     .columns
       .column.has-text-right
