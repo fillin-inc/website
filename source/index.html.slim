@@ -1,104 +1,103 @@
 ---
-description: 当社は Web アプリケーション開発から Web サイト制作まで対応するシステム開発会社です。お客様のビジネスの継続的な発展をお手伝いします。
+description: Webアプリケーション開発を専門としたシステム開発会社です。群馬県高崎市を拠点として都内のベンチャー,スタートアップ支援や受託開発を行っています。
+loader: true
 ---
 
-section.hero.first
+section.hero.is-fullheight
   .hero-body
-    .container.has-text-centered
-      .text
-        h1.title お客様のビジネスのピースを埋める
-        h2.subtitle 株式会社フィルイン
+    .container
+      h1.title.has-blue-background
+        | ビジネス価値を高める
+        br
+        | デジタルソリューションを
 
-section.hero.second
-  .hero-body
-    .container.has-text-centered
-      == image_tag 'images/logomark.svg', class: 'logo-mark', alt: ''
-      h1.title.has-text-white Webアプリ開発やWeb制作を専門としたシステム開発会社
-      h2.subtitle.has-text-white
-        | Web アプリ開発や Web サイト制作の企画, 開発, 制作や運用を通じて<br>
-          お客様のビジネスをサポートします。Web サービス, 社内システム, ランディングページから<br>
-          コーポレートサイトまで、まずはご相談ください。
-
-.office-room &nbsp;
-
-section.service.container
-  h1.title.has-text-centered サービス
-
+section.section.welcome.container
   .columns
     .column
-      == link_to '/services/entrusted-development/' do
-        .wrapper
-          == image_tag '/images/index/entrusted.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h2 受託開発
+      h1.title
+        | 株式会社フィルインは
+        br
+        | Webアプリケーション開発を専門とした
+        br
+        | システム開発会社
+    .column.content
       p
-        |
-          Webアプリ開発をご依頼いただけます。設計, 開発や運用やすでにご利用のシステムの調査, 改修まで対応します。
-
-    .column
-      == link_to '/services/service-engineering-service/' do
-        .wrapper
-          == image_tag 'images/index/support.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h2 開発支援
+        | 群馬県高崎市を拠点として
+        br
+        | 主に東京都内のベンチャー企業やスタートアップへの開発支援や
+        br
+        | 関東圏の受託開発を行っています。
       p
-        | Webサービス開発や運用に必要な技術提供を行っています。リモートワークを中心として支援します。
+        | Ruby, PHP, JavaScript, Go といった開発言語を
+        br
+        | 目的に応じて柔軟に切り替えながら開発を行うことができます。
 
-    .column
-      == link_to '/services/website-development/' do
-        .wrapper
-          == image_tag 'images/index/design.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h2 Web サイト制作
-      p
-        | Webサイトの制作を中心にプロモーションをお手伝いします。新商品やサービスのPRをお考えの場合はお気軽にお問い合わせください。
+section.section.service
+  .container
+    .columns
+      .column
+        .icon.white
+          == partial 'images/icons/document-text-outline.svg'
+        h1.title
+          == link_to '受託開発', '/services/entrusted-development/'
+        p
+          | Webアプリケーションの設計, 開発から
+          br
+          | 運用に加え改善までご対応いたします。
 
-section.information.container
+      .column
+        .icon.white
+          == partial 'images/icons/people-outline.svg'
+        h1.title
+          == link_to '開発支援', '/services/service-engineering-service/'
+        p
+          | Webサービス開発や運用に必要な
+          br
+          | 人材と技術の提供を行っています。
+
+      .column
+        .icon.white
+          == partial 'images/icons/desktop-outline.svg'
+        h1.title
+          == link_to 'Webサイト制作', '/services/website-development/'
+        p
+          | Webサイトの制作を中心に
+          br
+          | デジタルプロモーションをお手伝いします。
+
+section.mission
   .columns
-    section.column.release
-      h1.title.has-text-centered お知らせ
+    .column
+      figure
+        == image_tag '/images/index/meeting-space.jpg', alt: 'ミーティングスペース画像'
+    .column.section
+      h1.title
+        | 私たちは地域のビジネスをもっと強くしたい
+      .content
+        p
+          | 本来どこでも仕事ができるはずの IT 関連事業が大都市に集中し
+          br
+          | 結果として地方の事業が不利になる状況を芳しくないと考えています。
+        p
+          | 当社はWebアプリケーションのプロフェッショナルとして
+          br
+          | お客様のビジネス価値を高める支援がしたいのです。
 
-      ul
-        - blog(:releases).articles[0...5].each do |article|
-          li
-            == link_to article.url do
-              .date
-                == article.date.strftime('%Y-%m-%d')
-              .article-title
-                == article.title
+section.section.information
+  .container
+    h1.title.has-text-centered お知らせ
+    .columns
+      - blog(:releases).articles[0..2].each do |article|
+        .column
+          .article
+            h2.subtitle
+              == link_to article.title, article.url
+            .summary
+              == article.summary(60, '...')
+            .date
+              .icon
+                == partial 'images/icons/calendar-outline.svg'
+              == article.date.strftime('%Y-%m-%d')
 
-    section.column.company
-      h1.title.has-text-centered 会社概要
-
-      table.table.is-striped.is-fullwidth
-        tbody
-          tr
-            th 会社名
-            td 株式会社フィルイン
-          tr
-            th 代表取締役
-            td 松島&nbsp;祐也
-          tr
-            th 設立
-            td 2016 年 9 月 1 日
-          tr
-            th 資本金
-            td 100 万円
-          tr
-            th 事業内容
-            td
-              ul
-                li Web サービスの企画, 開発および運営
-                li コンピュータソフトウェアの企画, 開発および販売
-                li IT 技術に関するセミナーの企画および運営
-          tr
-            th 連絡先
-            td
-              | info@fillin-inc.com<br>
-              | 050-7101-1520
-          tr
-            th 所在地
-            td.address
-              | 370-0069
-              br
-              | 群馬県高崎市飯塚町147-4
-              br
-              span.is-size-7
-                | ※駐車場 12,13,22番をご利用いただけます。
+            .read-more
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'

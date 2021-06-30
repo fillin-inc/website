@@ -3,65 +3,79 @@ title: 受託開発
 description: Web サービスや社内システムの調査, 設計, 開発や運用をご依頼いただけます。
 priority: 0.75
 changefreq: monthly
+loader: false
 ---
 
-section
-  == partial 'layouts/title_block', locals: { title: current_page.data.title, english_title: 'Entrusted Development' }
+section.hero.is-medium
+  .hero-body
+    .container
+      h1.title.has-blue-background 受託開発
 
-  .container.content
-    h2#overview 概要
-    .columns
-      .column.is-two-thirds.is-offset-2.description
-        p
-          |
-            Web ブラウザから利用するWebアプリケーション開発をご依頼いただけます。<br>
-            お客様のRFP(提案依頼書)作成から設計, 開発や運用やすでにご利用のシステムの調査や改修まで対応します。<br>
-            「とりあえず困っている」ことがありましたらお気軽にお問い合わせください。
+section.section.introduction.container
+  h1.title.has-text-centered 課題を解決するシステム開発
 
-  .container.content.feature
-    h2#feature 特徴
-    .columns
-      .column
-        .wrapper
-          == image_tag '/images/index/entrusted.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h3 開発支援で高めた技術力
-        p
-          | スタートアップやベンチャー企業の開発支援で得たノウハウや経験をベースとした技術力を生かしたシステム開発を提供します。サービス運用を含めたご提案も可能です。
+  .columns.summary
+    .column.is-6.is-offset-3.has-text-centered
+      p
+        | 事業上の課題をスマートに解決するためのシステム開発を承ります。
+        br
+        | まず「何に困っているか」「予算はどの程度か」をお聞かせください。
+        br
+        | 当社の優秀なエンジニアが予算, 方法, 納期から将来的な保守性まで考慮の上で解決可能なシステムのご提案をさせていただきます。
 
-
-      .column
-        .wrapper
-          == image_tag '/images/index/server.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h3 目的にあった技術選定
-        p
-          | 開発の目的やビジネスの見通しに合わせた開発ツール, フレームワーク, アーキテクチャーや運用体制をご提案します。WebアプリだけでもRuby on Rails, PHP や Go といった選択が可能です。
-
-      .column
-        .wrapper
-          == image_tag '/images/index/future.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h3 流行キーワード対応
-        p
-          | DX(デジタルトランスフォーメーション)やリーンスタートアップ といった流行の横文字に対応した開発に対応します。小難しい部分は当社のエンジニアから現実的な設計とスケジュールでご説明します。
-
-
-  .container.content
-    h2#development 開発実績
-    .columns
-      .column.is-two-thirds.is-offset-2
-        .wrapper.no-align
-          ol
-            li レジアプリと EC サイトの連携アプリケーション(レジアプリサービス API + API(Ruby) + WordPress + AWS)
-            li 社内情報共有アプリケーション(PHP + Web フレームワーク)
-            li サイト内検索サービス(Ruby on Rails + Go + DigitalOcean + 決済サービス連携)
-            li Web サービス開発に係る技術調査 + 機能設計
-
-  .container
-    .columns.content
-      .column.is-two-thirds.is-offset-2
-        .notification
+  .columns.service-list
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+              == partial 'images/icons/search-outline.svg'
+          | 調査
+        .content
           p
-            | お問い合わせは下記ボタンまたは電話( <a href="tel:050-7101-1520">050-7101-1520</a> )にてお問い合わせください。
-              <span style="display:block;">※電話に出れない場合が多いため用件を留守番電話を残していただけると助かります。</span>
-
-          == link_to 'お問い合わせはこちら', '/inquiry/', class: 'button is-medium is-rounded'
-
+            | 計画の前提となる課題の詳細や事業の外部環境, 既存システムや利用サービスの活用状況を調査を行います。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+              == partial 'images/icons/documents-outline.svg'
+          | 計画
+        .content
+          p
+            | 調査に基づき必要なシステム設計のプランニングし, 採用するクラウドサービスや技術の利用を決定します。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/code-slash-outline.svg'
+          | 開発
+        .content
+          p
+            | 計画に基づきシステム開発を行います。アジャイル開発手法を代表とする各種手法を取り入れながら効率的な開発を行います。
+  .columns.service-list
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/cloud-outline.svg'
+          | 運用保守
+        .content
+          p
+            | 事業の進捗状況にあわせ機能の拡充やパフォーマンス改善やワークフローの見直しを行います。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/alert-circle-outline.svg'
+          | アラート対応
+        .content
+          p
+            | システムに業務上深刻な不具合が発生した場合に対応する体制を構築し, 緊急時には対応を行います。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/speedometer-outline.svg'
+          | 改善提案
+        .content
+          p
+            | システムの運用面から業務内容の見直しや改善を提案させていただきます。

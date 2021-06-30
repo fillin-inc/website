@@ -1,3 +1,53 @@
 html, body
   background: $white
   font-feature-settings: 'pkna'
+
+.section
+  padding: 6rem 1.5rem
+
+.title, .subtitle
+  line-height: 1.7
+
+.title.has-blue-background
+  display: inline-block
+  // $blue 透過
+  background: rgba(0, 117, 194, .78)
+  padding: .5rem 2rem
+
+.hero .title
+  font-size: 2.5rem
+  font-weight: 500
+  color: $white
+
+.icon.white
+  color: $white
+  fill: $white
+
+.icon.blue
+  color: $blue
+  fill: $blue
+
+.with-smaller-prefix:before
+  content: '>'
+  vertical-align: 'middle'
+  padding-right: .325rem
+
+.with-arrow-postfix:after
+  content: '→'
+  vertical-align: 'middle'
+  padding-right: .325rem
+
+.strike
+  text-decoration: line-through
+
+.section.inquiry
+  .title
+    font-weight: 400
+  .button
+    margin: 1.5rem .5rem
+  .phone-number
+    padding: 0 .25rem
+
++mobile
+  .hero .title
+    font-size: 2rem

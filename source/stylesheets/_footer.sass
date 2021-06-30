@@ -1,34 +1,57 @@
 @charset 'utf-8'
 
 body > .footer
-  background: $dark-blue
-  margin-top: 4.5rem
-  padding-bottom: .75rem
-  position: relative
+  background: $black
+  padding: 6.5rem 1.5rem
 
-  .logo-wrapper
-    .logo
-      width: 9rem
-      position: absolute
-      right: 0
-      top: -1.5rem
+  color: $white
+  line-height: 1.5
+  .title
+    display: inline-block
+    font-size: 1.25rem
+    font-weight: 400
+    color: $white
+    margin-bottom: .5rem
+  .company-name
+    font-size: 1.5rem
 
-  li
-    color: $pure_white
-    font-size: $font-6
-    font-weight: bold
-    padding-bottom: .25rem
-    a:link, a:visited
-      color: $pure_white
-    a:hover
-      text-decoration: underline
+  .external-links
+    margin-top: 1rem
+    li
+      display: inline-block
+      width: 1.5rem
+      height: 1.5rem
+      margin-right: .5rem
+    li, a
+      transition: all .3s ease
+      &:link, &:visited
+        color: $blue
+        fill: $blue
+      &:hover
+        color: $white
+        fill: $white
+      &:active
+        background: $blue
 
-  ul ul
-    margin-top: .5rem
+  .links
+    li
+      font-size: .95rem
+      padding: .375rem 0
 
-  ul li li
-    margin-left: 1.5rem
+    li:before
+      color: $blue
 
-  .copyright
-    color: $pure_white
+    a
+      color: $white
+      &:link, &:visited
+        color: $white
+      &:hover
+        color: $blue
+      &:active
+        background: $blue
+        color: $white
 
++mobile
+  body > .footer
+    .column
+      margin-bottom: 2rem

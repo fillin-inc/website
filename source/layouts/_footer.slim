@@ -1,36 +1,64 @@
 footer.footer
   .container
-    .logo-wrapper
-      == image_tag 'images/logo_white.svg', alt: '', class: 'logo'
-
     .columns
-      .column.is-one-quarter
-        ul.sitemap-1
-          li
-            == link_to 'TOP', '/'
-          li
+      .column
+        span.title.company-name 株式会社フィルイン
+        p
+          | 群馬県高崎市を拠点とした
+          br
+          | Webアプリケーション開発を専門とした
+          br
+          | システム開発会社
+        .external-links
+          ul
+            li
+              == link_to 'https://www.facebook.com/fillininc', title: '株式会社フィルインのFacebookページ', rel: 'noopener noreferrer' do
+                == partial 'images/icons/logo-facebook.svg'
+            li
+              == link_to 'https://goo.gl/maps/JDmT4vM6yJqNvzeN6', title: '株式会社フィルインのGoogle Map', rel: 'noopener noreferrer' do
+                == partial 'images/icons/map-outline.svg'
+            li
+              a href="mailto:info@fillin-inc.com" title="メールを送る"
+                == partial 'images/icons/mail-outline.svg'
+            li
+              a href="tel:050-7101-1520" title="電話をかける"
+                == partial 'images/icons/call-outline.svg'
+
+      .column
+        h1.title 事業内容
+        ul.links
+          li.with-smaller-prefix
             == link_to '受託開発', '/services/entrusted-development/'
-          li
+          li.with-smaller-prefix
             == link_to '開発支援', '/services/service-engineering-service/'
-          li
+          li.with-smaller-prefix
             == link_to 'Webサイト制作', '/services/website-development/'
 
-      .column.is-one-quarter
-        ul.sitemap-2
-          li
+      .column
+        h1.title 提供サービス
+        ul.links
+          li.with-smaller-prefix
+            == link_to '経験者向けPHP講座「PHP Zero」', '/lp/php-zero/'
+          li.with-smaller-prefix
+            span.strike サイト内検索サービス「LazySearch」
+            span
+              | (閉鎖)
+
+      .column
+        h1.title 会社情報
+        ul.links
+          li.with-smaller-prefix
+            == link_to '会社概要', '/company/'
+          li.with-smaller-prefix
             == link_to 'お知らせ', '/releases/'
-          li
-            == link_to '求人情報', '/job-information/'
-          li
-            == link_to 'お問い合わせ', '/inquiry/'
-          li
+          li.with-smaller-prefix
             == link_to 'プライバシーポリシー', '/privacy-policy/'
-          li
+          li.with-smaller-prefix
             == link_to '情報セキュリティ方針', '/information-security-policy/'
 
     .columns
       .column.has-text-right
-        small.copyright &copy; 2016-#{Date.current.year} fillin Inc
+        small.copyright &copy; 2016-#{Date.current.year} fillin Inc.
 
 == javascript_include_tag :site
 - if current_page.data.js

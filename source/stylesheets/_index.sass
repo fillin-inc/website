@@ -1,95 +1,103 @@
-.index
-  .first
-    height: 28rem
-    max-height: 28rem
+body.index
+  .hero
     background-image: url(/images/index/hero.jpg)
     background-size: cover
+    min-height: calc(100vh - 5rem)
 
+  .welcome
     .title
-      font-size: $font-2
-      letter-spacing: 2px
-      font-weight: normal
-    .subtitle
-      font-size: $font-3
-    .text
-      position: relative
-      top: 7.5rem
-      max-width: 44rem
-      margin: 0 auto
-      background: $pure_white
-      opacity: .85
-      padding: 1.5rem 0
-      border-radius: 50px
-
-  .second
-    min-height: 20rem
-    background: #00A0E9
-
-    .title
-      font-size: $font-3
-    .subtitle
-      font-size: $font-4
-      max-width: 50rem
-      margin: 0 auto
-      text-align: center
-    .logo-mark
-      width: 3rem
-      margin: 1.125rem 0 .5rem
-
-  .office-room
-    height: 15rem
-    max-height: 15em
-    background-image: url(/images/index/office-room.jpg)
-    background-size: cover
-    background-position: center center
+      font-weight: 400
+    .column
+      padding: 2rem 1rem
+      font-size: 1.25rem
+    .read-more .button
+      padding-left: 0
 
   .service
-    padding: 8rem 0 10rem
-
+    background: $blue
     .title
-      font-size: $font-3
-      padding-bottom: 3rem
-
-    .wrapper
-      text-align: center
-    .circle-image
-      border-radius: 50%
-      border: 2px solid $gray-circle
-      margin-bottom: .5rem
-
-    h2
-      text-align: center
-      padding: .75rem 0
-      font-size: $font-4
-      color: $blue
       margin-bottom: .25rem
+      a
+        font-size: 1.425rem
+        font-weight: 400
+        color: $white
+        &:link, &:hover, &:visited
+          color: $white
+    .column
+      color: $white
+    .icon
+      height: 1.875rem
+      width: 2rem
+    .column
+      text-align: center
 
-    a:hover .circle-image
-      border-color: $blue
+  .mission
+    .title
+      font-weight: 400
+    .column figure
+      position: relative
+      top: -2.5rem
 
   .information
-    padding-bottom: 6rem
+    background: linear-gradient(to left, $black 50%, $blue 50%)
+    .article
+      padding: 2.5rem 1.5rem
+      background: $white
+    .summary
+      margin-bottom: 2rem
+      height: 5rem
+    .title
+      font-weight: 500
+      color: $white
+    .subtitle
+      font-size: 1.25rem
+      height: 3rem
+      a
+        &:link, &:visited
+          color: $blue
+        &:hover
+          color: $black
+        &:active
+          color: $white
+          background: $blue
+    .date
+      text-align: left
+      font-size: .75rem
+      .icon
+        display: inline-block
+        height: 1rem
+        width: 1rem
+        padding-right: .25rem
+        position: relative
+        top: 2px
+    .read-more
+      text-align: right
+      a
+        font-size: .75rem
 
-    h1
-      font-size: $font-3
-      padding-bottom: 3rem
++touch
+  body.index
+    .mission
+      .column figure
+        top: 0
 
-    .release
-      ul
-        margin-top: 2rem
-      li
-        padding-bottom: .5rem
-        margin-bottom: 1rem
-        border-bottom: 1px solid $gray-border
++tablet
+  body.index
+    .welcome
+      .title
+        font-size: 1.5rem
 
-      .date
-        color: $blue
-        font-size: $font-6
-        font-weight: bold
-      .article-title
-        color: $black
-
-      a:visited .article-title, a:link .article-title
-        color: $black
-      a:hover .article-title
-        color: $blue
++mobile
+  body.index
+    .hero
+      min-height: calc(100vh - 14px)
+      .title
+        font-size: 1.875rem
+      .subtitle
+        font-size: 1rem
+    .mission
+      .secion
+        padding: 3rem 1.5rem
+    .information
+      .column
+        margin-bottom: 1.5rem

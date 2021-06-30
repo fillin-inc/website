@@ -5,63 +5,74 @@ priority: 0.75
 changefreq: monthly
 ---
 
-section
-  == partial 'layouts/title_block', locals: { title: current_page.data.title, english_title: 'Website Development' }
+section.hero.is-medium
+  .hero-body
+    .container
+      h1.title.has-blue-background Web サイト制作
 
-  .container.content
-    h2#overview 概要
-    .columns
-      .column.is-two-thirds.is-offset-2.description
-        p
-          |
-            コーポレートサイトからランディングページの企画, 制作, 運用保守まで<br>
-            ご依頼いただけます。CMS を使った方法からクラウドと静的サイトを駆使した制作まで<br>
-            お客様にあった運用方法を前提に制作いたします。
+section.section.introduction.container
+  h1.title.has-text-centered Web サイトからプロモーションまで
 
-  .container.content.feature
-    h2#feature 特徴
-    .columns
-      .column
-        .wrapper
-          == image_tag '/images/index/wireframe.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h3 機能に強い
-        p
-          | 開発支援や受託開発のシステム開発のノウハウを生かした機能追加やコンテンツ更新が可能な静的サイトの運用に自信があります。
+  .columns.summary
+    .column.is-6.is-offset-3.has-text-centered
+      p
+        | コーポレートサイトからランディングページの企画, 制作, 運用保守,
+        br
+        | 加えてSNSや動画を活用したプロモーションまでご依頼いただけます。
 
-
-      .column
-        .wrapper
-          == image_tag '/images/index/cost.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h3 低価格の運用コスト
-        p
-          | 静的サイトでの制作運用をご選択いただけますと月額100円程度(当社実績)からWebサイトを運用いただけます。
-
-
-      .column
-        .wrapper
-          == image_tag '/images/index/kanban.jpg', width: 432, height: 345, alt: '', loading: :lazy
-        h3 目的に適した計画
-        p
-          | 商品やサービス内容, 体制に応じてWebサイトの制作内容や運用, お客様を含めた運用プランをご提案させていただきます。
-
-
-  .container.content
-    h2#development 制作実績
-    .columns
-      .column.is-three-fifths.is-offset-3
-        .wrapper.no-align
-          ol
-            li 関東圏10店舗以上を構える小売店コーポレートサイト(WordPress)
-            li 群馬県内温泉地の観光プロジェクトのランディングページ制作(静的サイト)
-            li プログラミング講座ランディングページ制作(静的サイト)
-
-  .container
-    .columns.content
-      .column.is-two-thirds.is-offset-2
-        .notification
+  .columns.service-list
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/documents-outline.svg'
+          | 静的サイト
+        .content
           p
-            | お問い合わせは下記ボタンまたは電話( <a href="tel:050-7101-1520">050-7101-1520</a> )にてお問い合わせください。
-              <span style="display:block;">※電話に出れない場合が多いため用件を留守番電話を残していただけると助かります。</span>
-
-          == link_to 'お問い合わせはこちら', '/inquiry/', class: 'button is-medium is-rounded'
-
+            | 運用費用を抑えた静的サイトの制作が可能です。AWS を利用することで月額100円から運用することが可能です。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/logo-wordpress.svg'
+          | WordPress
+        .content
+          p
+            | コンテンツ運用に強い WordPress を使った制作が可能です。機能を拡張するプラグインの導入から開発まで対応できます。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/wifi-outline.svg'
+          | サービス連携
+        .content
+          p
+            | Twitter, Facebook やマーケティングオートメーションと連携した制作が可能です。
+  .columns.service-list
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/server-outline.svg'
+          | 豊富なサーバー環境
+        .content
+          p
+            | レンタルサーバーから専用サーバー, クラウドサーバー環境まで対応することができます。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/cloud-outline.svg'
+          | 運用保守
+        .content
+          p
+            | コンテンツの管理や更新を含めた運用保守が可能です。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/bookmarks-outline.svg'
+          | 広告運用
+        .content
+          p
+            | LP(ランディングページ)を活用した広告運用に対応できます。SNS広告から動画広告, リスティングまでお任せください。

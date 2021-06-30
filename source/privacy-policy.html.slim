@@ -2,12 +2,14 @@
 title: プライバシーポリシー
 description: 株式会社フィルインのプライバシーポリシー
 priority: 0.2
+loader: false
+inquiry: false
 ---
 
 section
-  == partial 'layouts/title_block', locals: { title: current_page.data.title, english_title: 'Privacy Policy' }
+  == partial 'layouts/title_block', locals: { title: current_page.data.title }
 
-  .container
+  .container.inner
     .columns
       .column.is-two-thirds.is-offset-2.content
 
