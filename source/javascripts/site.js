@@ -15,5 +15,7 @@ hamburgerMenu.addEventListener('click', function (event) {
 })
 
 if (pageLoader) {
-  setTimeout(() => { pageLoader.classList.remove('is-active') }, 500)
+  setTimeout(function () {
+    pageLoader.classList.remove('is-active')
+  }, 500)
 }
