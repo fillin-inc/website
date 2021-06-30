@@ -1,10 +1,12 @@
 aside.menu
   p.menu-label 最近のお知らせ
   ul.menu-list.release-menu
-    - blog(:releases).articles[0...10].each do |article|
+    - blog(:releases).articles[0..2].each do |article|
       li
         == link_to article.url do
+          .date
+            span.icon
+              == partial 'images/icons/12/calendar-outline.svg'
+            = article.date.strftime('%Y-%m-%d')
           .title
             = article.title
-          .date
-            = article.date.strftime('%Y-%m-%d')
