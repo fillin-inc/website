@@ -8,6 +8,16 @@ html, body
 .title, .subtitle
   line-height: 1.7
 
+.title.has-blue-background
+  display: inline-block
+  background: $blue
+  padding: .5rem 2rem
+
+.hero .title
+  font-size: 2.5rem
+  font-weight: 500
+  color: $white
+
 .icon.white
   color: $white
   fill: $white
@@ -24,3 +34,7 @@ html, body
 
 .strike
   text-decoration: line-through
+
++mobile
+  .hero .title
+    font-size: 2rem
