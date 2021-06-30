@@ -5,9 +5,12 @@ priority: 0.75
 changefreq: monthly
 ---
 
-section
-  == partial 'layouts/title_block', locals: { title: current_page.data.title, english_title: 'Website Development' }
+section.hero.is-medium
+  .hero-body
+    .container
+      h1.title.has-blue-background Web サイト制作
 
+section
   .container.content
     h2#overview 概要
     .columns

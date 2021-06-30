@@ -5,9 +5,12 @@ priority: 0.75
 changefreq: monthly
 ---
 
-section
-  == partial 'layouts/_title_block', locals: { title: current_page.data.title, english_title: 'Service Engineering Service' }
+section.hero.is-medium
+  .hero-body
+    .container
+      h1.title.has-blue-background 開発支援
 
+section
   .container.content
     h2#overview 概要
     .columns
