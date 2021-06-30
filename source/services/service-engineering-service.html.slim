@@ -10,58 +10,69 @@ section.hero.is-medium
     .container
       h1.title.has-blue-background 開発支援
 
-section
-  .container.content
-    h2#overview 概要
-    .columns
-      .column.is-two-thirds.is-offset-2.description
-        p
-          | お客様のサービス開発に必要な要員や技術の提供を行っています。<br>
-            リモートワークを主とした都内案件を中心にご相談いただいております。
+section.section.introduction.container
+  h1.title.has-text-centered Web サービス開発支援
 
-  .container.content.feature
-    h2#stack 技術スタック
-    .columns
-      .column
-        h4 サーバーサイド
-        ul
-          li Ruby on Rails
-          li PHP (Laravel, CakePHP, CodeIgniter 他)
-          li Go
+  .columns.summary
+    .column.is-6.is-offset-3.has-text-centered
+      p
+        | Web サービスの新規開発, 機能追加や改善に対し技術と人員の提供を行います。
+        br
+        | リモートワークを中心としながら必要に応じてご指定の開発施設での作業も行います。
 
-      .column
-        h4 クライアントサイド
-        ul
-          li JavaScript ( + ES 2015)
-          li jQuery
-          li React ( + react-router  + react-redux)
-          li VueJS
-          li Webpack ( + babel 他)
-
-      .column
-        h4 開発環境
-        ul
-          li Vagrant
-          li Docker ( + docker-compose)
-          li Git/GitHub
-          li CircleCI
-          li Travis CI
-
-  .container.content
-    h2#work-space 作業場所に関して
-    .columns
-      .column.is-two-thirds.is-offset-2.description
-        p
-          | 作業場所は群馬県高崎市にある当社または当社社員の自宅を基本とさせていただいております。<br>
-            ご依頼内容に応じて週1〜2回程度の頻度で東京都内のお客様オフィスにて作業する程度は可能です。ご相談ください。
-
-  .container
-    .columns.content
-      .column.is-two-thirds.is-offset-2
-        .notification
+  .columns.service-list
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/diamond-outline.svg'
+          | Ruby on Rails
+        .content
           p
-            | お問い合わせは下記ボタンまたは電話( <a href="tel:050-7101-1520">050-7101-1520</a> )にてお問い合わせください。
-              <span style="display:block;">※電話に出れない場合が多いため用件を留守番電話を残していただけると助かります。</span>
-
-          == link_to 'お問い合わせはこちら', '/inquiry/', class: 'button is-medium is-rounded'
-
+            | Ruby on Rails (> 4.0) を用いたWebサービス開発をご依頼いただけます。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/code-slash-outline.svg'
+          | PHP
+        .content
+          p
+            | 独自フレームワークから主要なWebフレームワークを用いたサービス開発に対応できます。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/logo-javascript.svg'
+          | JavaScript
+        .content
+          p
+            | Vue.js や React を代表とするモダンな環境での開発に対応できます。
+  .columns.service-list
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/logo-github.svg'
+          | Git/GitHub
+        .content
+          p
+            | Git/GitHub を導入した開発に対応できます。VCS が未導入のプロジェクトでは導入や社内レクチャーも可能です。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/cloud-outline.svg'
+          | AWS
+        .content
+          p
+            | AWS を代表とするクラウドサービスの利用にも対応できます。社内では関連資格の取得を推奨しています。
+    .column
+      .item
+        h2.subtitle
+          .icon.blue
+            == partial 'images/icons/alert-circle-outline.svg'
+          | Ruby on Rails へリプレイス
+        .content
+          p
+            | PHP フレームワークから Ruby on Rails への移植が可能です。PHP のコードをライブラリレベルで調査し移植を行います。
