@@ -9,6 +9,8 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/lp/*.html', layout: false
 
+ignore '/images/icons/*'
+
 data.redirects.each do |r|
   redirect r.from, to: 'https://www.fillin-inc.com/' + r.to
 end
