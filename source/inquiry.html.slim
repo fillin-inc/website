@@ -21,19 +21,19 @@ section
         form.form#inquiry-form method="post"
           .control
             label.label お名前
-            input.input name="name" type="text"
+            input.input name="name" type="text" required="true"
 
           .control
             label.label メールアドレス
-            input.input name="email" type="email"
+            input.input name="email" type="email" required="true"
 
           .control
             label.label お問い合わせ内容
-            textarea.textarea name="message"
+            textarea.textarea name="message" required="true"
 
           .control.confirm-privacy-policy
             label.label
-              input.checkbox type="checkbox" name="privacy_policy"
+              input.checkbox type="checkbox" name="privacy_policy" required="true"
               | &nbsp;
               span.text
                 == link_to 'プライバシーポリシー', '/privacy-policy/'
