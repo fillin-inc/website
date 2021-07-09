@@ -3,6 +3,7 @@ title: お問い合わせ
 priority: 1.0
 inquiry: false
 loader: true
+js: javascripts/inquiry.js
 ---
 
 section
@@ -14,6 +15,33 @@ section
 
         p お問い合わせ内容をご入力の上送信してください。
 
-        <iframe style="height: 55rem;" src="https://docs.google.com/forms/d/e/1FAIpQLSf7_8Q-A4O4jeRyw9GtNR17VqOr5mL8ITFSNbLAPG7H77N8pg/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+        ul
+          li 通常 1-2 営業日以内に返信させていただきます。
+          li 営業目的のお問い合わせは返信を行わない場合があります。
 
-        p Email でのお問い合わせをご希望の場合は info@fillin-inc.com までご連絡ください。
+        form.form#inquiry-form method="post"
+          .control
+            label.label お名前
+            input.input name="name" type="text" required="true"
+
+          .control
+            label.label メールアドレス
+            input.input name="email" type="email" required="true"
+
+          .control
+            label.label お問い合わせ内容
+            textarea.textarea name="message" required="true"
+
+          .control.confirm-privacy-policy
+            label.label
+              input.checkbox type="checkbox" name="privacy_policy" required="true"
+              | &nbsp;
+              span.text
+                == link_to 'プライバシーポリシー', '/privacy-policy/'
+                | &nbsp;に同意します。
+
+          .control.is-hidden.has-text-danger#inquiry-error
+            ul
+
+          .control.has-text-right
+            button.button.is-primary#inquiry-submit 送信

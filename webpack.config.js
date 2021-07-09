@@ -1,6 +1,7 @@
 module.exports = {
   entry: {
     site: './source/javascripts/site.js',
+    inquiry: './source/javascripts/inquiry.js',
   },
 
   output: {
