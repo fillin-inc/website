@@ -11,7 +11,6 @@
     - 拡張機能
         - [middleman-blog](https://github.com/middleman/middleman-blog)
         - [middleman-generator-tag](https://github.com/yterajima/middleman-generator-tag)
-        - [middleman-vcs-time](https://github.com/AndrewKvalheim/middleman-vcs-time)
         - [middleman-s3_sync](https://github.com/fredjean/middleman-s3_sync)
 - テンプレートエンジン 
     - [Slim](http://slim-lang.com/)
@@ -20,6 +19,9 @@
 - JavaScript
     - [webpack](https://webpack.github.io/)
     - [Babel](https://babeljs.io/)
+- お問い合わせ
+    - AWS Lambda
+    - AWS API Gateway
 
 ### サーバ環境
 
