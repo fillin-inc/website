@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 default: &default
   working_directory: ~/website
@@ -7,6 +7,9 @@ default: &default
       environment:
         TZ: Asia/Tokyo
         MM_ENV: production
+
+orbs:
+  slack: circleci/slack@4.4.2
 
 jobs:
   release:
@@ -27,10 +30,12 @@ jobs:
           npm install
       - save_cache:
           key: gem-cache-{{ checksum "Gemfile.lock" }}
-          paths: vendor/bundle
+          paths:
+            - vendor/bundle
       - save_cache:
           key: npm-cache-{{ checksum "package-lock.json" }}
-          paths: node_modules
+          paths:
+            - node_modules
       - run:
           command: |
             NO_CONTRACTS=true bundle exec middleman build
@@ -39,6 +44,7 @@ jobs:
             aws configure set preview.cloudfront true
             aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*'
             curl http://www.google.com/webmasters/sitemaps/ping --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"
+      - slack/status
   build:
     <<: *default
     steps:
@@ -56,15 +62,16 @@ jobs:
           npm install
       - save_cache:
           key: gem-cache-{{ checksum "Gemfile.lock" }}
-          paths: vendor/bundle
+          paths:
+            - vendor/bundle
       - save_cache:
           key: npm-cache-{{ checksum "package-lock.json" }}
-          paths: node_modules
+          paths:
+            - node_modules
       - run:
           command: NO_CONTRACTS=true bundle exec middleman build
 
 workflows:
-  version: 2
   build-release:
     jobs:
       - release:
