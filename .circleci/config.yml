@@ -44,7 +44,9 @@ jobs:
             aws configure set preview.cloudfront true
             aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*'
             curl http://www.google.com/webmasters/sitemaps/ping --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"
-      - slack/status
+      - slack/notify:
+          event: always
+
   build:
     <<: *default
     steps:
