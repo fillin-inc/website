@@ -45,7 +45,11 @@ jobs:
             aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_ID --paths '/*'
             curl http://www.google.com/webmasters/sitemaps/ping --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"
       - slack/notify:
-          event: always
+          event: pass
+          template: basic_success_1
+      - slack/notify:
+          event: fail
+          template: basic_fail_1
 
   build:
     <<: *default
