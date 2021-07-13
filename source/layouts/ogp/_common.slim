@@ -10,7 +10,7 @@ meta property="og:type" content="website"
 meta property="og:site_name" content="株式会社フィルイン | 群馬でWebサービスを作る会社"
 
 - if current_page.data.ogp_image
-  meta property="og:image" content="#{'https://www.fillin-inc.com' + File.join('/images/ogp', current_page.data.ogp_image)}"
+  meta property="og:image" content="#{'https://www.fillin-inc.com' + File.join('/', current_page.data.ogp_image)}"
 - else
   meta property="og:image" content="https://www.fillin-inc.com/images/ogp/ogp.jpg"
 

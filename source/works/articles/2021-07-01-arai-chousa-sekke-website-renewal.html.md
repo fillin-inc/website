@@ -5,6 +5,7 @@ tags:
     - website
     - middleman
 cover: images/works/2021-07-01/arai-chosa.jpg
+ogp_image: images/works/2021-07-01/arai-chosa.jpg
 ---
 
 新井調査設計株式会社様のコーポレートサイトをリニューアルを行いました。<br>
