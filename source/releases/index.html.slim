@@ -5,21 +5,26 @@ title: お知らせ
 description: 株式会社フィルインのお知らせ一覧ページです。運営するサービスの最新情報や事業情報がご確認いただけます。
 priority: 1.0
 changefreq: weekly
+pageable: true
 ---
 
-- blog.articles.group_by {|a| a.date.year}.each do |year, articles|
-  div class="year-#{year} year-group"
-    h3.title
-      span.year
-        == year
-      | 年
-    ul
-      - articles.each do |article|
-        li
-          == link_to article.url do
-            .date
-              span.icon
-                == partial 'images/icons/12/calendar-outline.svg'
-              = article.date.strftime('%Y-%m-%d')
-            .article-title
-              = article.title
+.articles
+  - page_articles.each do |article|
+    article.article
+      .inner
+        .date
+          span.icon
+            == partial 'images/icons/16/calendar-number-outline.svg'
+          = article.date.strftime('%Y-%m-%d')
+
+        h2.title
+          == link_to article.title, article.url
+
+        == article.summary(80, '...')
+
+        .read-more
+          == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+
+  nav.pagination role="navigation" aria-label="pagination"
+    == link_to '前ページへ', prev_page, class: "pagination-previous", disabled: prev_page ? false : true
+    == link_to '次ページへ', next_page, class: "pagination-next", disabled: next_page ? false : true
