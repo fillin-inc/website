@@ -1,6 +1,7 @@
 ---
 title: 新井調査設計株式会社様 Web サイトリニューアル
 date: 2021-07-01
+description: 新井調査設計株式会社様のWebサイトリニューアルを行いました。Middleman による静的サイト生成を使って構築しています。
 tags:
     - website
     - middleman
