@@ -25,8 +25,13 @@ body.works
       margin-bottom: 2rem
 
   .article
+    border: 1px solid $gray-border
     margin-bottom: 4rem
     position: relative
+
+    .inner
+      padding: 1.5rem 2.5rem 2rem
+
     .title
       font-size: 1.625rem
       margin-bottom: 2.5rem
@@ -59,13 +64,10 @@ body.works
         color: $blue
         background: $white
 
-body.works_index, body.works_page
-  .article
-    border: 1px solid $gray-border
-    .inner
-      padding: 1.5rem 2.5rem 2rem
+  .to-works
+    text-align: center
 
 +mobile
   body.works
     .articles
-      padding: 0 1.5rem
+      padding: 0 1.75rem
