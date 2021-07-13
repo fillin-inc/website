@@ -11,8 +11,9 @@ pageable: true
 .articles
   - page_articles.each do |article|
     article.article
-      figure.figure
-        = image_tag article.data.cover, alt: ''
+      == link_to article.url do
+        figure.figure
+          == image_tag article.data.cover, alt: ''
 
       ul.vertical-tags
         - article.tags.each do |tag|
@@ -21,9 +22,9 @@ pageable: true
 
       .inner
         h2.title
-          = link_to article.title, article.url
+          == link_to article.title, article.url
 
-        = article.summary
+        == article.summary
 
         .read-more
           == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
