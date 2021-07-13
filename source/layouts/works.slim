@@ -1,6 +1,6 @@
 = wrap_layout :layout do
   section
-    == partial 'layouts/title_block', locals: { title: '実績' }
+    == partial 'layouts/title_block', locals: { title: '開発実績' }
 
     .container
       .columns
@@ -26,7 +26,7 @@
                   == yield
 
               nav.to-works
-                == link_to '実績一覧へ', '/works/', class: 'button'
+                == link_to '一覧へ', '/works/', class: 'button'
 
         .column.is-3.is-hidden-touch
           == partial 'layouts/works_menu'
