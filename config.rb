@@ -30,7 +30,8 @@ activate :blog do |blog|
   blog.prefix = blog.name
   blog.layout = blog.name
   blog.sources = 'articles/{year}-{month}-{day}-{title}.html'
-  blog.taglink = 'articles/{tag}.html'
+  blog.taglink = 'tags/{tag}.html'
+  blog.tag_template = '/works/tag.html'
   blog.default_extension = '.md'
   blog.summary_separator = /<!--more-->/
   blog.paginate = true

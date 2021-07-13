@@ -17,7 +17,7 @@
                 ul.vertical-tags
                   - current_page.data.tags.each do |tag|
                     li.vertical-tag
-                      == link_to tag, "/works/tags/#{tag}"
+                      == link_to tag, tag_path(tag)
 
                 .inner
                   h2.title
