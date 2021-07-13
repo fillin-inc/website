@@ -25,6 +25,17 @@ activate :blog do |blog|
   blog.paginate = false
 end
 
+activate :blog do |blog|
+  blog.name = 'works'
+  blog.prefix = blog.name
+  blog.layout = blog.name
+  blog.sources = 'articles/{year}-{month}-{day}-{title}.html'
+  blog.taglink = 'articles/{tag}.html'
+  blog.default_extension = '.md'
+  blog.summary_separator = /<!--more-->/
+  blog.paginate = false
+end
+
 activate :robots,
   :rules => [
     {

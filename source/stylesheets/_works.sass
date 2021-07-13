@@ -1,0 +1,72 @@
+body.works
+  .content
+    h2, h3, h4, h5, h6
+      font-weight: 400
+    h2
+      font-size: 1.5rem
+      margin-bottom: 1.75rem
+    h3
+      font-size: 1.375rem
+      margin-bottom: 1.625rem
+    h4, h5, h6
+      font-size: 1.25rem
+      margin-bottom: 1.5rem
+
+    ul, ol
+      margin: 1.5rem 0 2rem 2.75rem
+
+    img
+      margin: 1rem 0
+
+    figure > img
+      margin: 0
+
+    p
+      margin-bottom: 2rem
+
+  .article
+    margin-bottom: 4rem
+    position: relative
+    .title
+      font-size: 1.625rem
+      margin-bottom: 2.5rem
+    .figure
+      margin: 0
+    .read-more
+      text-align: right
+
+  .content .vertical-tags
+    margin: 0
+
+  .vertical-tags
+    list-style: none
+    position: absolute
+    top: 1.25rem
+    left: -1.5rem
+  .vertical-tag
+    font-size: .825rem
+    a
+      display: inline-block
+      min-width: 5.5rem
+      color: $white
+      background: rgba(0, 117, 194, .78)
+      border: 1px solid rgba(0, 117, 194, .78)
+      padding: .5rem 1.5rem
+      border-radius: 3px
+      &:link, &:visited
+        color: $white
+      &:hover, &:active
+        color: $blue
+        background: $white
+
+body.works_index
+  .article
+    border: 1px solid $gray-border
+    .inner
+      padding: 1.5rem 2.5rem 2rem
+
++mobile
+  body.works
+    .vertical-tags
+      top: .5rem
+      left: -.25rem

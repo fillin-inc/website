@@ -1,0 +1,25 @@
+= wrap_layout :layout do
+  section
+    == partial 'layouts/title_block', locals: { title: '実績' }
+
+    .container
+      .columns
+        .column.is-7.is-offset-1.content
+          - unless is_blog_article?
+              == yield
+          - else
+            .single
+              .article-data
+                span.published
+                  span.icon
+                    == partial 'images/icons/12/calendar-outline.svg'
+                  span.date
+                    == current_page.date.strftime('%Y-%m-%d')
+
+              h2.title
+                = current_page.data.title
+
+              == yield
+
+        .column.is-3.is-hidden-touch
+          == partial 'layouts/release_menu'

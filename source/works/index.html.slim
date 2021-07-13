@@ -1,0 +1,27 @@
+---
+blog: works
+layout: works
+title: 実績
+description: 当社の開発実績一覧ページです。これまで当社が手がけた案件の一部を掲載しています。
+priority: 1.0
+changefreq: weekly
+---
+
+- blog.articles[0..4].each do |article|
+  article.article
+    figure.figure
+      = image_tag article.data.cover, alt: ''
+
+    ul.vertical-tags
+      - article.tags.each do |tag|
+        li.vertical-tag
+          == link_to tag, "/works/tags/#{tag}"
+
+    .inner
+      h2.title
+        = link_to article.title, article.url
+
+      = article.summary
+
+      .read-more
+        == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
