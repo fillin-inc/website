@@ -22,7 +22,8 @@ activate :blog do |blog|
   blog.sources = 'articles/{year}-{month}-{day}-{title}.html'
   blog.default_extension = '.md'
   blog.summary_separator = /<!--more-->/
-  blog.paginate = false
+  blog.paginate = true
+  blog.per_page = 5
 end
 
 activate :blog do |blog|

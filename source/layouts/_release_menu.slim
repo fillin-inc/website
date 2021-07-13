@@ -1,12 +1,13 @@
 aside.menu
-  p.menu-label 最近のお知らせ
-  ul.menu-list.release-menu
-    - blog(:releases).articles[0..2].each do |article|
-      li
-        == link_to article.url do
-          .date
-            span.icon
-              == partial 'images/icons/12/calendar-outline.svg'
-            = article.date.strftime('%Y-%m-%d')
-          .title
-            = article.title
+  .widget.recent-releases
+    h3.menu-label 最新のお知らせ
+    ul.menu-list
+      - blog(:releases).articles[0..2].each do |article|
+        li
+          == link_to article.url do
+            .date
+              span.icon
+                == partial 'images/icons/16/calendar-number-outline.svg'
+              = article.date.strftime('%Y-%m-%d')
+            .article-title
+              = article.title
