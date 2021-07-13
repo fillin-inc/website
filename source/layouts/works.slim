@@ -15,13 +15,23 @@
                   == image_tag current_page.data.cover, alt: ''
 
                 ul.vertical-tags
-                  - current_page.data.tags.each do |tag|
+                  - current_page.tags.each do |tag|
                     li.vertical-tag
                       == link_to tag, tag_path(tag)
 
                 .inner
+                  .article-info
+                    .date
+                      span.icon
+                        == partial 'images/icons/16/calendar-number-outline.svg'
+                      = current_page.date.strftime('%Y-%m-%d')
+                    .tag-list
+                      span.icon
+                        == partial 'images/icons/16/pricetags-outline.svg'
+                      = current_page.tags.map { |tag| '<span class="tag-link">' + link_to(tag, tag_path(tag)) + '</span>' }.join(',')
+
                   h2.title
-                    = current_page.data.title
+                    = current_page.title
 
                   == yield
 

@@ -22,6 +22,16 @@ loader: true
             == link_to tag, "/works/tags/#{tag}"
 
       .inner
+        .article-info
+          .date
+            span.icon
+              == partial 'images/icons/16/calendar-number-outline.svg'
+            = article.date.strftime('%Y-%m-%d')
+          .tag-list
+            span.icon
+              == partial 'images/icons/16/pricetags-outline.svg'
+            = article.tags.map { |tag| '<span class="tag-link">' + link_to(tag, tag_path(tag)) + '</span>' }.join(',')
+
         h2.title
           == link_to article.title, article.url
 
