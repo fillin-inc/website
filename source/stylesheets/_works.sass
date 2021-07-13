@@ -1,0 +1,129 @@
+body.works
+  .content
+    h2, h3, h4, h5, h6
+      font-weight: 400
+      margin-top: 3.5rem
+    h2
+      font-size: 1.5rem
+      margin-bottom: 1.75rem
+    h3
+      font-size: 1.375rem
+      margin-bottom: 1.625rem
+    h4, h5, h6
+      font-size: 1.25rem
+      margin-bottom: 1.5rem
+
+    ul, ol
+      margin: 1.5rem 0 2rem 2.75rem
+
+    img
+      margin: 1rem 0
+
+    figure > img
+      margin: 0
+
+    p
+      margin-bottom: 2rem
+
+  .article
+    border: 1px solid $gray-border
+    margin-bottom: 4rem
+    position: relative
+
+    .inner
+      padding: .5rem 2.5rem 2rem
+
+      .icon
+        position: relative
+        top: 2px
+        padding-right: .25rem
+      .date
+        padding-right: 1.25rem
+      .tag-list
+        display: inline-flex
+      .tag-link
+        padding: 0 .25rem
+
+      .article-info
+        display: flex
+
+    .title
+      font-size: 1.5rem
+      margin-bottom: 2rem
+      margin-top: 2.825rem
+    .figure
+      margin: 0
+    .read-more
+      text-align: right
+
+  .content .vertical-tags
+    margin: 0
+
+  .vertical-tags
+    list-style: none
+    position: absolute
+    top: 1.25rem
+    left: -1.5rem
+  .vertical-tag
+    font-size: .825rem
+    a
+      display: inline-block
+      min-width: 5.5rem
+      color: $white
+      background: rgba(0, 117, 194, .78)
+      border: 1px solid rgba(0, 117, 194, .78)
+      padding: .5rem 1.5rem
+      border-radius: 3px
+      &:link, &:visited
+        color: $white
+      &:hover, &:active
+        color: $blue
+        background: $white
+
+  .to-works
+    text-align: center
+
+  .tag.title
+    font-size: 1.25rem
+    font-weight: 400
+    margin-bottom: 1.5rem
+
+    .tag-name
+      padding-left: .5rem
+
++touch
+  body.works
+    h2, h3, h4, h5, h6
+      margin-top: 5rem
+    .article
+      .inner
+        .tag-list
+          display: inline-block
+
+        .article-info
+          display: block
+          font-size: .825rem
+
++mobile
+  body.works
+    .articles
+      padding: 0 1.75rem
+
+      .title
+        font-size: 1.25rem
+        margin-bottom: 3.5rem
+        margin-top: 2.5rem
+
+    .content
+      h2
+        font-size: 1.25rem
+        margin-bottom: 1.5rem
+      h3
+        font-size: 1.125rem
+        margin-bottom: 1.375rem
+      h4, h5, h6
+        font-size: 1.125rem
+        margin-bottom: 1.375rem
+
+      ul, ol
+        margin: 1.5rem 0 2rem 2rem

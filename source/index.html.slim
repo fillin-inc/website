@@ -101,3 +101,26 @@ section.section.information
 
             .read-more
               == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+
+section.section.works
+  .container
+    h1.title.has-text-centered 開発実績
+    .columns
+      - blog(:works).articles[0..2].each do |article|
+        .column
+          .article
+            == link_to article.url do
+              figure.figure
+                == image_tag article.data.cover, alt: ''
+
+            h2.subtitle
+              == link_to article.title, article.url
+            .summary
+              == article.summary
+            .date
+              .icon
+                == partial 'images/icons/12/calendar-outline.svg'
+              == article.date.strftime('%Y-%m-%d')
+
+            .read-more
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'

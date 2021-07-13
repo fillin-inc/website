@@ -25,12 +25,25 @@ activate :blog do |blog|
   blog.paginate = false
 end
 
+activate :blog do |blog|
+  blog.name = 'works'
+  blog.prefix = blog.name
+  blog.layout = blog.name
+  blog.sources = 'articles/{year}-{month}-{day}-{title}.html'
+  blog.taglink = 'tags/{tag}.html'
+  blog.tag_template = '/works/tag.html'
+  blog.default_extension = '.md'
+  blog.summary_separator = /<!--more-->/
+  blog.paginate = true
+  blog.per_page = 5
+end
+
 activate :robots,
   :rules => [
     {
       user_agent: '*',
       allow: %w(/),
-      disallow: %w(/404/ /inquiry/thanks/ /inquiry/thanks/index.html),
+      disallow: %w(/404/ /inquiry/thanks/ /inquiry/thanks/index.html /works/tags/),
     }
   ],
   :sitemap => 'https://www.fillin-inc.com/sitemap.xml'
