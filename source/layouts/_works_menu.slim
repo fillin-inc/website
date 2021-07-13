@@ -5,4 +5,4 @@ aside.menu
     ul.menu-list
       - blog.tags.sort.each do |tag, articles|
         li
-          == link_to "#{tag} (#{articles.size})", tag_path(tag)
+          == link_to "#{tag_name(tag)} (#{articles.size})", tag_path(tag)

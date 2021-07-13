@@ -21,7 +21,7 @@ loader: true
       ul.vertical-tags
         - article.tags.each do |tag|
           li.vertical-tag
-            == link_to tag, tag_path(tag)
+            == link_to tag_name(tag), tag_path(tag)
 
       .inner
         .article-info
@@ -32,7 +32,7 @@ loader: true
           .tag-list
             span.icon
               == partial 'images/icons/16/pricetags-outline.svg'
-            = article.tags.map { |tag| '<span class="tag-link">' + link_to(tag, tag_path(tag)) + '</span>' }.join(',')
+            = tag_link_join(article.tags)
 
         h2.title
           == link_to article.title, article.url
