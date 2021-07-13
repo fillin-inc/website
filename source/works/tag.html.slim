@@ -11,7 +11,7 @@ sitemap_ignore: true
   span.title.tag
     | タグ:
     span.tag-name
-      == tagname
+      == tag_name(tagname)
 
   - page_articles.each do |article|
     article.article
