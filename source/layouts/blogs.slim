@@ -1,0 +1,42 @@
+= wrap_layout :layout do
+  section
+    == partial 'layouts/title_block', locals: { title: 'ブログ' }
+
+    .container
+      .columns
+        - unless is_blog_article?
+          .column.is-7.is-offset-1.content
+            == yield
+        - else
+          .column.is-7.is-offset-1.content
+            .articles
+              article.article.single
+                figure.figure
+                  == image_tag current_page.data.cover, alt: ''
+
+                ul.vertical-tags
+                  - current_page.tags.each do |tag|
+                    li.vertical-tag
+                      == link_to tag_name(tag), tag_path(tag)
+
+                .inner
+                  .article-info
+                    .date
+                      span.icon
+                        == partial 'images/icons/16/calendar-number-outline.svg'
+                      = current_page.date.strftime('%Y-%m-%d')
+                    .tag-list
+                      span.icon
+                        == partial 'images/icons/16/pricetags-outline.svg'
+                      = tag_link_join(current_page.tags)
+
+                  h2.title
+                    = current_page.title
+
+                  == yield
+
+              nav.to-blogs
+                == link_to '一覧へ', '/blogs/', class: 'button'
+
+        .column.is-3.is-hidden-touch
+          == partial 'layouts/blogs_menu'
