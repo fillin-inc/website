@@ -1,7 +1,7 @@
 articles = [blog(:releases).articles, blog(:works).articles].flatten.compact.sort_by(&:date).reverse
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  site_url = "https://www.fillin-inc.com"
+  site_url = "https://www.fillin-inc.com/"
   xml.title "全記事一覧"
   xml.id site_url
   xml.link "href" => site_url
