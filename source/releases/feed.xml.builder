@@ -18,6 +18,11 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
       xml.updated time.present? ? Time.parse(time).iso8601 : File.mtime(article.source_file).iso8601
       xml.author '株式会社フィルイン'
       xml.content article.summary(200, '...'), "type" => "html"
+      xml.image {
+        xml.url URI.join(site_url, article.data.cover ? article.data.cover : '/images/ogp/ogp.jpg')
+        xml.title article.title
+        xml.link URI.join(site_url, article.url)
+      }
     end
   end
 end
