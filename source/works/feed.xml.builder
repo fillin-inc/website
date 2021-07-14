@@ -1,7 +1,7 @@
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   site_url = "https://www.fillin-inc.com"
-  xml.title "リリース一覧"
+  xml.title "開発実績一覧"
   xml.id URI.join(site_url, blog(:works).options.prefix.to_s + '/')
   xml.link "href" => URI.join(site_url, blog(:works).options.prefix.to_s + '/')
   xml.link "href" => URI.join(site_url, current_page.path), "rel" => "self"
