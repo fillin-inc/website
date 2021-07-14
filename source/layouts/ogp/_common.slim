@@ -1,13 +1,13 @@
 - if current_page.data.title
   meta property="og:title" content="#{current_page.data.title} | 株式会社フィルイン"
 - else
-  meta property="og:title" content="株式会社フィルイン | 群馬でWebサービスをつくる会社"
+  meta property="og:title" content="株式会社フィルイン | ビジネス価値を高めるデジタルソリューションを"
 
 meta property="og:url" content="https://www.fillin-inc.com#{current_page.url}"
 - if current_page.data.description
   meta property="og:description" content="#{current_page.data.description}"
 meta property="og:type" content="website"
-meta property="og:site_name" content="株式会社フィルイン | 群馬でWebサービスを作る会社"
+meta property="og:site_name" content="株式会社フィルイン | ビジネス価値を高めるデジタルソリューションを"
 
 - if current_page.data.ogp_image
   meta property="og:image" content="#{'https://www.fillin-inc.com' + File.join('/', current_page.data.ogp_image)}"
