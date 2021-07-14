@@ -3,7 +3,6 @@ title: サーバレスお問い合わせフォーム改修
 date: 2021-07-09
 description: 自社サイトのお問い合わせフォームを AWS を使ったサーバレス実装で改修を行いました。
 tags:
-    - in-house-development
     - aws-lambda
     - amazon-api-gateway
 cover: images/works/2021-07-09/inquiry-form.jpg
