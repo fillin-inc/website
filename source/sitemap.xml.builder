@@ -10,8 +10,8 @@ xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
 
     xml.url do
       xml.loc File.join(site_url, page.url)
-      - time = `git log -1 --pretty="format:%ci" #{page.source_file}`
-      xml.lastmod time.present? ? Time.parse(time).iso8601 : Time.current.iso8601
+      time = `git log -1 --pretty="format:%ci" #{page.source_file}`
+      xml.lastmod time.present? ? Time.parse(time).iso8601 : File.mtime(page.source_file).iso8601
       xml.priority page.data.priority || "0.5"
     end
   end
