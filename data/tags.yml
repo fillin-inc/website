@@ -19,3 +19,4 @@ aws-s3: AWS S3
 slack: Slack
 terraform: Terraform
 docker: Docker
+business-owners: 経営者向け
