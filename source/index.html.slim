@@ -148,3 +148,7 @@ section.section.blogs
 
             .read-more
               == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+
+      - if blog(:blogs).articles[0..2].size < 3
+        - (3 - blog(:blogs).articles[0..2].size).times do
+          .column
