@@ -25,6 +25,10 @@
                       span.icon
                         == partial 'images/icons/16/calendar-number-outline.svg'
                       = current_page.date.strftime('%Y-%m-%d')
+                    .author
+                      span.icon
+                        == partial 'images/icons/16/person-outline.svg'
+                      = current_page.data.author
                     .tag-list
                       span.icon
                         == partial 'images/icons/16/pricetags-outline.svg'
