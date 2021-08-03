@@ -13,3 +13,9 @@ task :release, [:title] do |t, args|
     f.puts(yml.join("\n"))
   end
 end
+
+desc 'textlint fot blog'
+task :textlint_blog do
+  sh './node_modules/.bin/textlint source/blogs/articles/'
+end
+

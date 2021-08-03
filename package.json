@@ -29,6 +29,9 @@
     "bulma": "^0.9",
     "bulma-pageloader": "^0.3.0",
     "bulma-timeline": "^3.0.4",
+    "textlint": "^12.0.2",
+    "textlint-rule-preset-ja-spacing": "^2.2.0",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0",
     "webpack": "^5.4",
     "webpack-cli": "^4.7"
   },

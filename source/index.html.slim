@@ -110,6 +110,11 @@ section.section.works
         .column
           .article
             == link_to article.url do
+              ul.vertical-tags
+                - article.tags.each do |tag|
+                  li.vertical-tag
+                    == tag_name(tag)
+
               figure.figure
                 == image_tag article.data.cover, alt: ''
 
@@ -124,3 +129,36 @@ section.section.works
 
             .read-more
               == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+
+
+section.section.blogs
+  .container
+    h1.title.has-text-centered ブログ
+    .columns
+      - blog(:blogs).articles[0..2].each do |article|
+        .column
+          .article
+            == link_to article.url do
+              ul.vertical-tags
+                - article.tags.each do |tag|
+                  li.vertical-tag
+                    == tag_name(tag)
+
+              figure.figure
+                == image_tag article.data.cover, alt: ''
+
+            h2.subtitle
+              == link_to article.title, article.url
+            .summary
+              == article.summary
+            .date
+              .icon
+                == partial 'images/icons/12/calendar-outline.svg'
+              == article.date.strftime('%Y-%m-%d')
+
+            .read-more
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+
+      - if blog(:blogs).articles[0..2].size < 3
+        - (3 - blog(:blogs).articles[0..2].size).times do
+          .column

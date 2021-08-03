@@ -1,18 +1,14 @@
-articles = [blog(:releases).articles, blog(:works).articles, blog(:blogs).articles].flatten.compact.sort_by(&:date).reverse
 xml.instruct!
-xml.feed "xmlns" => "http://www.w3.org/2005/Atom", "xml:lang" => "ja" do
-  site_url = "https://www.fillin-inc.com/"
-  xml.title "記事一覧"
-  xml.id site_url
-  xml.link "href" => site_url
+xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
+  site_url = "https://www.fillin-inc.com"
+  xml.title "ブログ記事一覧"
+  xml.id URI.join(site_url, blog(:blogs).options.prefix.to_s + '/')
+  xml.link "href" => URI.join(site_url, blog(:blogs).options.prefix.to_s + '/')
   xml.link "href" => URI.join(site_url, current_page.path), "rel" => "self"
-  xml.updated(articles.first.date.to_time.iso8601) unless articles.empty?
-  xml.author {
-    xml.name "株式会社フィルイン"
-    xml.email "info@fillin-inc.com"
-  }
+  xml.updated(blog(:blogs).articles.first.date.to_time.iso8601) unless blog(:blogs).articles.empty?
+  xml.author { xml.name "株式会社フィルイン" }
 
-  articles[0..4].each do |article|
+  blog(:blogs).articles[0..4].each do |article|
     xml.entry do
       xml.title article.title
       xml.link "rel" => "alternate", "href" => URI.join(site_url, article.url)

@@ -39,6 +39,19 @@ activate :blog do |blog|
   blog.per_page = 5
 end
 
+activate :blog do |blog|
+  blog.name = 'blogs'
+  blog.prefix = blog.name
+  blog.layout = blog.name
+  blog.sources = 'articles/{year}-{month}-{day}-{title}.html'
+  blog.taglink = 'tags/{tag}.html'
+  blog.tag_template = '/blogs/tag.html'
+  blog.default_extension = '.md'
+  blog.summary_separator = /<!--more-->/
+  blog.paginate = true
+  blog.per_page = 5
+end
+
 activate :robots,
   :rules => [
     {
