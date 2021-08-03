@@ -5,8 +5,8 @@ description: Web アプリケーション開発を発注する際のプログラ
 tags:
     - business-owners
 author: 松島
-cover: images/works/2021-07-09/inquiry-form.jpg
-ogp_image: images/works/2021-07-09/inquiry-form.jpg
+cover: images/blogs/2021-08-03/cover.jpg
+ogp_image: images/blogs/2021-08-03/cover.jpg
 ---
 
 Web アプリケーション開発を発注する際のプログラミング言語選定についてまとめます。どのような観点を考慮すべきでしょうか。
