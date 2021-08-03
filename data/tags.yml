@@ -20,3 +20,4 @@ slack: Slack
 terraform: Terraform
 docker: Docker
 business-owners: 経営者向け
+tech: 技術ブログ
