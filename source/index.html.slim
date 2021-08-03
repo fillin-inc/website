@@ -113,7 +113,8 @@ section.section.works
               ul.vertical-tags
                 - article.tags.each do |tag|
                   li.vertical-tag
-                    == tag_name(tag)
+                    span.tag
+                      == tag_name(tag)
 
               figure.figure
                 == image_tag article.data.cover, alt: ''
@@ -142,7 +143,8 @@ section.section.blogs
               ul.vertical-tags
                 - article.tags.each do |tag|
                   li.vertical-tag
-                    == tag_name(tag)
+                    span.tag
+                      == tag_name(tag)
 
               figure.figure
                 == image_tag article.data.cover, alt: ''
