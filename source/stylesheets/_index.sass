@@ -80,8 +80,26 @@ body.index
       padding: 2.5rem 1.5rem
       background: $white
       border: 1px solid $gray-border
+      position: relative
+
+    .vertical-tags
+      list-style: none
+      position: absolute
+      top: 1rem
+      left: -0.75rem
+    .vertical-tag
+      font-size: .825rem
+      min-width: 3.5rem
+      color: $white
+      background: rgba(0, 117, 194, .78)
+      border: 1px solid rgba(0, 117, 194, .78)
+      padding: .5rem .75rem
+      margin-bottom: .125rem
+      border-radius: 3px
+
     .figure img
       box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+
     .title
       font-weight: 500
     .subtitle
@@ -96,6 +114,7 @@ body.index
         &:active
           color: $white
           background: $blue
+
     .summary
       margin: 2.5rem 0
     .date

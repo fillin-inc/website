@@ -110,6 +110,11 @@ section.section.works
         .column
           .article
             == link_to article.url do
+              ul.vertical-tags
+                - article.tags.each do |tag|
+                  li.vertical-tag
+                    == tag_name(tag)
+
               figure.figure
                 == image_tag article.data.cover, alt: ''
 
@@ -134,6 +139,11 @@ section.section.blogs
         .column
           .article
             == link_to article.url do
+              ul.vertical-tags
+                - article.tags.each do |tag|
+                  li.vertical-tag
+                    == tag_name(tag)
+
               figure.figure
                 == image_tag article.data.cover, alt: ''
 
