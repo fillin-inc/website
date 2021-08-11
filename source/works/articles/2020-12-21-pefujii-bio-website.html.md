@@ -9,8 +9,12 @@ cover: images/works/2020-12-21/cover.jpg
 ogp_image: images/works/2020-12-21/cover.jpg
 ---
 
+<!-- textlint-disable -->
+
 藤井技術士事務所様の事業用 Web サイトを制作しました。<br>
 URL: https://pefujii-bio.com/
+
+<!-- textlint-enable -->
 
 <!--more-->
 

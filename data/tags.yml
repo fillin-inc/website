@@ -12,7 +12,7 @@ middleman: Middleman
 wordpress: WordPress
 aws: AWS
 gcp: GCP
-serverless: サーバレス
+serverless: サーバーレス
 aws-lambda: AWS Lambda
 amazon-api-gateway: Amazon API Gateway
 aws-s3: AWS S3

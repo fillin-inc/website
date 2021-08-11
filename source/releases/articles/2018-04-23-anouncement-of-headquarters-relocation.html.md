@@ -13,5 +13,9 @@ date: 2018-04-23
 
 ### 移転先
 
+<!-- textlint-disable -->
+
 〒 370 - 0813
 群馬県高崎市本町 48 番地
+
+<!-- textlint-enable -->
