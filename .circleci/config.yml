@@ -75,6 +75,8 @@ jobs:
           paths:
             - node_modules
       - run:
+          command: rake textlint
+      - run:
           command: NO_CONTRACTS=true bundle exec middleman build
 
 workflows:
