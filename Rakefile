@@ -19,3 +19,7 @@ task :textlint_blog do
   sh './node_modules/.bin/textlint source/blogs/articles/'
 end
 
+desc 'textlint'
+task :textlint do
+  sh './node_modules/.bin/textlint source/'
+end
