@@ -14,8 +14,7 @@ task :release, [:title] do |t, args|
   end
 end
 
-desc 'textlint fot blog'
-task :textlint_blog do
-  sh './node_modules/.bin/textlint source/blogs/articles/'
+desc 'textlint'
+task :textlint do
+  sh './node_modules/.bin/textlint source/'
 end
-

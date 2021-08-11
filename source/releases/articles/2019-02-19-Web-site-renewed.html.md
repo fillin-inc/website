@@ -23,6 +23,4 @@ date: 2019-02-19
 - デプロイメント: [CircleCI](https://circleci.com/gh/fillin-inc/website)
 - 画像素材: [Unsplasu](https://unsplash.com/)
 
-開発手法等についてはお問い合わせいただければご説明できるかと思います。ご連絡お待ちしております。
-
-
+開発手法等についてはお問い合わせいただければご説明できます。ご連絡お待ちしております。
