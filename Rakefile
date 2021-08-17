@@ -16,5 +16,5 @@ end
 
 desc 'textlint'
 task :textlint do
-  sh './node_modules/.bin/textlint source/'
+  sh 'npm run textlint'
 end

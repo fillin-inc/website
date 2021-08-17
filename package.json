@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --bail --mode production",
     "watch": "webpack -d eval-source-map --watch --mode development",
-    "clear": "rm -r source/javascripts/dist/* && touch source/javascripts/dist/.keep"
+    "clear": "rm -r source/javascripts/dist/* && touch source/javascripts/dist/.keep",
+    "textlint": "textlint source/"
   },
   "repository": {
     "type": "git",
