@@ -7,6 +7,9 @@ tags:
     - middleman
 cover: images/works/2021-07-01/arai-chosa.jpg
 ogp_image: images/works/2021-07-01/arai-chosa.jpg
+twitter_card:
+    image: images/works/2021-07-01/arai-chosa.jpg
+    type: summary_large_image
 ---
 
 <!-- textlint-disable -->

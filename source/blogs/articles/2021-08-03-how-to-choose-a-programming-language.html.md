@@ -7,6 +7,9 @@ tags:
 author: 松島
 cover: images/blogs/2021-08-03/cover.jpg
 ogp_image: images/blogs/2021-08-03/cover.jpg
+twitter_card:
+    image: images/blogs/2021-08-03/cover.jpg
+    type: summary_large_image
 ---
 
 Web アプリケーション開発を発注する際のプログラミング言語選定についてまとめます。どのような観点を考慮すべきでしょうか。

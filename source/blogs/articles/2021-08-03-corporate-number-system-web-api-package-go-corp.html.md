@@ -8,6 +8,9 @@ tags:
 author: 松島
 cover: images/blogs/2021-08-03/cover-2.jpg
 ogp_image: images/blogs/2021-08-03/cover-2.jpg
+twitter_card:
+    image: images/blogs/2021-08-03/cover-2.jpg
+    type: summary_large_image
 ---
 
 当社で開発ならびに公開している [法人番号システム Web-API][corp-api] 用の Go パッケージ(ライブラリ) の紹介です。

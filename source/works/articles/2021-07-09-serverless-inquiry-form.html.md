@@ -7,6 +7,9 @@ tags:
     - amazon-api-gateway
 cover: images/works/2021-07-09/inquiry-form.jpg
 ogp_image: images/works/2021-07-09/inquiry-form.jpg
+twitter_card:
+    image: images/works/2021-07-09/inquiry-form.jpg
+    type: summary_large_image
 ---
 
 当サイトのお問い合わせフォームを [Google フォーム](https://www.google.com/intl/ja_jp/forms/about/) から [AWS Lambda](https://aws.amazon.com/jp/lambda/) + [Amazon API Gateway](https://aws.amazon.com/jp/api-gateway/) を組み合わせたサーバーレス実装へ改修しました。
