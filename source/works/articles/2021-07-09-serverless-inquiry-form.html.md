@@ -6,9 +6,9 @@ tags:
     - aws-lambda
     - amazon-api-gateway
 cover: images/works/2021-07-09/inquiry-form.jpg
-ogp_image: images/works/2021-07-09/inquiry-form.jpg
+ogp_image: images/ogp/works/2021-07-09/inquiry-form.jpg
 twitter_card:
-    image: images/works/2021-07-09/inquiry-form.jpg
+    image: images/ogp/works/2021-07-09/inquiry-form.jpg
     type: summary_large_image
 ---
 

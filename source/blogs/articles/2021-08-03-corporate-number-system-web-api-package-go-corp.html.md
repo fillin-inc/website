@@ -7,9 +7,9 @@ tags:
     - go
 author: 松島
 cover: images/blogs/2021-08-03/cover-2.jpg
-ogp_image: images/blogs/2021-08-03/cover-2.jpg
+ogp_image: images/ogp/blogs/2021-08-03/cover-2.jpg
 twitter_card:
-    image: images/blogs/2021-08-03/cover-2.jpg
+    image: images/ogp/blogs/2021-08-03/cover-2.jpg
     type: summary_large_image
 ---
 

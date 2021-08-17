@@ -6,9 +6,9 @@ tags:
     - website
     - middleman
 cover: images/works/2020-12-21/cover.jpg
-ogp_image: images/works/2020-12-21/cover.jpg
+ogp_image: images/ogp/works/2020-12-21/cover.jpg
 twitter_card:
-    image: images/works/2020-12-21/cover.jpg
+    image: images/ogp/works/2020-12-21/cover.jpg
     type: summary_large_image
 ---
 
