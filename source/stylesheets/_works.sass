@@ -5,10 +5,24 @@ body.works, body.blogs
       margin-top: 3.5rem
     h2
       font-size: 1.5rem
+      font-weight: 600
       margin-bottom: 1.75rem
     h3
       font-size: 1.375rem
-      margin-bottom: 1.625rem
+      margin-bottom: 1.825rem
+      position: relative
+      padding-bottom: 1rem
+      &:before
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        content: '';
+        background-image: repeating-linear-gradient(-45deg, $black, $black 1px, transparent 2px, transparent 5px);
+        background-size: 7px 7px;
+        backface-visibility: hidden;
+
     h4, h5, h6
       font-size: 1.25rem
       margin-bottom: 1.5rem
@@ -99,6 +113,7 @@ body.works, body.blogs
       margin-top: 5rem
     .article
       .inner
+        padding: .5rem 1.5rem 2rem
         .tag-list
           display: inline-block
 
@@ -118,13 +133,13 @@ body.works, body.blogs
 
     .content
       h2
-        font-size: 1.25rem
-        margin-bottom: 1.5rem
+        font-size: 1.625rem
+        margin-bottom: 1.825rem
       h3
-        font-size: 1.125rem
-        margin-bottom: 1.375rem
+        font-size: 1.25rem
+        margin-bottom: 1.825rem
       h4, h5, h6
-        font-size: 1.125rem
+        font-size: 1.25rem
         margin-bottom: 1.375rem
 
       ul, ol
