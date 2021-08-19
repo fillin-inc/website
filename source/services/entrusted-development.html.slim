@@ -6,76 +6,128 @@ changefreq: monthly
 loader: false
 ---
 
-section.hero.is-medium
-  .hero-body
-    .container
-      h1.title.has-blue-background 受託開発
+section
+  == partial 'layouts/title_block', locals: { title: '受託開発' }
 
-section.section.introduction.container
-  h1.title.has-text-centered 課題解決型システム開発
+section.description
+  .columns
+    .column
+      figure
+        == image_tag '/images/index/meeting-space.jpg', alt: 'ミーティングスペース画像'
+    .column.section
+      h1.title
+        | 事業課題を解決するためのシステム開発を承ります。
+      .content
+        ul.list
+          li 事業課題, 予算やスケジュールに応じた複数プランのご提案
+          li レンタルサーバー, VPS から AWS クラウドサーバーまで選択可能
+          li 開発方法や運用保守を念頭に置いた開発言語やフレームワークの選定
+          li リリース後の運用保守サポート
+          li システム利活用のためのスタッフトレーニング
 
-  .columns.summary
-    .column.is-6.is-offset-3.has-text-centered
-      p
-        | 事業上の課題をスマートに解決するシステム開発を承ります。
-        br
-        | 予算,方法,納期から将来的な保守性まで考慮の上
-        br.is-hidden-desktop
-        | 解決可能なシステムのご提案をさせていただきます。
+section.section
+  .container
+    h1.title.has-text-centered ご依頼いただけるもの
 
-  .columns.service-list
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-              == partial 'images/icons/32/search-outline.svg'
-          | 調査
-        .content
-          p
-            | 計画の前提となる課題の詳細や事業の外部環境, 既存システムや利用サービスの活用状況を調査を行います。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-              == partial 'images/icons/32/documents-outline.svg'
-          | 計画
-        .content
-          p
-            | 調査に基づき必要なシステム設計のプランニングし, 採用するクラウドサービスや技術の利用を決定します。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/code-slash-outline.svg'
-          | 開発
-        .content
-          p
-            | Ruby, Ruby on Rails, PHP, Go や JavaScript といった言語を使ってシステム開発を行います。
-  .columns.service-list
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/cloud-outline.svg'
-          | 運用保守
-        .content
-          p
-            | 事業の進捗状況にあわせ機能の拡充やパフォーマンス改善やワークフローの見直しを行います。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/alert-circle-outline.svg'
-          | アラート対応
-        .content
-          p
-            | システムに業務上深刻な不具合が発生した場合に対応する体制を構築し, 緊急時には対応を行います。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/speedometer-outline.svg'
-          | 改善提案
-        .content
-          p
-            | システムの運用面から業務内容の見直しや改善を提案させていただきます。
+    .columns
+      .column
+        h1.title Web サービス
+      .column
+        h1.title 社内システム
+      .column
+        h1.title
+
+section.section.to-order
+  .container
+    h1.title.has-text-centered お取引の流れ
+
+    .columns
+      .column.is-6.is-offset-3
+        .timeline
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading ヒアリング
+              p
+                | お客様が必要としているシステムやサービスについてヒアリングを行います。
+                br
+                | 秘密保持契約（NDA）の締結を同時に行います。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading プランニング
+              p
+                | ヒアリングの内容に基づき当社で調査検討を行います。
+                br
+                | システムの目的, 機能や開発スケジュールを確定しながら見積を作成します。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading プランと見積りの説明
+              p
+                | 当社で作成したプランと見積り内容の説明を行います。
+                br
+                | プラン内容に見直しや削るべき内容がある場合, 改めて当社でプランの見直しを行います。
+                | ご発注の確定までにご納得いただける内容に仕上げます。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading ご発注
+              p
+                | 作成したプランに基づきご発注いただきます。
+                br
+                | ご発注の際には請負契約書または準委任契約書の締結を行います。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading システム開発
+              p
+                | 作成したプランに基づきご発注いただきます。
+                br
+                | ご発注の際には請負契約書または準委任契約書の締結を行います。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading 仮納品
+              p
+                | 開発したシステムを動作確認環境（ステージング環境）でご確認いただきます。
+                br
+                | 並行して当社でシステムに不具合がないか確認を行います。ご希望の場合にはお客様のスタッフに対しシステム操作のトレーニングを行います。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading リリース（納品）
+              p
+                | 開発したシステムをリリースします。
+                br
+                | ご指定がある場合はソースコード一式の納品も対応可能です。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading 検収
+              p
+                | リリースしたシステムに不具合がないかお客様にご確認いただきます。
+                br
+                | 不具合が発見された場合には速やかに修正を行います。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading お支払い
+              p
+                | 検収完了後に契約条件に基づき開発費用をお支払いいただきます。
+                br
+                | 検収完了日を含む月末締め翌月末払いを基本としてお願いしています。支払いタイミングや分割払いをご希望の場合にはご相談ください。
+
+section.pricing
+  .container
+    h1.title.has-text-centered 選択可能な取引形態
+    .columns
+      .column.is-8.is-offset-2.content
