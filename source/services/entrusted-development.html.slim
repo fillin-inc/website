@@ -3,7 +3,7 @@ title: 受託開発
 description: Web サービスや社内システムの調査, 設計, 開発や運用をご依頼いただけます。
 priority: 0.75
 changefreq: monthly
-loader: false
+loader: true
 ---
 
 section.hero.is-medium
@@ -11,71 +11,234 @@ section.hero.is-medium
     .container
       h1.title.has-blue-background 受託開発
 
-section.section.introduction.container
-  h1.title.has-text-centered 課題解決型システム開発
+section.section.description.container
+  h1.title.has-text-centered 当社で開発できるもの
+  .columns
+    .column
+      h2.title.has-text-centered
+        span.icon
+          == partial 'images/icons/24/business-outline.svg'
+        | 社内システム
+      .detail.content
+        p
+          |
+            DX（デジタルトランスフォーメーション）を念頭に長期的に利用可能なシステムの設計開発を行います。
+        p
+          |
+            在庫, 販売管理や会議室の予約システム。
+            またSlackやTeamsとの連携, コーポレートサイトの連携までご希望の機能を実装し運用できます。
 
-  .columns.summary
-    .column.is-6.is-offset-3.has-text-centered
-      p
-        | 事業上の課題をスマートに解決するシステム開発を承ります。
-        br
-        | 予算,方法,納期から将来的な保守性まで考慮の上
-        br.is-hidden-desktop
-        | 解決可能なシステムのご提案をさせていただきます。
+    .column
+      h2.title.has-text-centered
+        span.icon
+          == partial 'images/icons/24/cloud-outline.svg'
+        | Web サービス
+      .detail.content
+        p
+          |
+            toC, toB を問わず新しい事業展開に必要な Web サービスの開発を行います。
+        p
+          |
+            ご利用者様のログインからサービス機能の設計, 実装や運用まで対応します。
+            大規模な Web サービス開発にも携わっておりますので安心してお任せください。
 
-  .columns.service-list
     .column
-      .item
-        h2.subtitle
-          .icon.blue
-              == partial 'images/icons/32/search-outline.svg'
-          | 調査
+      h2.title.has-text-centered
+        span.icon
+          == partial 'images/icons/24/hammer-outline.svg'
+        | システム改修
+      .detail.content
+        p
+          |
+            既存システムの機能追加や改修, 新しいサーバー構成への移行を行います。
+        p
+          |
+            稼働中のシステム調査を行い, 機能追加や改修の計画を策定します。
+            小規模なリプレイスから長期の保守管理を見越した大規模な構成変更まで対応可能です。
+
+
+section.section.flow
+  .container
+    .columns
+      .column.left.is-hidden-mobile
+        figure
+          == image_tag 'images/services/entrusted-development/flow.jpg', alt: ''
+      .column.right
+        h1.title.has-text-centered お取引の流れ
+
+        .timeline
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content.content
+              p.heading ヒアリング
+              p
+                | お客様の困りごとや必要としているサービス, ご予算についてヒアリングします。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading プランニング
+              p
+                | ヒアリング内容に基づき当社で調査, 企画し現実的なプランを作成します。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading プランと見積りの説明
+              p
+                | 当社で作成したプランと見積り内容の説明を行います。
+                br
+                | プラン内容や予算にご不満がある場合, 当社で見直しを行います。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading ご発注
+              p
+                | 作成したプランに基づきご発注いただきます。
+                br
+                | ご発注の際には取引形態に応じて請負契約書または準委任契約書の締結を行います。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading システム開発
+              p
+                | 当社スタッフならびに外部パートナーと連携しながらシステム開発を進めます。
+                br
+                | お客様が開発の進捗を確認されたい場合, その時点で動作するシステムをご確認いただけます。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading 仮納品
+              p
+                | 開発したシステムを動作確認環境（ステージング環境）でご確認いただきます。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading リリース（納品）
+              p
+                | 開発したシステムをサーバー環境にリリースします。
+                br
+                | ご指定がある場合はソースコード一式の納品も対応可能です。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading 検収
+              p
+                | リリースしたシステムに不具合がないかお客様にご確認いただきます。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading お支払い
+              p
+                | 検収完了後に契約条件に基づき開発費用をお支払いいただきます。
+
+section.section.pricing
+  .container
+    .columns
+      .column.left
+        h1.title.has-text-centered ご利用料金例
         .content
+          p ※参考価格とを掲載ししています。開発するシステム構成や機能によって変動します。
+
+          table.table.is-striped
+            thead
+              tr
+                th システム名
+                th 参考価格
+                th 概要
+            tbody
+              tr
+                td 来店予約管理システム
+                td 100万円〜
+                td
+                  ul.list
+                    li 店舗サイト予約管理システム
+                    li メールアドレスで予約可能
+              tr
+                td
+                  | アプリ連携
+                  br.is-hidden-mobile
+                  | 在庫管理システム
+                td 60万円〜
+                td
+                  ul.list
+                    li iPad レジアプリの売上データから在庫数の増減を連携
+                    li 在庫数を EC サイトにリアルタイム連携
+              tr
+                td 社内管理システム
+                td 250万円〜
+                td
+                  ul.list
+                    li 帳票アプリケーション
+                    li 部署単位のユーザー管理機能
+                    li 変更記録保存による監査ログ対応
+
+        p
+          |
+            見積金額は開発するシステム構成, 難易度や開発期間から算出します。
+          br
+          |
+            概算の見積であればゼロコストでご用意いたしますので, お気軽にご相談ください。
+
+      .column.right.is-hidden-mobile
+        figure
+          == image_tag 'images/services/entrusted-development/pricing.jpg', alt: ''
+
+section.section.qa
+  .container
+    h1.title.has-text-centered よくある質問
+    .columns.content
+      .column
+        p.question
+          | 開発後のサポートはお願いできますか。
+        .answer
+          p  対応できます。
+          p サポート内容に応じて運用保守のご依頼ご契約が必要です。
+
+      .column
+        p.question
+          | 分割払いは可能ですか。
+        .answer
+          p システム開発を複数段階に分割（多段階契約）することで対応できます。
+          p 納品後の分割払いについてはお問い合わせください。
+
+      .column
+        p.question
+          | 予算が少なくても依頼は可能ですか。
+        .answer
+          p 対応可能な場合があります。
           p
-            | 計画の前提となる課題の詳細や事業の外部環境, 既存システムや利用サービスの活用状況を調査を行います。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-              == partial 'images/icons/32/documents-outline.svg'
-          | 計画
-        .content
+            | 外部の Web サービス連携や OSS パッケージの活用で低価格にシステムを実現できる場合があります。
+            | 予算感をお伝えください。実現可能なプランがあるか調査の上ご提案させていただきます。
+
+    .columns.content
+      .column
+        p.question
+          | システムの品質に不安があります。
+        .answer
+          p ご安心してお任せください。
           p
-            | 調査に基づき必要なシステム設計のプランニングし, 採用するクラウドサービスや技術の利用を決定します。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/code-slash-outline.svg'
-          | 開発
-        .content
+            | 当社には上場企業を含むベンチャーやスタートアップへの開発支援の実績があります。同様の品質で納品できるように努めます。
+            | 納品時にシステムの品質について説明させていただきます。
+
+      .column
+        p.question
+          | システムを活用できるか不安です。
+        .answer
+          p 御社スタッフのトレーニングをご依頼ください。
+          p 納品完了までにトレーニングを行い, すぐに活用できる体制作りのお手伝いをします。
+
+      .column
+        p.question
+          | 稼働中システムの詳細が不明です。
+        .answer
+          p 対応できる場合があります。
           p
-            | Ruby, Ruby on Rails, PHP, Go や JavaScript といった言語を使ってシステム開発を行います。
-  .columns.service-list
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/cloud-outline.svg'
-          | 運用保守
-        .content
-          p
-            | 事業の進捗状況にあわせ機能の拡充やパフォーマンス改善やワークフローの見直しを行います。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/alert-circle-outline.svg'
-          | アラート対応
-        .content
-          p
-            | システムに業務上深刻な不具合が発生した場合に対応する体制を構築し, 緊急時には対応を行います。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/speedometer-outline.svg'
-          | 改善提案
-        .content
-          p
-            | システムの運用面から業務内容の見直しや改善を提案させていただきます。
+            | システムが稼働しているサーバーやソースコードにアクセス可能であれば対応可能です。
+            | 当社のエンジニアが調査の上で対応プランをご提案させていただきます。
