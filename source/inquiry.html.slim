@@ -6,6 +6,12 @@ loader: true
 js: javascripts/inquiry.js
 ---
 
+#inquiry-loader.inquiry-loader.pageloader
+  span.title
+    | お問い合わせ送信中
+    span.icon
+      == partial 'images/icons/24/airplane-outline.svg'
+
 section
   == partial 'layouts/title_block', locals: { title: current_page.data.title }
 

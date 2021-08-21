@@ -5,6 +5,7 @@ const inquiryButton = form.querySelector('.button')
 const inquiryError = form.querySelector('#inquiry-error')
 const errorList = inquiryError.querySelector('ul')
 const inquiryApi = 'https://49l881wnce.execute-api.ap-northeast-1.amazonaws.com/inquiry'
+const pageLoader = document.querySelector('.inquiry-loader')
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -49,6 +50,8 @@ form.addEventListener('submit', function (event) {
     inquiryError.classList.add('is-hidden')
   }
 
+  pageLoader.classList.add('is-active')
+
   axios
     .post(inquiryApi, values)
     .then(function (response) {
@@ -60,5 +63,6 @@ form.addEventListener('submit', function (event) {
       inquiryError.appendChild(li)
       inquiryError.classList.remove('is-hidden')
       inquiryButton.removeAttribute('disabled')
+      pageLoader.classList.remove('is-active')
     })
 });
