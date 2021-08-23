@@ -3,6 +3,7 @@ title: Web サイト制作
 description: コーポレートサイトやランディングページの企画,制作や運用をご依頼いただけます。
 priority: 0.75
 changefreq: monthly
+loader: true
 ---
 
 section.hero.is-medium
@@ -10,72 +11,234 @@ section.hero.is-medium
     .container
       h1.title.has-blue-background Web サイト制作
 
-section.section.introduction.container
-  h1.title.has-text-centered
-    | Web サイトから
-    br.is-hidden-desktop
-    | プロモーションまで
+section.section.description.container
+  h1.title.has-text-centered 当社で制作できるもの
+  .columns
+    .column
+      h2.title.has-text-centered
+        span.icon
+          == partial 'images/icons/24/business-outline.svg'
+        | コーポレートサイト
+      .detail.content
+        p
+          |
+            事業用ホームページの制作が可能です。企画やライティングも含めて対応します。
+        p
+          | ホームページの目的に応じて, マーケティング向けの機能やコンテンツ展開も可能です。
+          | 目標とする事業展開と併せてご相談ください。
 
-  .columns.summary
-    .column.is-6.is-offset-3.has-text-centered
-      p
-        | コーポレートサイトやランディングページの企画,制作,運用保守,
-        br
-        | SNSや動画を活用したプロモーションまで承ります。
+    .column
+      h2.title.has-text-centered
+        span.icon
+          == partial 'images/icons/24/browsers-outline.svg'
+        | LP（ランディングページ）
+      .detail.content
+        p
+          | リスティング広告や動画広告の着地点とする LP 制作が可能です。
+        p
+          |
+            LP 制作に併せた各種 Web 広告の展開についてもご相談ください。
+            掲載期間中は定期的な見直しを行います。
 
-  .columns.service-list
     .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/documents-outline.svg'
-          | 静的サイト
+      h2.title.has-text-centered
+        span.icon
+          == partial 'images/icons/24/logo-wordpress.svg'
+        | WordPress サイト
+      .detail.content
+        p
+          |
+            CMS の定番「WordPress」を使った Web サイトの制作が可能です。
+        p
+          |
+            静的サイトからのリプレイスや各種プラグインの導入, オリジナルプラグイン（拡張機能）の開発も可能です。
+
+
+section.section.flow
+  .container
+    .columns
+      .column.left.is-hidden-mobile
+        figure
+          == image_tag 'images/services/website-development/flow.jpg', alt: ''
+      .column.right
+        h1.title.has-text-centered お取引の流れ
+
+        .timeline
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content.content
+              p.heading ヒアリング
+              p
+                | 制作したいホームページの種類, 目的, ご予算についてヒアリングします。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading プランニング
+              p
+                | ヒアリング内容に基づき当社でワイヤーフレームと見積りを作成します。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading プランと見積りの説明
+              p
+                | ワイヤーフレームと見積内容の説明を行います。
+                br
+                | プランの内容や予算, ワイヤーフレームにご不満がある場合, 当社で見直しを行います。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading ご発注
+              p
+                | 作成したプランに基づきご発注いただきます。
+                br
+                | ご発注の際には請負契約書の締結を行います。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading デザイン制作
+              p
+                | ワイヤーフレームに基づいて Web サイトのデザインを制作します。
+                br
+                | お客様にデザインのご確認後に次の作業に進みます。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading コーディング
+              p
+                | デザインデータから Web サイトを起こします。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading 仮納品
+              p
+                | 制作した Web サイトをテスト環境でご確認いただきます。
+                br
+                | コンテンツ内容に問題がないかご確認の上でリリースを行います。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading リリース（納品）
+              p
+                | Web サイトをサーバー上に展開し, 公開します。
+                br
+                | ご指定がある場合はソースコード一式の納品も対応可能です。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading 検収
+              p
+                | リリースした Web サイトに不具合がないかお客様にご確認いただきます。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading お支払い
+              p
+                | 検収完了後に契約条件に基づき開発費用をお支払いいただきます。
+
+section.section.pricing
+  .container
+    .columns
+      .column.left
+        h1.title.has-text-centered ご利用料金例
         .content
+          p ※参考価格とを掲載ししていますす。制作する Web サイトの構成や機能によって変動します。
+
+          table.table.is-striped
+            thead
+              tr
+                th Web サイトの種類
+                th 参考価格
+                th 概要
+            tbody
+              tr
+                td コーポレートサイト
+                td 30万円〜
+                td
+                  ul.list
+                    li 5 ページ程度
+                    li お問い合わせフォーム付き
+              tr
+                td LP（ランディングページ）
+                td 15万円〜
+                td
+                  ul.list
+                    li オリジナルデザイン
+                    li 静的サイト納品
+              tr
+                td お問い合わせフォーム追加
+                td 3万円〜
+                td
+                  ul.list
+                    li 既存サイトにお問い合わせフォームを追加
+                    li お問い合わせ情報はメール通知
+
+        p
+          |
+            見積金額は制作する Web サイトの構成, 難易度や制作期間から算出します。
+          br
+          |
+            概算の見積であればゼロコストでご用意いたしますので, お気軽にご相談ください。
+
+      .column.right.is-hidden-mobile
+        figure
+          == image_tag 'images/services/website-development/pricing.jpg', alt: ''
+
+section.section.qa
+  .container
+    h1.title.has-text-centered よくある質問
+    .columns.content
+      .column
+        p.question
+          | リリース後のサポートはできますか。
+        .answer
+          p  対応できます。
+          p サポート内容に応じて運用保守のご契約が必要です。
+
+      .column
+        p.question
+          | モバイル表示に対応できますか。
+        .answer
+          p 当社で制作する Web サイトはすべてモバイル表示に対応します。
           p
-            | 運用費用を抑えた静的サイトの制作が可能です。AWS を利用することで月額100円から運用することが可能です。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/logo-wordpress.svg'
-          | WordPress
-        .content
+            | レスポンシブ表示というモバイル端末やタブレット端末でも表示できる Web サイトの制作を基本としています。
+
+      .column
+        p.question
+          | 予算が少なくても依頼は可能ですか。
+        .answer
+          p 対応可能な場合があります。
           p
-            | コンテンツ運用に強い WordPress を使った制作が可能です。機能を拡張するプラグインの導入から開発まで対応できます。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/wifi-outline.svg'
-          | サービス連携
-        .content
+            | 当社では有償のテンプレートを用いた制作にも対応しています。作業上のコストを抑えることで低価格の制作に対応できます。
+
+    .columns.content
+      .column
+        p.question
+          | 発注前に用意すべきものはありますか。
+        .answer
+          p 会社概要や商品の資料をご用意ください。
           p
-            | Twitter, Facebook やマーケティングオートメーションと連携した制作が可能です。
-  .columns.service-list
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/server-outline.svg'
-          | 豊富なサーバー環境
-        .content
+            | Web サイトのコンテンツ製作時に利用させていただきます。紙資料と統一した情報を PR することができます。
+
+      .column
+        p.question
+          | 分割払いは可能ですか。
+        .answer
+          p Web サイト制作を複数段階に分割（多段階契約）することで対応できます。
+
+
+      .column
+        p.question
+          | 動画や写真の撮影は可能ですか。
+        .answer
+          p 提携するカメラマンや動画制作会社に依頼することで対応します。
           p
-            | レンタルサーバーから専用サーバー, クラウドサーバー環境まで対応することができます。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/cloud-outline.svg'
-          | 運用保守
-        .content
-          p
-            | コンテンツの管理や更新を含めた運用保守が可能です。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/bookmarks-outline.svg'
-          | 広告運用
-        .content
-          p
-            | LP(ランディングページ)を活用した広告運用に対応できます。SNS広告から動画広告, リスティングまでお任せください。
+            | 簡単な撮影であれば当社スタッフが対応することも可能です。
