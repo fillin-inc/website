@@ -1,8 +1,9 @@
 ---
 title: 開発支援
-description: お客様のサービス開発に必要な要員や技術の提供を行っています。リモートワークを主とした都内案件を中心にご相談いただいております。
+description: お客様のサービス開発に必要な技術提供を行っています。リモートワークを主とした都内案件を中心にご相談いただいております。
 priority: 0.75
 changefreq: monthly
+loader: true
 ---
 
 section.hero.is-medium
@@ -10,71 +11,111 @@ section.hero.is-medium
     .container
       h1.title.has-blue-background 開発支援
 
-section.section.introduction.container
-  h1.title.has-text-centered Web サービス開発支援
+section.section.description.container
+  h1.title.has-text-centered 支援可能なプロジェクト
+  .columns
+    .column
+      h2.title.has-text-centered
+        span.icon
+          == partial 'images/icons/24/cloud-outline.svg'
+        | Web サービス
+      .detail.content
+        p
+          | Web サービスの開発支援が可能です。新規開発から運用開発まで広く対応します。
+        p
+          | Ruby on Rails, PHP, Go, JavaScript, AWS, Git/GitHub などモダンな開発環境に対応できます。
 
-  .columns.summary
-    .column.is-6.is-offset-3.has-text-centered
-      p
-        | Web サービスの新規開発, 機能追加や改善に対し
-        br.is-hidden-desktop
-        | 技術と人員の提供を行います。
-        br
-        | リモートワークを中心に柔軟に対応します。
+    .column
+      h2.title.has-text-centered
+        span.icon
+          == partial 'images/icons/24/browsers-outline.svg'
+        | プロトタイプ開発
+      .detail.content
+        p
+          | PMF（プロダクトマーケットフィット） 検証用のプロトタイプ開発が可能です。
+        p
+          | サーバーレスアーキテクチャーや外部 Web サービスを活用して, プロトタイプの有用性検証を行います。
+          | ユーザーインタビューの実施についても対応できます。
 
-  .columns.service-list
     .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/diamond-outline.svg'
-          | Ruby on Rails
-        .content
+      h2.title.has-text-centered
+        span.icon
+          == partial 'images/icons/24/hammer-outline.svg'
+        | リプレイス
+      .detail.content
+        p
+          | 既存サービスの開発言語, フレームワークを含むアーキテクチャーの変更に対応できます。
+        p
+          | 稼働中サービスの調査を行い, 新しいアーキテクチャー移植を行います。
+          | 可能な限り既存サービスの機能を忠実に移植することもできます。
+
+
+section.section.flow
+  .container
+    .columns
+      .column.left.is-hidden-mobile
+        figure
+          == image_tag 'images/services/service-engineering-service/flow.jpg', alt: ''
+      .column.right
+        h1.title.has-text-centered お取引の流れ
+
+        .timeline
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content.content
+              p.heading ヒアリング
+              p
+                | 開発支援が必要なプロジェクトについて詳細をお聞かせください。
+                br
+                | 当社で提供可能な人員や技術について説明させていただきます。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading ご契約
+              p
+                | 開発支援の期間や内容を元にご契約いただきます。
+
+          .timeline-item
+            .timeline-marker
+            .timeline-content
+              p.heading 開発支援開始
+              p
+                | 当社スタッフが御社プロジェクトに参加し, サービス開発をサポートします。
+
+          .timeline-item
+            .timeline-marker.is-primary
+            .timeline-content
+              p.heading 定期 MTG
+              p
+                | 開発支援の品質向上のため定期的な MTG を行います。
+                br
+                | 不足している技術についてご相談いただければ, 当社にてスタッフの教育強化を行います。
+
+section.section.qa
+  .container
+    h1.title.has-text-centered よくある質問
+    .columns.content
+      .column
+        p.question
+          | 東京のプロジェクトでも依頼できますか。
+        .answer
+          p 群馬県, 埼玉県, 東京都のプロジェクトに対応しています。
+          p 取引実績として, 開発支援は東京都内の事業会社様からご依頼いただくことが多いです。
+
+      .column
+        p.question
+          | 必要な場合には来社できますか。
+        .answer
+          p 東京都内または群馬県内であれば週 1 〜 2 程度の頻度であれば可能です。
           p
-            | Ruby on Rails (> 4.0) を用いたWebサービス開発をご依頼いただけます。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/code-slash-outline.svg'
-          | PHP
-        .content
-          p
-            | 独自フレームワークから主要なWebフレームワークを用いたサービス開発に対応できます。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/logo-javascript.svg'
-          | JavaScript
-        .content
-          p
-            | Vue.js や React を代表とするモダンな環境での開発に対応できます。
-  .columns.service-list
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/logo-github.svg'
-          | Git/GitHub
-        .content
-          p
-            | Git/GitHub を導入した開発に対応できます。VCS が未導入のプロジェクトでは導入や社内レクチャーも可能です。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/cloud-outline.svg'
-          | AWS
-        .content
-          p
-            | AWS を代表とするクラウドサービスの利用にも対応できます。社内では関連資格の取得を推奨しています。
-    .column
-      .item
-        h2.subtitle
-          .icon.blue
-            == partial 'images/icons/32/alert-circle-outline.svg'
-          | Ruby on Rails へリプレイス
-        .content
-          p
-            | PHP フレームワークから Ruby on Rails への移植が可能です。PHP のコードをライブラリレベルで調査し移植を行います。
+            | 基本的に週 1 で対面 MTG をしています。
+            br
+            | ※コロナ禍ののため可能な限りリモートワークで対応
+
+      .column
+        p.question
+          | 週 3 日の頻度でも対応できますか。
+        .answer
+          p 当社の開発支援では週 1 日から週 5 日の支援が可能です。
+          p 費用については人月ベースの日割り計算になります。ご相談ください。
