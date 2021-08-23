@@ -3,6 +3,10 @@ title: 研修生の募集を開始
 date: 2019-08-22
 ---
 
+<div class="notification is-danger">
+  研修生の募集は現在停止しています。
+</div>
+
 弊社では, 将来の採用候補となる人材育成のために新たに「研修生制度」を用意し募集を開始しました。
 
 研修生制度: https://www.fillin-inc.com/trainee/
@@ -27,5 +31,5 @@ Ruby on Rails は Web 開発, 特にスタートアップやベンチャーで�
 
 ### お問い合わせ
 
-本制度のお問い合わせについては https://form.run/@trainee よりご連絡ください。
+本制度のお問い合わせについては https://www.fillin-inc.com/inquiry/?from=trainee-release よりご連絡ください。
 
