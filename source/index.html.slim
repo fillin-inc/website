@@ -100,7 +100,7 @@ section.section.information
               == article.date.strftime('%Y-%m-%d')
 
             .read-more
-              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix', title: article.title
 
 section.section.works
   .container
@@ -129,7 +129,7 @@ section.section.works
               == article.date.strftime('%Y-%m-%d')
 
             .read-more
-              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix', title: article.title
 
 
 section.section.blogs
@@ -159,4 +159,4 @@ section.section.blogs
               == article.date.strftime('%Y-%m-%d')
 
             .read-more
-              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix', title: article.title
