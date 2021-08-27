@@ -69,7 +69,7 @@ section.mission
   .columns
     .column
       figure
-        == image_tag '/images/index/meeting-space.jpg', alt: 'ミーティングスペース画像'
+        == image_tag '/images/index/meeting-space.jpg', loading: :lazy, alt: 'ミーティングスペース画像'
     .column.section
       h1.title
         | 私たちは地域のビジネスをもっと強くしたい
@@ -117,7 +117,7 @@ section.section.works
                       == tag_name(tag)
 
               figure.figure
-                == image_tag article.data.cover, alt: ''
+                == image_tag article.data.cover, loading: :lazy, alt: ''
 
             h2.subtitle
               == link_to article.title, article.url
@@ -147,7 +147,7 @@ section.section.blogs
                       == tag_name(tag)
 
               figure.figure
-                == image_tag article.data.cover, alt: ''
+                == image_tag article.data.cover, loading: :lazy, alt: ''
 
             h2.subtitle
               == link_to article.title, article.url
