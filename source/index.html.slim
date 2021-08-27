@@ -1,5 +1,7 @@
 ---
 description: Webアプリケーション開発を専門としたシステム開発会社です。群馬県高崎市を拠点として都内のベンチャー,スタートアップ支援や受託開発を行っています。
+stylesheet:
+    - index
 loader: true
 ---
 
@@ -69,7 +71,7 @@ section.mission
   .columns
     .column
       figure
-        == image_tag '/images/index/meeting-space.jpg', alt: 'ミーティングスペース画像'
+        == image_tag '/images/index/meeting-space.jpg', loading: :lazy, alt: 'ミーティングスペース画像'
     .column.section
       h1.title
         | 私たちは地域のビジネスをもっと強くしたい
@@ -100,7 +102,7 @@ section.section.information
               == article.date.strftime('%Y-%m-%d')
 
             .read-more
-              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix', title: article.title
 
 section.section.works
   .container
@@ -117,7 +119,7 @@ section.section.works
                       == tag_name(tag)
 
               figure.figure
-                == image_tag article.data.cover, alt: ''
+                == image_tag article.data.cover, loading: :lazy, alt: ''
 
             h2.subtitle
               == link_to article.title, article.url
@@ -129,7 +131,7 @@ section.section.works
               == article.date.strftime('%Y-%m-%d')
 
             .read-more
-              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix', title: article.title
 
 
 section.section.blogs
@@ -147,7 +149,7 @@ section.section.blogs
                       == tag_name(tag)
 
               figure.figure
-                == image_tag article.data.cover, alt: ''
+                == image_tag article.data.cover, loading: :lazy, alt: ''
 
             h2.subtitle
               == link_to article.title, article.url
@@ -159,4 +161,4 @@ section.section.blogs
               == article.date.strftime('%Y-%m-%d')
 
             .read-more
-              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix'
+              == link_to '続きを読む', article, class: 'button is-text with-arrow-postfix', title: article.title
