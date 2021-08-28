@@ -16,6 +16,8 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
     - if current_page.data.description
       meta name="description" content="#{current_page.data.description}"
 
+    link rel="preconnect" href="https://www.googletagmanager.com"
+
     - unless current_page.url == '/404/'
       link rel="canonical" href="https://www.fillin-inc.com#{current_page.url}"
       == partial 'layouts/ogp/common'
