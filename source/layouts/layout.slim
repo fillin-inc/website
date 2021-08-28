@@ -30,7 +30,7 @@ html lang="ja" prefix="og: http://ogp.me/ns#"
       script
         == partial 'javascripts/google-tag-manager.js'
 
-    == stylesheet_link_tag current_page.data&.stylesheet || :site
+    == stylesheet_link_tag :site
   body class="#{page_classes}"
     - if show_loader?
       .pageloader.is-active
