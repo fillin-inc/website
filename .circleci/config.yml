@@ -3,7 +3,7 @@ version: 2.1
 default: &default
   working_directory: ~/website
   docker:
-    - image: ghcr.io/fillin-inc/middleman:3.0.2-slim-buster
+    - image: ghcr.io/fillin-inc/middleman:2.7.4-slim-buster
       environment:
         TZ: Asia/Tokyo
         MM_ENV: production
@@ -27,7 +27,7 @@ jobs:
             - npm-cache-
       - run: |
           bundle install --path vendor/bundle
-          npm install
+          npm ci
       - save_cache:
           key: gem-cache-{{ checksum "Gemfile.lock" }}
           paths:
