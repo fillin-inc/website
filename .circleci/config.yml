@@ -3,7 +3,7 @@ version: 2.1
 default: &default
   working_directory: ~/website
   docker:
-    - image: ghcr.io/fillin-inc/middleman:3.0.2-slim-buster
+    - image: ghcr.io/fillin-inc/middleman:3.1.2-slim-buster
       environment:
         TZ: Asia/Tokyo
         MM_ENV: production
