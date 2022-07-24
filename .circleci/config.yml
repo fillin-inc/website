@@ -27,7 +27,7 @@ jobs:
             - npm-cache-
       - run: |
           bundle install --path vendor/bundle
-          npm install
+          npm ci
       - save_cache:
           key: gem-cache-{{ checksum "Gemfile.lock" }}
           paths:
