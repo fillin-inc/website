@@ -1,0 +1,113 @@
+name: Build & Deploy
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .tool-versions
+          bundler-cache: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .tool-versions
+          cache: 'npm'
+      - run: npm ci
+
+      - name: Build
+        run: NO_CONTRACT=true bundle exec middleman build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: 'build/'
+
+  deploy:
+      runs-on: ubuntu-latest
+      if: github.ref == 'refs/heads/main'
+      needs: build
+      steps:
+        - name: Post to a Slack channel
+          id: slack
+          uses: slackapi/slack-github-action@v1.23.0
+          with:
+            channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
+            payload: |
+              {
+                "text": "コーポレートサイトのデプロイを開始します。 (In Progress)",
+                "attachments": [
+                  {
+                    "pretext": "Deployment started",
+                    "color": "dbab09",
+                    "fields": [
+                      {
+                        "title": "Status",
+                        "short": true,
+                        "value": "In Progress"
+                      }
+                    ]
+                  }
+                ]
+              }
+          env:
+            SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+
+        - name: Download build
+          uses: actions/download-artifact@v3
+          with:
+            name: build
+            path: build
+
+        - name: Display structure of build files
+          run: ls -R
+          working-directory: build
+
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v2
+          with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: ap-northeast-1
+
+        - name: S3 Sync
+          run: aws s3 sync --delete ./build s3://${{ secrets.AWS_BUCKET }} --region ap-northeast-1
+
+        - name: Invalidate CloudFront
+          run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+
+        - name: Send Sitemap update
+          run: curl http://www.google.com/webmasters/sitemaps/ping --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"
+
+        - name: Post to a Slack channel
+          uses: slackapi/slack-github-action@v1.23.0
+          with:
+            channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
+            update-ts: ${{ steps.slack.outputs.ts }}
+            payload: |
+              {
+                "text": "コーポレートサイトのデプロイが完了しました。 (${{ job.status }})\nhttps://www.fillin-inc.com/",
+                "attachments": [
+                  {
+                    "pretext": "Deployment finished",
+                    "color": "28a745",
+                    "fields": [
+                      {
+                        "title": "Status",
+                        "short": true,
+                        "value": "Completed"
+                      }
+                    ]
+                  }
+                ]
+              }
+          env:
+            SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
