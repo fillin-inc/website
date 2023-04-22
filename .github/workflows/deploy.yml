@@ -66,6 +66,6 @@ jobs:
           uses: slackapi/slack-github-action@v1.23.0
           with:
             channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
-            slack-message: "GitHub build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+            slack-message: "fillin-inc.com をリリースしました: ${{ job.status }}\nhttps://www.fillin-inc.com\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
           env:
             SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
