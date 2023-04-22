@@ -87,7 +87,6 @@ jobs:
           run: curl http://www.google.com/webmasters/sitemaps/ping --get --data-urlencode "sitemap=https://www.fillin-inc.com/sitemap.xml"
 
         - name: Post to a Slack channel
-          id: slack
           uses: slackapi/slack-github-action@v1.23.0
           with:
             channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
