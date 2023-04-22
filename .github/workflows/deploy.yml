@@ -17,9 +17,9 @@ jobs:
 
       - name: Set up Node
         uses: actions/setup-node@v3
-          with:
-            node-version: .tool-versions
-            cache: 'npm'
+        with:
+          node-version: .tool-versions
+          cache: 'npm'
 
       - name: Build
         run:
