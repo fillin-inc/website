@@ -1,0 +1,32 @@
+@startuml
+title AWS Architecture for fillin-inc.com
+
+top to bottom direction
+
+rectangle "閲覧者" as users
+
+users -- [Distribution]
+
+rectangle "AWS Cloud" {
+    node "S3 Bucket" {
+        [www.fillin-inc.com Bucket] --> [Static Website Hosting]
+    }
+
+    node "CloudFront" {
+        [Distribution] -up-> [Static Website Hosting]
+    }
+
+    node "Lambda Function" {
+        [Inquiry Lambda] --> [CloudWatch Logs]
+    }
+
+    node "ECR" {
+        [website-inquiry-api Repo] --> [API Docker Image]
+    }
+
+    [CloudFront] --> [S3 Bucket]
+    [Lambda Function] --> [S3 Bucket]
+    [Lambda Function] --> [ECR]
+}
+
+@enduml
