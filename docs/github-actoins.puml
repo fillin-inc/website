@@ -1,0 +1,43 @@
+@startuml github_actions
+title GitHub Actions - Build & Deploy
+
+actor "開発者" as Dev
+participant "GitHub" as G
+participant "GitHub Actions" as GA
+participant "Slack" as Slack
+participant "Google Search" as Google
+box AWS
+  participant "S3" as S3
+  participant "CloudFront" as CF
+end box
+
+Dev -> G : PR 作成\n（feature/branch-name)
+G -> GA: GitHub Actions 実行
+
+group Build Job
+  GA --> GA : Checkout Repository
+  GA --> GA : Set up Ruby
+  GA --> GA : Set up Node
+  GA --> GA : npm ci
+  GA --> GA : Build
+  GA --> GA : Artifact にビルドファイル保存
+end
+
+GA -> G : Build 結果表示
+Dev -> G : PR を main にマージ
+G -> GA : GitHub Actions 実行
+
+group Deploy Job
+  GA -> Slack : デプロイ開始通知
+  Slack -> Dev : デプロイ開始通知
+  GA -> GA : Artifact からビルドファイル取得
+  GA -> GA : ビルドファイルリスト表示
+  GA -> GA : AWS Credentials 設定
+  GA -> S3 : sync 実行
+  GA -> CF : キャッシュ削除
+  GA -> Google: sitemap.xml 更新通知
+  GA -> Slack : デプロイ完了通知
+  Slack -> Dev : デプロイ完了通知
+end
+
+@enduml
